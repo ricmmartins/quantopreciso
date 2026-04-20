@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9XR4FLXXT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N9XR4FLXXT');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:site_name" content="QuantoPreciso.com">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Calculadora de Impermeabilização — Quanto Material Preciso?">
+<meta property="og:description" content="Calcule a quantidade de material para impermeabilização: manta asfáltica, manta líquida ou argamassa polimérica. Com número de demãos e custo estimado.">
+<title>Calculadora de Impermeabilização — Quanto Material Preciso?</title>
+<meta name="description" content="Calcule a quantidade de material para impermeabilização: manta asfáltica, manta líquida ou argamassa polimérica. Com número de demãos e custo estimado.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-impermeabilizacao.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .card h1{font-size:1.35rem}
+  .header-inner{height:auto;padding:.75rem 0}
+  .card{padding:1.25rem}
+  nav{display:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Calculadora de Impermeabilização",
+      "url":"https://quantopreciso.com/calculadora-de-impermeabilizacao.html",
+      "description":"Calcule a quantidade de material para impermeabilização de lajes, banheiros e áreas externas. Manta asfáltica, líquida ou argamassa polimérica.",
+      "applicationCategory":"UtilityApplication",
+      "operatingSystem":"All",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Qual o melhor tipo de impermeabilização?","acceptedAnswer":{"@type":"Answer","text":"Depende da aplicação. Manta asfáltica é ideal para lajes e coberturas grandes por sua durabilidade (15–20 anos). Impermeabilizante líquido (manta líquida) é prático para banheiros e áreas menores. Argamassa polimérica é versátil e econômica para fundações, reservatórios e áreas de contato com o solo."}},
+        {"@type":"Question","name":"Onde é obrigatório impermeabilizar?","acceptedAnswer":{"@type":"Answer","text":"A NBR 9575 determina impermeabilização obrigatória em: lajes de cobertura, terraços, varandas expostas, banheiros, cozinhas, lavanderias, reservatórios de água, piscinas, jardineiras, subsolos e fundações. A falta de impermeabilização pode causar infiltrações, mofo e comprometer a estrutura."}},
+        {"@type":"Question","name":"Quanto tempo dura a impermeabilização?","acceptedAnswer":{"@type":"Answer","text":"A manta asfáltica bem aplicada dura de 15 a 20 anos. O impermeabilizante líquido dura de 5 a 10 anos, dependendo da exposição. A argamassa polimérica tem durabilidade de 10 a 15 anos. A vida útil depende da qualidade da aplicação, preparo da superfície e exposição ao sol e à chuva."}},
+        {"@type":"Question","name":"Posso impermeabilizar sobre piso existente?","acceptedAnswer":{"@type":"Answer","text":"Sim, em alguns casos. A manta líquida e a argamassa polimérica podem ser aplicadas sobre pisos existentes, desde que a superfície esteja limpa, sem trincas profundas e com caimento adequado. Já a manta asfáltica geralmente exige remoção do piso. Consulte sempre um profissional para avaliar."}}
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
+        {"@type":"ListItem","position":2,"name":"Calculadora de Impermeabilização","item":"https://quantopreciso.com/calculadora-de-impermeabilizacao.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo">Quanto<span>Preciso</span>.com</a>
+<nav>
+<a href="/">Início</a>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb">
+<a href="/">Início</a> <span>›</span> <span>Calculadora de Impermeabilização</span>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<div class="card">
+<h1><span class="icon">💧</span> Calculadora de Impermeabilização</h1>
+<p class="subtitle">Calcule a quantidade de material impermeabilizante para lajes, banheiros e áreas externas — com número de demãos e custo estimado.</p>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="area">Área a impermeabilizar (m²)</label>
+<input type="number" id="area" min="0.1" step="0.01" placeholder="Ex: 25">
+</div>
+<div class="form-group">
+<label for="tipo">Tipo de impermeabilizante</label>
+<select id="tipo" onchange="atualizarInfo()">
+<option value="manta">Manta asfáltica (rolos 10 m²)</option>
+<option value="liquida">Impermeabilizante líquido (manta líquida)</option>
+<option value="argamassa">Argamassa polimérica</option>
+</select>
+</div>
+<div class="form-group">
+<label for="demaos">Número de demãos</label>
+<select id="demaos">
+<option value="2">2 demãos</option>
+<option value="3" selected>3 demãos (recomendado)</option>
+<option value="4">4 demãos</option>
+</select>
+</div>
+<div class="form-group">
+<label id="lblCusto" for="custoUnit">Custo por rolo/lata (R$)</label>
+<input type="number" id="custoUnit" min="0" step="0.01" value="180" placeholder="Ex: 180">
+</div>
+<div class="form-group full">
+<button class="btn" onclick="calcImpermeabilizacao()">Calcular Material</button>
+</div>
+</div>
+
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rArea">—</div><div class="lbl">Área total (m²)</div></div>
+<div class="result-item"><div class="val" id="rMaterial">—</div><div class="lbl" id="lblMaterial">Quantidade de material</div></div>
+<div class="result-item"><div class="val" id="rDemaos">—</div><div class="lbl">Demãos</div></div>
+<div class="result-item"><div class="val" id="rPrimer">—</div><div class="lbl" id="lblPrimer">Primer / Selador (L)</div></div>
+<div class="result-item"><div class="val" id="rConsumo">—</div><div class="lbl">Consumo total (kg ou m²)</div></div>
+<div class="result-item"><div class="val" id="rCusto">—</div><div class="lbl">Custo estimado (R$)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<div class="card content-section">
+<h2>Guia completo de impermeabilização</h2>
+<p>A impermeabilização é uma das etapas mais importantes da construção e reforma. Ela protege a estrutura contra infiltrações, umidade ascendente e vazamentos que podem causar mofo, desplacamento de revestimentos e até comprometer a armadura do concreto. Segundo a ABNT NBR 9575, diversas áreas da edificação exigem impermeabilização obrigatória.</p>
+
+<h3>Tipos de impermeabilização</h3>
+<table class="info-table">
+<thead><tr><th>Tipo</th><th>Consumo por m²</th><th>Demãos</th><th>Custo por m²</th><th>Durabilidade</th><th>Melhor uso</th></tr></thead>
+<tbody>
+<tr><td>Manta asfáltica</td><td>1,1 m² (10% sobreposição)</td><td>1 camada</td><td>R$40–R$70</td><td>15–20 anos</td><td>Lajes, coberturas, terraços</td></tr>
+<tr><td>Impermeabilizante líquido</td><td>1,0 kg/m²/demão</td><td>3 demãos</td><td>R$25–R$45</td><td>5–10 anos</td><td>Banheiros, varandas, sacadas</td></tr>
+<tr><td>Argamassa polimérica</td><td>1,5 kg/m²/demão</td><td>3 demãos</td><td>R$20–R$35</td><td>10–15 anos</td><td>Fundações, reservatórios, piscinas</td></tr>
+</tbody>
+</table>
+
+<h3>Onde impermeabilizar na sua casa</h3>
+<ul>
+<li><strong>Laje de cobertura:</strong> A mais crítica — use manta asfáltica de 3 ou 4 mm com proteção mecânica (contrapiso).</li>
+<li><strong>Banheiros:</strong> Impermeabilize todo o piso e as paredes do box até 1,80 m de altura com manta líquida ou argamassa polimérica.</li>
+<li><strong>Cozinhas e lavanderias:</strong> Impermeabilize o piso e a parede atrás da pia com manta líquida.</li>
+<li><strong>Varandas e sacadas:</strong> Impermeabilize antes do piso com manta líquida ou asfáltica. Garanta caimento para o ralo.</li>
+<li><strong>Fundações e baldrames:</strong> Use argamassa polimérica para evitar umidade ascendente nas paredes.</li>
+<li><strong>Reservatórios e caixas d'água:</strong> Argamassa polimérica atóxica, aprovada para contato com água potável.</li>
+</ul>
+
+<h3>Passo a passo da impermeabilização com manta líquida</h3>
+<ol>
+<li><strong>Limpe a superfície:</strong> Remova poeira, óleos, graxa e resíduos. A superfície deve estar firme e regular.</li>
+<li><strong>Aplique o primer:</strong> Passe o primer (selador) em toda a área e aguarde a secagem (4–6 horas).</li>
+<li><strong>Primeira demão:</strong> Aplique o impermeabilizante com rolo de lã ou trincha em uma direção (ex: horizontal).</li>
+<li><strong>Segunda demão:</strong> Após 6–12 horas de secagem, aplique a segunda demão na direção perpendicular (ex: vertical).</li>
+<li><strong>Terceira demão:</strong> Repita o processo em direção alternada. Reforce cantos e ralos com tela de poliéster.</li>
+<li><strong>Teste de estanqueidade:</strong> Após 72 horas de cura, tampe o ralo e encha a área com 5 cm de água por 72 horas.</li>
+<li><strong>Proteção mecânica:</strong> Aplique contrapiso ou argamassa sobre a impermeabilização antes de instalar o piso.</li>
+</ol>
+
+<h3>Erros comuns na impermeabilização</h3>
+<ul>
+<li><strong>Não preparar a superfície:</strong> Sujeira e poeira impedem a aderência do impermeabilizante.</li>
+<li><strong>Aplicar poucas demãos:</strong> O mínimo recomendado é 3 demãos para garantir uma película contínua e sem falhas.</li>
+<li><strong>Não reforçar cantos e ralos:</strong> São os pontos mais críticos — use tela de reforço e aplique demãos extras.</li>
+<li><strong>Furar a impermeabilização depois:</strong> Parafusos e pregos na laje impermeabilizada causam vazamentos. Planeje as instalações antes.</li>
+<li><strong>Não fazer teste de estanqueidade:</strong> Sem o teste, problemas só aparecem meses depois, quando o reparo custa muito mais.</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual o melhor tipo de impermeabilização?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Depende da aplicação. Manta asfáltica é ideal para lajes e coberturas grandes por sua durabilidade (15–20 anos). Impermeabilizante líquido (manta líquida) é mais prático para banheiros e áreas menores. Argamassa polimérica é versátil e econômica para fundações, reservatórios e áreas de contato com o solo.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Onde é obrigatório impermeabilizar?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">A NBR 9575 determina impermeabilização obrigatória em: lajes de cobertura, terraços, varandas expostas, banheiros, cozinhas, lavanderias, reservatórios de água, piscinas, jardineiras, subsolos e fundações. A falta de impermeabilização pode causar infiltrações, mofo e comprometer a estrutura da edificação.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto tempo dura a impermeabilização?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">A manta asfáltica bem aplicada dura de 15 a 20 anos. O impermeabilizante líquido dura de 5 a 10 anos, dependendo da exposição. A argamassa polimérica tem durabilidade de 10 a 15 anos. A vida útil depende da qualidade da aplicação, preparo da superfície e exposição ao sol e à chuva.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Posso impermeabilizar sobre piso existente?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Sim, em alguns casos. A manta líquida e a argamassa polimérica podem ser aplicadas sobre pisos existentes, desde que a superfície esteja limpa, sem trincas profundas e com caimento adequado para o ralo. Já a manta asfáltica geralmente exige remoção do piso. Consulte um profissional para avaliar.</div>
+</div>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col">
+<h4>Calculadoras</h4>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-tijolo.html">Tijolo</a>
+<a href="/calculadora-de-areia.html">Areia</a>
+<a href="/calculadora-de-telha.html">Telha</a>
+<a href="/calculadora-de-drywall.html">Drywall</a>
+<a href="/calculadora-de-concreto.html">Concreto</a>
+<a href="/calculadora-de-piscina.html">Piscina</a>
+<a href="/calculadora-de-impermeabilizacao.html">Impermeabilização</a>
+<a href="/calculadora-de-fio-eletrico.html">Fio Elétrico</a>
+<a href="/calculadora-de-cano.html">Cano</a>
+<a href="/calculadora-de-madeira.html">Madeira</a>
+</div>
+<div class="footer-col">
+<h4>Guias</h4>
+<a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a>
+<a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a>
+</div>
+<div class="footer-col">
+<h4>Outros sites</h4>
+<a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a>
+</div>
+<div class="footer-col">
+<h4>QuantoPreciso.com</h4>
+<p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p>
+</div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+
+<script>
+var tipos={
+  manta:{
+    consumoM2:1.10,
+    unidade:'rolos (10 m²)',
+    unitSize:10,
+    primerL:0.4,
+    custoDefault:180,
+    custoLabel:'Custo por rolo (R$)',
+    demaoFixa:true,
+    demaos:1
+  },
+  liquida:{
+    consumoKg:1.0,
+    unidade:'latas (18 kg)',
+    unitSize:18,
+    primerL:0.3,
+    custoDefault:250,
+    custoLabel:'Custo por lata 18 kg (R$)',
+    demaoFixa:false
+  },
+  argamassa:{
+    consumoKg:1.5,
+    unidade:'sacos (18 kg)',
+    unitSize:18,
+    primerL:0.3,
+    custoDefault:90,
+    custoLabel:'Custo por saco 18 kg (R$)',
+    demaoFixa:false
+  }
+};
+function atualizarInfo(){
+  var t=document.getElementById('tipo').value;
+  var info=tipos[t];
+  document.getElementById('lblCusto').textContent=info.custoLabel;
+  document.getElementById('custoUnit').value=info.custoDefault;
+  document.getElementById('demaos').disabled=info.demaoFixa||false;
+  if(info.demaoFixa)document.getElementById('demaos').value='1';
+}
+function calcImpermeabilizacao(){
+  var area=parseFloat(document.getElementById('area').value);
+  var t=document.getElementById('tipo').value;
+  var demaos=parseInt(document.getElementById('demaos').value);
+  var custoUnit=parseFloat(document.getElementById('custoUnit').value)||0;
+  if(!area||area<=0){alert('Preencha a área corretamente.');return;}
+  var info=tipos[t];
+  var areaComPerda=area*1.10;
+  var qtdUnidades,consumoTotal,primerTotal,custoTotal,lblMat,lblConsumo;
+
+  if(t==='manta'){
+    var mantaM2=areaComPerda*info.consumoM2;
+    qtdUnidades=Math.ceil(mantaM2/info.unitSize);
+    consumoTotal=mantaM2.toFixed(1)+' m²';
+    lblMat=qtdUnidades+' rolos';
+    primerTotal=(areaComPerda*info.primerL).toFixed(1);
+    custoTotal=(qtdUnidades*custoUnit).toFixed(2);
+    document.getElementById('rDemaos').textContent='1';
+    document.getElementById('lblMaterial').textContent='Rolos de manta (10 m²)';
+  }else{
+    var consumoKg=info.consumoKg;
+    var totalKg=areaComPerda*consumoKg*demaos;
+    qtdUnidades=Math.ceil(totalKg/info.unitSize);
+    consumoTotal=totalKg.toFixed(1)+' kg';
+    lblMat=qtdUnidades+(t==='liquida'?' latas':' sacos');
+    primerTotal=(areaComPerda*info.primerL).toFixed(1);
+    custoTotal=(qtdUnidades*custoUnit).toFixed(2);
+    document.getElementById('rDemaos').textContent=demaos;
+    document.getElementById('lblMaterial').textContent=t==='liquida'?'Latas (18 kg)':'Sacos (18 kg)';
+  }
+
+  document.getElementById('rArea').textContent=area.toFixed(1);
+  document.getElementById('rMaterial').textContent=qtdUnidades;
+  document.getElementById('rPrimer').textContent=primerTotal;
+  document.getElementById('rConsumo').textContent=consumoTotal;
+  document.getElementById('rCusto').textContent='R$ '+parseFloat(custoTotal).toLocaleString('pt-BR',{minimumFractionDigits:2});
+  document.getElementById('results').style.display='block';
+
+  var tipoNome=t==='manta'?'Manta asfáltica':t==='liquida'?'Manta líquida':'Argamassa polimérica';
+  var txt='Impermeabilização ('+tipoNome+'): '+area.toFixed(1)+' m² | '+lblMat+' | '+consumoTotal+' | '+primerTotal+' L primer | R$ '+custoTotal+' — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9XR4FLXXT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N9XR4FLXXT');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:site_name" content="QuantoPreciso.com">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Calculadora de Drywall — Quanto de Gesso Preciso?">
+<meta property="og:description" content="Calcule quantas placas de drywall, perfis metálicos, parafusos e massa de rejunte você precisa. Com fator de perda de 10% incluso.">
+<title>Calculadora de Drywall — Quanto de Gesso Preciso?</title>
+<meta name="description" content="Calcule quantas placas de drywall, perfis metálicos, parafusos e massa de rejunte você precisa. Com fator de perda de 10% incluso.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-drywall.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .card h1{font-size:1.35rem}
+  .header-inner{height:auto;padding:.75rem 0}
+  .card{padding:1.25rem}
+  nav{display:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Calculadora de Drywall",
+      "url":"https://quantopreciso.com/calculadora-de-drywall.html",
+      "description":"Calcule quantas placas de drywall, perfis metálicos, parafusos e massa para juntas você precisa para montar paredes de gesso acartonado.",
+      "applicationCategory":"UtilityApplication",
+      "operatingSystem":"All",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Drywall é mais barato que alvenaria?","acceptedAnswer":{"@type":"Answer","text":"Sim, em geral o drywall é 20–40% mais barato que a alvenaria convencional, considerando mão de obra e material. A instalação é mais rápida (até 3x), gera menos entulho e não precisa de cura. Porém, para áreas externas ou que exijam alta resistência a impacto, a alvenaria ainda é mais indicada."}},
+        {"@type":"Question","name":"Qual o preço do drywall por m²?","acceptedAnswer":{"@type":"Answer","text":"O custo médio do drywall instalado fica entre R$60 e R$120 por m², dependendo da região, tipo de placa (standard, resistente à umidade ou fogo) e complexidade da obra. Apenas o material (placa + perfis + acabamento) custa entre R$35 e R$65 por m²."}},
+        {"@type":"Question","name":"Qual a espessura de uma parede de drywall?","acceptedAnswer":{"@type":"Answer","text":"Uma parede simples de drywall (1 placa de cada lado + perfil de 70mm) tem cerca de 95mm de espessura total. Para melhor isolamento acústico, pode-se usar perfil de 90mm com lã mineral, resultando em ~115mm. Paredes duplas (2 placas por lado) chegam a ~120–140mm."}},
+        {"@type":"Question","name":"Pode usar drywall em banheiro e cozinha?","acceptedAnswer":{"@type":"Answer","text":"Sim, desde que use a placa verde (RU — Resistente à Umidade). Ela possui aditivos que reduzem a absorção de água. Para áreas de box e próximas ao chuveiro, aplique impermeabilizante sobre a placa antes do revestimento cerâmico."}}
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
+        {"@type":"ListItem","position":2,"name":"Calculadora de Drywall","item":"https://quantopreciso.com/calculadora-de-drywall.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo">Quanto<span>Preciso</span>.com</a>
+<nav>
+<a href="/">Início</a>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb">
+<a href="/">Início</a> <span>›</span> <span>Calculadora de Drywall</span>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<div class="card">
+<h1><span class="icon">🧱</span> Calculadora de Drywall</h1>
+<p class="subtitle">Calcule quantas placas de gesso acartonado, perfis metálicos, parafusos e massa para juntas você precisa — com 10% de perda já incluso.</p>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="compParede">Comprimento da parede (m)</label>
+<input type="number" id="compParede" min="0.1" step="0.01" placeholder="Ex: 4">
+</div>
+<div class="form-group">
+<label for="altParede">Altura da parede (m)</label>
+<input type="number" id="altParede" min="0.1" step="0.01" placeholder="Ex: 2.8" value="2.80">
+</div>
+<div class="form-group">
+<label for="numParedes">Número de paredes</label>
+<input type="number" id="numParedes" min="1" step="1" value="1" placeholder="Ex: 2">
+</div>
+<div class="form-group">
+<label for="tipoPlaca">Tipo de placa</label>
+<select id="tipoPlaca">
+<option value="st">Standard (ST) — áreas secas</option>
+<option value="ru">Resistente à Umidade (RU) — banheiros</option>
+<option value="rf">Resistente ao Fogo (RF) — saídas, cozinhas</option>
+</select>
+</div>
+<div class="form-group full">
+<button class="btn" onclick="calcDrywall()">Calcular Materiais</button>
+</div>
+</div>
+
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo (com 10% de perda)</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rArea">—</div><div class="lbl">Área total (m²)</div></div>
+<div class="result-item"><div class="val" id="rPlacas">—</div><div class="lbl">Placas 1,20×1,80 m</div></div>
+<div class="result-item"><div class="val" id="rGuias">—</div><div class="lbl">Perfis guia (3 m)</div></div>
+<div class="result-item"><div class="val" id="rMontantes">—</div><div class="lbl">Perfis montante (3 m)</div></div>
+<div class="result-item"><div class="val" id="rParafusos">—</div><div class="lbl">Parafusos</div></div>
+<div class="result-item"><div class="val" id="rMassa">—</div><div class="lbl">Massa p/ juntas (kg)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<div class="card content-section">
+<h2>Como funciona o cálculo de drywall</h2>
+<p>O drywall (gesso acartonado) é um sistema construtivo formado por placas de gesso parafusadas em uma estrutura de perfis metálicos. É amplamente usado no Brasil para paredes internas, forros e divisórias, por ser mais rápido, limpo e leve que a alvenaria convencional.</p>
+<p>Nossa calculadora considera a placa padrão de <strong>1,20 × 1,80 m</strong> (2,16 m²), perfis guia (instalados no piso e no teto) e perfis montante (instalados verticalmente a cada 60 cm). Todos os valores já incluem <strong>10% de perda</strong> por cortes e ajustes.</p>
+
+<h3>Passo a passo da instalação</h3>
+<ol>
+<li><strong>Marcação:</strong> Marque no piso e no teto a posição da parede usando linha de giz.</li>
+<li><strong>Fixação das guias:</strong> Parafuse os perfis guia no piso e no teto com bucha e parafuso a cada 60 cm.</li>
+<li><strong>Instalação dos montantes:</strong> Encaixe os perfis montante nas guias a cada 60 cm (ou 40 cm para maior rigidez).</li>
+<li><strong>Fixação das placas:</strong> Parafuse as placas nos montantes com parafusos para drywall a cada 25 cm.</li>
+<li><strong>Tratamento de juntas:</strong> Aplique fita de papel e massa para juntas em todas as emendas entre placas.</li>
+<li><strong>Acabamento:</strong> Lixe as juntas e aplique massa corrida ou textura para finalizar.</li>
+</ol>
+
+<h3>Comparativo: Drywall × Alvenaria</h3>
+<table class="info-table">
+<thead><tr><th>Característica</th><th>Drywall</th><th>Alvenaria</th></tr></thead>
+<tbody>
+<tr><td>Custo por m²</td><td>R$60–R$120</td><td>R$80–R$180</td></tr>
+<tr><td>Tempo de execução</td><td>Rápido (1–2 dias p/ cômodo)</td><td>Lento (5–10 dias p/ cômodo)</td></tr>
+<tr><td>Peso por m²</td><td>~25 kg</td><td>~150 kg</td></tr>
+<tr><td>Isolamento acústico</td><td>Bom (com lã mineral: 40–50 dB)</td><td>Moderado (35–45 dB)</td></tr>
+<tr><td>Resistência a impacto</td><td>Baixa a moderada</td><td>Alta</td></tr>
+<tr><td>Instalações embutidas</td><td>Fácil (passa dentro da estrutura)</td><td>Precisa quebrar/rasgar</td></tr>
+<tr><td>Geração de entulho</td><td>Mínima</td><td>Alta</td></tr>
+</tbody>
+</table>
+
+<h3>Tipos de placa de drywall</h3>
+<table class="info-table">
+<thead><tr><th>Tipo</th><th>Cor</th><th>Uso indicado</th></tr></thead>
+<tbody>
+<tr><td>Standard (ST)</td><td>Branca</td><td>Áreas secas — salas, quartos, corredores</td></tr>
+<tr><td>Resistente à Umidade (RU)</td><td>Verde</td><td>Banheiros, cozinhas, lavanderias</td></tr>
+<tr><td>Resistente ao Fogo (RF)</td><td>Rosa</td><td>Saídas de emergência, cozinhas industriais, shafts</td></tr>
+</tbody>
+</table>
+
+<h3>Dicas para economizar na obra de drywall</h3>
+<ul>
+<li><strong>Planeje os cortes:</strong> Distribua as placas de forma a minimizar recortes. Aproveite sobras de uma parede em outra.</li>
+<li><strong>Use espaçamento de 60 cm:</strong> O padrão de 60 cm entre montantes é suficiente para paredes residenciais. Só use 40 cm em áreas com revestimento pesado (cerâmica).</li>
+<li><strong>Compre em quantidade:</strong> Lojas de material de construção oferecem desconto para compras maiores de placas e perfis.</li>
+<li><strong>Invista em isolamento:</strong> Adicionar lã mineral (lã de vidro ou rocha) entre as placas melhora muito o conforto acústico e térmico, com custo adicional baixo.</li>
+<li><strong>Contrate um profissional certificado:</strong> A montagem correta evita trincas nas juntas e garante durabilidade.</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Drywall é mais barato que alvenaria?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Sim, em geral o drywall é 20–40% mais barato que a alvenaria convencional, considerando mão de obra e material. A instalação é mais rápida (até 3x), gera menos entulho e não precisa de tempo de cura. Porém, para áreas externas ou que exijam alta resistência a impacto, a alvenaria ainda é mais indicada.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual o preço do drywall por m² instalado?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O custo médio do drywall instalado fica entre R$60 e R$120 por m², dependendo da região, tipo de placa (standard, resistente à umidade ou fogo) e complexidade da obra. Apenas o material (placa + perfis + acabamento) custa entre R$35 e R$65 por m².</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual a espessura de uma parede de drywall?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Uma parede simples de drywall (1 placa de cada lado + perfil de 70 mm) tem cerca de 95 mm de espessura total. Para melhor isolamento acústico, pode-se usar perfil de 90 mm com lã mineral, resultando em ~115 mm. Paredes duplas (2 placas por lado) chegam a 120–140 mm.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Pode usar drywall em banheiro e cozinha?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Sim, desde que use a placa verde (RU — Resistente à Umidade). Ela possui aditivos que reduzem a absorção de água. Para áreas de box e próximas ao chuveiro, aplique impermeabilizante sobre a placa antes de instalar o revestimento cerâmico.</div>
+</div>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col">
+<h4>Calculadoras</h4>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-tijolo.html">Tijolo</a>
+<a href="/calculadora-de-areia.html">Areia</a>
+<a href="/calculadora-de-telha.html">Telha</a>
+<a href="/calculadora-de-drywall.html">Drywall</a>
+<a href="/calculadora-de-concreto.html">Concreto</a>
+<a href="/calculadora-de-piscina.html">Piscina</a>
+<a href="/calculadora-de-impermeabilizacao.html">Impermeabilização</a>
+<a href="/calculadora-de-fio-eletrico.html">Fio Elétrico</a>
+<a href="/calculadora-de-cano.html">Cano</a>
+<a href="/calculadora-de-madeira.html">Madeira</a>
+</div>
+<div class="footer-col">
+<h4>Guias</h4>
+<a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a>
+<a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a>
+</div>
+<div class="footer-col">
+<h4>Outros sites</h4>
+<a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a>
+</div>
+<div class="footer-col">
+<h4>QuantoPreciso.com</h4>
+<p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p>
+</div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+
+<script>
+function calcDrywall(){
+  var comp=parseFloat(document.getElementById('compParede').value);
+  var alt=parseFloat(document.getElementById('altParede').value);
+  var np=parseInt(document.getElementById('numParedes').value);
+  if(!comp||!alt||!np||comp<=0||alt<=0||np<=0){alert('Preencha todos os campos corretamente.');return;}
+
+  var areaBruta=comp*alt*np;
+  var areaComPerda=areaBruta*1.10;
+  var placaArea=1.20*1.80;
+  var placas=Math.ceil(areaComPerda/placaArea);
+
+  // Guias: top + bottom per wall, each 3m long
+  var guiasLinear=comp*2*np;
+  var guias=Math.ceil((guiasLinear*1.10)/3);
+
+  // Montantes: every 60cm + 1 per wall, cut to wall height from 3m perfis
+  var montantesPorParede=Math.ceil(comp/0.60)+1;
+  var totalMontantes=montantesPorParede*np;
+  var perfisParaMontante=Math.ceil((totalMontantes*(alt/3))*1.10);
+
+  // Parafusos: ~28 per plate for drywall + ~6 per montante for structure
+  var parafusos=Math.ceil(placas*28+totalMontantes*6);
+
+  // Massa para juntas: ~0.5 kg per m² of area
+  var massa=Math.ceil(areaComPerda*0.5);
+
+  document.getElementById('rArea').textContent=areaBruta.toFixed(1);
+  document.getElementById('rPlacas').textContent=placas;
+  document.getElementById('rGuias').textContent=guias;
+  document.getElementById('rMontantes').textContent=perfisParaMontante;
+  document.getElementById('rParafusos').textContent=parafusos;
+  document.getElementById('rMassa').textContent=massa;
+  document.getElementById('results').style.display='block';
+
+  var txt='Drywall: '+areaBruta.toFixed(1)+' m² | '+placas+' placas (1,20×1,80) | '+guias+' guias | '+perfisParaMontante+' montantes | '+parafusos+' parafusos | '+massa+' kg massa — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

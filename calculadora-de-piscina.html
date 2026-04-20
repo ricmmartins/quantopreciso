@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9XR4FLXXT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N9XR4FLXXT');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:site_name" content="QuantoPreciso.com">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Calculadora de Piscina — Quantos Litros Tem Minha Piscina?">
+<meta property="og:description" content="Calcule o volume da sua piscina em litros, tempo para encher, custo de água e quantidade de cloro para manutenção mensal. Retangular, circular ou oval.">
+<title>Calculadora de Piscina — Quantos Litros Tem Minha Piscina?</title>
+<meta name="description" content="Calcule o volume da sua piscina em litros, tempo para encher, custo de água e quantidade de cloro para manutenção mensal. Retangular, circular ou oval.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-piscina.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+.dim-group{display:none}
+.dim-group.active{display:flex}
+@media(max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .card h1{font-size:1.35rem}
+  .header-inner{height:auto;padding:.75rem 0}
+  .card{padding:1.25rem}
+  nav{display:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Calculadora de Piscina",
+      "url":"https://quantopreciso.com/calculadora-de-piscina.html",
+      "description":"Calcule o volume da sua piscina em litros, tempo para encher, custo de água e produtos de manutenção mensal.",
+      "applicationCategory":"UtilityApplication",
+      "operatingSystem":"All",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Quanto custa manter uma piscina por mês?","acceptedAnswer":{"@type":"Answer","text":"O custo mensal médio de manutenção de uma piscina residencial (20.000–40.000 litros) fica entre R$150 e R$400, incluindo produtos químicos (cloro, algicida, clarificante), energia elétrica da bomba filtro e, opcionalmente, serviço de um piscineiro. A energia da bomba costuma ser o maior gasto."}},
+        {"@type":"Question","name":"Quantas horas a bomba da piscina deve ficar ligada?","acceptedAnswer":{"@type":"Answer","text":"A bomba deve filtrar todo o volume da piscina pelo menos 1 vez ao dia. Para uma piscina de 30.000 litros com bomba de 1/2 cv (vazão ~7.000 L/h), são necessárias cerca de 4–5 horas diárias. No verão ou com uso intenso, aumente para 6–8 horas."}},
+        {"@type":"Question","name":"Como calcular a quantidade de cloro para piscina?","acceptedAnswer":{"@type":"Answer","text":"Para manter o cloro entre 1 e 3 ppm (ideal), use cerca de 3 gramas de cloro granulado (hipoclorito de cálcio 65%) por 1.000 litros de água, por aplicação. A cloração de choque (para recuperar água verde) requer 10–15 g por 1.000 litros."}},
+        {"@type":"Question","name":"Quanto tempo demora para encher uma piscina?","acceptedAnswer":{"@type":"Answer","text":"Com uma mangueira de jardim padrão (vazão de ~1.000 litros/hora), uma piscina de 20.000 litros leva cerca de 20 horas para encher. Com duas mangueiras simultâneas, o tempo cai pela metade. Algumas concessionárias oferecem caminhão pipa como alternativa."}}
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
+        {"@type":"ListItem","position":2,"name":"Calculadora de Piscina","item":"https://quantopreciso.com/calculadora-de-piscina.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo">Quanto<span>Preciso</span>.com</a>
+<nav>
+<a href="/">Início</a>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb">
+<a href="/">Início</a> <span>›</span> <span>Calculadora de Piscina</span>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<div class="card">
+<h1><span class="icon">🏊</span> Calculadora de Piscina</h1>
+<p class="subtitle">Calcule o volume da sua piscina em litros, tempo estimado para encher, custo da água e quantidade de produtos químicos para manutenção mensal.</p>
+
+<div class="form-grid">
+<div class="form-group full">
+<label for="formato">Formato da piscina</label>
+<select id="formato" onchange="mudarFormato()">
+<option value="retangular">Retangular</option>
+<option value="circular">Circular (redonda)</option>
+<option value="oval">Oval</option>
+</select>
+</div>
+
+<div class="form-group dim-group active" id="grpComp">
+<label for="comp">Comprimento (m)</label>
+<input type="number" id="comp" min="0.1" step="0.01" placeholder="Ex: 8">
+</div>
+<div class="form-group dim-group active" id="grpLarg">
+<label for="larg">Largura (m)</label>
+<input type="number" id="larg" min="0.1" step="0.01" placeholder="Ex: 4">
+</div>
+<div class="form-group dim-group" id="grpDiam">
+<label for="diam">Diâmetro (m)</label>
+<input type="number" id="diam" min="0.1" step="0.01" placeholder="Ex: 5">
+</div>
+
+<div class="form-group">
+<label for="prof">Profundidade média (m)</label>
+<input type="number" id="prof" min="0.1" step="0.01" placeholder="Ex: 1.4">
+</div>
+<div class="form-group">
+<label for="custoAgua">Custo da água (R$/m³)</label>
+<input type="number" id="custoAgua" min="0" step="0.01" value="12" placeholder="Ex: 12">
+</div>
+<div class="form-group full">
+<button class="btn" onclick="calcPiscina()">Calcular Volume</button>
+</div>
+</div>
+
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rVol">—</div><div class="lbl">Volume (m³)</div></div>
+<div class="result-item"><div class="val" id="rLitros">—</div><div class="lbl">Litros</div></div>
+<div class="result-item"><div class="val" id="rTempo">—</div><div class="lbl">Tempo p/ encher (horas)</div></div>
+<div class="result-item"><div class="val" id="rCusto">—</div><div class="lbl">Custo da água (R$)</div></div>
+<div class="result-item"><div class="val" id="rCloro">—</div><div class="lbl">Cloro mensal (kg)</div></div>
+<div class="result-item"><div class="val" id="rAlgicida">—</div><div class="lbl">Algicida mensal (mL)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<div class="card content-section">
+<h2>Como calcular o volume da piscina</h2>
+<p>O volume da piscina é calculado com base no formato e nas dimensões internas. Se sua piscina tem profundidades diferentes (rasa de um lado e funda do outro), use a <strong>profundidade média</strong>: some a parte mais rasa com a mais funda e divida por 2.</p>
+
+<h3>Fórmulas por formato</h3>
+<table class="info-table">
+<thead><tr><th>Formato</th><th>Fórmula do volume</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Retangular</td><td>Comprimento × Largura × Profundidade</td><td>8 × 4 × 1,4 = 44,8 m³ (44.800 L)</td></tr>
+<tr><td>Circular</td><td>π × (Diâmetro ÷ 2)² × Profundidade</td><td>π × 2,5² × 1,3 = 25,5 m³ (25.500 L)</td></tr>
+<tr><td>Oval</td><td>π × (Comp ÷ 2) × (Larg ÷ 2) × Profundidade</td><td>π × 3,5 × 2 × 1,4 = 30,8 m³ (30.800 L)</td></tr>
+</tbody>
+</table>
+
+<h3>Volumes de piscinas comuns</h3>
+<table class="info-table">
+<thead><tr><th>Tamanho</th><th>Dimensões típicas</th><th>Volume aprox.</th></tr></thead>
+<tbody>
+<tr><td>Pequena</td><td>4 × 2 × 1,2 m</td><td>9.600 litros</td></tr>
+<tr><td>Média</td><td>6 × 3 × 1,3 m</td><td>23.400 litros</td></tr>
+<tr><td>Grande</td><td>8 × 4 × 1,4 m</td><td>44.800 litros</td></tr>
+<tr><td>Semiolímpica</td><td>12,5 × 6 × 1,5 m</td><td>112.500 litros</td></tr>
+</tbody>
+</table>
+
+<h3>Manutenção mensal da piscina</h3>
+<p>Manter a água limpa e cristalina exige cuidados regulares. Veja os produtos essenciais e a frequência recomendada:</p>
+<table class="info-table">
+<thead><tr><th>Produto</th><th>Dosagem por 10.000 L</th><th>Frequência</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>Cloro granulado</td><td>30 g</td><td>2–3× por semana</td><td>Desinfecção, elimina bactérias</td></tr>
+<tr><td>Algicida</td><td>100 mL</td><td>1× por semana</td><td>Previne algas verdes</td></tr>
+<tr><td>Clarificante</td><td>50 mL</td><td>1× por semana</td><td>Água cristalina, agrupa partículas</td></tr>
+<tr><td>Regulador de pH</td><td>Conforme teste</td><td>Semanalmente</td><td>Mantém pH entre 7,2 e 7,6</td></tr>
+</tbody>
+</table>
+
+<h3>Dicas para economizar na piscina</h3>
+<ul>
+<li><strong>Use capa térmica:</strong> Reduz evaporação em até 90%, economizando água e produtos químicos.</li>
+<li><strong>Filtre nos horários de energia mais barata:</strong> Se sua tarifa é diferenciada, ligue a bomba fora do horário de pico (das 21h às 6h).</li>
+<li><strong>Mantenha o pH correto:</strong> Com o pH adequado (7,2–7,6), o cloro age com mais eficiência e você usa menos produto.</li>
+<li><strong>Limpe o cesto do skimmer e pré-filtro semanalmente:</strong> Filtros limpos reduzem o trabalho da bomba e economizam energia.</li>
+<li><strong>Não esvazie a piscina desnecessariamente:</strong> A troca completa de água raramente é necessária. Trate a água quimicamente.</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto custa manter uma piscina por mês?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O custo mensal médio de manutenção de uma piscina residencial (20.000–40.000 litros) fica entre R$150 e R$400, incluindo produtos químicos (cloro, algicida, clarificante), energia elétrica da bomba filtro e, opcionalmente, serviço de um piscineiro. A energia elétrica da bomba costuma ser o maior gasto individual.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantas horas a bomba da piscina deve ficar ligada?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">A bomba deve filtrar todo o volume da piscina pelo menos 1 vez ao dia. Para uma piscina de 30.000 litros com bomba de 1/2 cv (vazão aproximada de 7.000 L/h), são necessárias cerca de 4–5 horas diárias. No verão ou com uso intenso, aumente para 6–8 horas.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Como calcular a quantidade de cloro para piscina?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para manter o cloro entre 1 e 3 ppm (nível ideal), use cerca de 3 gramas de cloro granulado (hipoclorito de cálcio 65%) por 1.000 litros de água, por aplicação. A cloração de choque — necessária quando a água está verde ou turva — requer 10 a 15 gramas por 1.000 litros.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto tempo demora para encher uma piscina?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Com uma mangueira de jardim padrão (vazão de ~1.000 litros/hora), uma piscina de 20.000 litros leva cerca de 20 horas para encher. Com duas mangueiras simultâneas, o tempo cai pela metade. Algumas concessionárias de água também oferecem o serviço de caminhão pipa como alternativa mais rápida.</div>
+</div>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col">
+<h4>Calculadoras</h4>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-tijolo.html">Tijolo</a>
+<a href="/calculadora-de-areia.html">Areia</a>
+<a href="/calculadora-de-telha.html">Telha</a>
+<a href="/calculadora-de-drywall.html">Drywall</a>
+<a href="/calculadora-de-concreto.html">Concreto</a>
+<a href="/calculadora-de-piscina.html">Piscina</a>
+<a href="/calculadora-de-impermeabilizacao.html">Impermeabilização</a>
+<a href="/calculadora-de-fio-eletrico.html">Fio Elétrico</a>
+<a href="/calculadora-de-cano.html">Cano</a>
+<a href="/calculadora-de-madeira.html">Madeira</a>
+</div>
+<div class="footer-col">
+<h4>Guias</h4>
+<a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a>
+<a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a>
+</div>
+<div class="footer-col">
+<h4>Outros sites</h4>
+<a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a>
+</div>
+<div class="footer-col">
+<h4>QuantoPreciso.com</h4>
+<p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p>
+</div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+
+<script>
+function mudarFormato(){
+  var f=document.getElementById('formato').value;
+  document.getElementById('grpComp').className='form-group dim-group'+(f!=='circular'?' active':'');
+  document.getElementById('grpLarg').className='form-group dim-group'+(f==='retangular'||f==='oval'?' active':'');
+  document.getElementById('grpDiam').className='form-group dim-group'+(f==='circular'?' active':'');
+}
+function calcPiscina(){
+  var f=document.getElementById('formato').value;
+  var prof=parseFloat(document.getElementById('prof').value);
+  var custoM3=parseFloat(document.getElementById('custoAgua').value)||12;
+  if(!prof||prof<=0){alert('Preencha a profundidade corretamente.');return;}
+  var vol=0;
+  if(f==='retangular'){
+    var c=parseFloat(document.getElementById('comp').value);
+    var l=parseFloat(document.getElementById('larg').value);
+    if(!c||!l||c<=0||l<=0){alert('Preencha comprimento e largura.');return;}
+    vol=c*l*prof;
+  }else if(f==='circular'){
+    var d=parseFloat(document.getElementById('diam').value);
+    if(!d||d<=0){alert('Preencha o diâmetro.');return;}
+    vol=Math.PI*Math.pow(d/2,2)*prof;
+  }else{
+    var c=parseFloat(document.getElementById('comp').value);
+    var l=parseFloat(document.getElementById('larg').value);
+    if(!c||!l||c<=0||l<=0){alert('Preencha comprimento e largura.');return;}
+    vol=Math.PI*(c/2)*(l/2)*prof;
+  }
+  var litros=vol*1000;
+  var horas=Math.ceil(litros/1000);
+  var custo=(vol*custoM3).toFixed(2);
+
+  // Monthly maintenance: cloro 3g/1000L × 10 applications/month
+  var cloroMensal=((litros/1000)*3*10)/1000;
+  // Algicida: 10mL/1000L × 4 weeks
+  var algicidaMensal=Math.round((litros/1000)*10*4);
+
+  document.getElementById('rVol').textContent=vol.toFixed(1);
+  document.getElementById('rLitros').textContent=Math.round(litros).toLocaleString('pt-BR');
+  document.getElementById('rTempo').textContent=horas;
+  document.getElementById('rCusto').textContent='R$ '+parseFloat(custo).toLocaleString('pt-BR',{minimumFractionDigits:2});
+  document.getElementById('rCloro').textContent=cloroMensal.toFixed(1);
+  document.getElementById('rAlgicida').textContent=algicidaMensal.toLocaleString('pt-BR');
+  document.getElementById('results').style.display='block';
+
+  var txt='Piscina ('+f+'): '+vol.toFixed(1)+' m³ | '+Math.round(litros).toLocaleString('pt-BR')+' litros | ~'+horas+'h p/ encher | Água R$'+custo+' | Cloro mensal '+cloroMensal.toFixed(1)+' kg — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

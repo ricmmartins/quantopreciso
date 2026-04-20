@@ -70,7 +70,15 @@
 
         footer{background:var(--txt);color:rgba(255,255,255,.7);padding:32px 0;text-align:center;font-size:.85rem}
 
-        @media(max-width:768px){.hero h1{font-size:1.6rem}.calcs-grid{grid-template-columns:1fr}nav{display:none}}
+        .all-calcs{padding:48px 0;background:#fff;border-top:1px solid var(--brd)}
+        .all-calcs h2{text-align:center;font-size:1.6rem;margin-bottom:8px}
+        .all-calcs .sub{text-align:center;color:var(--txt-l);margin-bottom:32px;font-size:.95rem}
+        .all-calcs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:1100px;margin:0 auto;padding:0 20px}
+        .all-calc-link{display:flex;align-items:center;gap:12px;background:var(--bg);border:2px solid var(--brd);border-radius:12px;padding:16px;text-decoration:none;color:var(--txt);font-weight:600;font-size:.95rem;transition:all .2s}
+        .all-calc-link:hover{border-color:var(--pri);background:#eff6ff;transform:translateY(-2px);box-shadow:0 4px 12px rgba(37,99,235,.1);text-decoration:none}
+        .all-calc-link .emoji{font-size:1.5rem;flex-shrink:0}
+
+        @media(max-width:768px){.hero h1{font-size:1.6rem}.calcs-grid{grid-template-columns:1fr}.all-calcs-grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebApplication","name":"Quanto Preciso","url":"https://quantopreciso.com","description":"Calculadoras gratuitas para obra e reforma: tinta, piso, cimento, argamassa e mais.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"inLanguage":"pt-BR"}
@@ -103,8 +111,6 @@
     <h1>Quanto Preciso de...? 🤔</h1>
     <p>Calculadoras <strong>gratuitas</strong> para sua obra e reforma. Descubra a quantidade exata de tinta, piso, cimento, argamassa e muito mais.</p>
 </section>
-
-<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
 
 <div class="container">
     <div class="calcs-grid">
@@ -349,7 +355,30 @@
     </div>
 </div>
 
-<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+<section class="all-calcs">
+    <div class="container">
+        <h2>🧰 Todas as Calculadoras</h2>
+        <p class="sub">16 calculadoras gratuitas para sua obra e reforma</p>
+        <div class="all-calcs-grid">
+            <a href="/calculadora-de-tinta.html" class="all-calc-link"><span class="emoji">🎨</span> Tinta</a>
+            <a href="/calculadora-de-piso.html" class="all-calc-link"><span class="emoji">🏗️</span> Piso</a>
+            <a href="/calculadora-de-cimento.html" class="all-calc-link"><span class="emoji">🧱</span> Cimento</a>
+            <a href="/calculadora-de-argamassa.html" class="all-calc-link"><span class="emoji">🪣</span> Argamassa</a>
+            <a href="/calculadora-de-grama.html" class="all-calc-link"><span class="emoji">🌱</span> Grama</a>
+            <a href="/calculadora-de-azulejo.html" class="all-calc-link"><span class="emoji">🔲</span> Azulejo</a>
+            <a href="/calculadora-de-tijolo.html" class="all-calc-link"><span class="emoji">🧱</span> Tijolo</a>
+            <a href="/calculadora-de-areia.html" class="all-calc-link"><span class="emoji">⏳</span> Areia</a>
+            <a href="/calculadora-de-telha.html" class="all-calc-link"><span class="emoji">🏠</span> Telha</a>
+            <a href="/calculadora-de-concreto.html" class="all-calc-link"><span class="emoji">🏗️</span> Concreto</a>
+            <a href="/calculadora-de-drywall.html" class="all-calc-link"><span class="emoji">📐</span> Drywall</a>
+            <a href="/calculadora-de-piscina.html" class="all-calc-link"><span class="emoji">🏊</span> Piscina</a>
+            <a href="/calculadora-de-impermeabilizacao.html" class="all-calc-link"><span class="emoji">💧</span> Impermeabilização</a>
+            <a href="/calculadora-de-fio-eletrico.html" class="all-calc-link"><span class="emoji">🔌</span> Fio Elétrico</a>
+            <a href="/calculadora-de-cano.html" class="all-calc-link"><span class="emoji">🚰</span> Cano PVC</a>
+            <a href="/calculadora-de-madeira.html" class="all-calc-link"><span class="emoji">🪵</span> Madeira</a>
+        </div>
+    </div>
+</section>
 
 <section class="seo-section">
     <div class="container">
@@ -388,8 +417,6 @@
     </div>
 </section>
 
-<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
-
 <footer>
     <div class="container">
         <p style="margin-bottom:12px;color:rgba(255,255,255,.9)"><strong>Calculadoras:</strong>
@@ -401,7 +428,14 @@
             <a href="/calculadora-de-azulejo.html" style="color:rgba(255,255,255,.7)">Azulejo</a> ·
             <a href="/calculadora-de-tijolo.html" style="color:rgba(255,255,255,.7)">Tijolo</a> ·
             <a href="/calculadora-de-areia.html" style="color:rgba(255,255,255,.7)">Areia</a> ·
-            <a href="/calculadora-de-telha.html" style="color:rgba(255,255,255,.7)">Telha</a>
+            <a href="/calculadora-de-telha.html" style="color:rgba(255,255,255,.7)">Telha</a> ·
+            <a href="/calculadora-de-concreto.html" style="color:rgba(255,255,255,.7)">Concreto</a> ·
+            <a href="/calculadora-de-drywall.html" style="color:rgba(255,255,255,.7)">Drywall</a> ·
+            <a href="/calculadora-de-piscina.html" style="color:rgba(255,255,255,.7)">Piscina</a> ·
+            <a href="/calculadora-de-impermeabilizacao.html" style="color:rgba(255,255,255,.7)">Impermeabilização</a> ·
+            <a href="/calculadora-de-fio-eletrico.html" style="color:rgba(255,255,255,.7)">Fio Elétrico</a> ·
+            <a href="/calculadora-de-cano.html" style="color:rgba(255,255,255,.7)">Cano</a> ·
+            <a href="/calculadora-de-madeira.html" style="color:rgba(255,255,255,.7)">Madeira</a>
         </p>
         <p style="margin-bottom:12px;color:rgba(255,255,255,.9)"><strong>Guias:</strong>
             <a href="/quanto-gasto-para-reformar-banheiro.html" style="color:rgba(255,255,255,.7)">Reformar Banheiro</a> ·

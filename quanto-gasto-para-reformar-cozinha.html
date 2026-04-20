@@ -247,29 +247,15 @@ footer{background:#1e293b;color:#cbd5e1;padding:40px 0 24px;margin-top:48px}
 
 </div>
 
-<footer><div class="container">
-<div class="footer-grid">
-<div class="footer-col"><h4>Calculadoras</h4>
-<a href="/calculadora-de-tinta.html">Calculadora de Tinta</a>
-<a href="/calculadora-de-piso.html">Calculadora de Piso</a>
-<a href="/calculadora-de-cimento.html">Calculadora de Cimento</a>
-<a href="/calculadora-de-argamassa.html">Calculadora de Argamassa</a>
-<a href="/calculadora-de-grama.html">Calculadora de Grama</a>
-</div>
-<div class="footer-col"><h4>Mais Calculadoras</h4>
-<a href="/calculadora-de-azulejo.html">Calculadora de Azulejo</a>
-<a href="/calculadora-de-tijolo.html">Calculadora de Tijolo</a>
-<a href="/calculadora-de-areia.html">Calculadora de Areia</a>
-<a href="/calculadora-de-telha.html">Calculadora de Telha</a>
-</div>
-<div class="footer-col"><h4>Guias de Reforma</h4>
-<a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a>
-<a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a>
-<a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com 🇺🇸</a>
-</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>Calculadoras</h4><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-tijolo.html">Tijolo</a><a href="/calculadora-de-areia.html">Areia</a><a href="/calculadora-de-telha.html">Telha</a><a href="/calculadora-de-drywall.html">Drywall</a><a href="/calculadora-de-concreto.html">Concreto</a><a href="/calculadora-de-piscina.html">Piscina</a><a href="/calculadora-de-impermeabilizacao.html">Impermeabilização</a><a href="/calculadora-de-fio-eletrico.html">Fio Elétrico</a><a href="/calculadora-de-cano.html">Cano</a><a href="/calculadora-de-madeira.html">Madeira</a></div>
+<div class="footer-col"><h4>Guias</h4><a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a><a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a></div>
+<div class="footer-col"><h4>Outros sites</h4><a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a></div>
+<div class="footer-col"><h4>QuantoPreciso.com</h4><p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p></div>
 </div>
 <div class="footer-bottom">© 2026 QuantoPreciso.com — Todos os direitos reservados.</div>
-</div></footer>
+</footer>
 
 <script>
 function calcPiso(){const c=parseFloat(document.getElementById('pc_comp').value),l=parseFloat(document.getElementById('pc_larg').value),p=parseFloat(document.getElementById('pc_peca').value);if(!c||!l||!p)return;const area=c*l,pecaPorM2=10000/(p*p),pecas=Math.ceil(area*pecaPorM2*1.1),r=document.getElementById('pc_res');r.style.display='block';r.innerHTML='Área: <strong>'+area.toFixed(2)+' m²</strong><br>Peças necessárias ('+p+'x'+p+'cm, +10%): <strong>'+pecas+' peças</strong>';}

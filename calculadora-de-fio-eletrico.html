@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9XR4FLXXT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N9XR4FLXXT');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Fio Elétrico — Qual Bitola de Fio Usar?</title>
+<meta name="description" content="Calcule a bitola do fio elétrico ideal para o seu circuito. Descubra a seção do cabo, disjuntor adequado e queda de tensão — conforme a NBR 5410.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-fio-eletrico.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.result-note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:1rem;margin-top:1rem;font-size:.9rem;color:#92400e}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.card h1{font-size:1.35rem}.header-inner{height:auto;padding:.75rem 0}nav{display:none}.card{padding:1.25rem}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calculadora de Fio Elétrico","url":"https://quantopreciso.com/calculadora-de-fio-eletrico.html","description":"Calcule a bitola do fio elétrico ideal para o seu circuito. Seção do cabo, disjuntor adequado e queda de tensão conforme NBR 5410.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qual a diferença entre fio e cabo elétrico?","acceptedAnswer":{"@type":"Answer","text":"O fio possui um único condutor sólido (rígido), enquanto o cabo é formado por vários fios finos trançados (flexível). Para instalações residenciais, o cabo flexível é mais usado por ser mais fácil de passar em eletrodutos. A NBR 5410 permite ambos."}},{"@type":"Question","name":"Como escolher a bitola do fio elétrico?","acceptedAnswer":{"@type":"Answer","text":"A bitola depende da corrente do circuito e da distância. Calcule a corrente (I = P / V), consulte a tabela de capacidade de condução (NBR 5410) e verifique a queda de tensão. A seção mínima é 1,5 mm² para iluminação e 2,5 mm² para tomadas."}},{"@type":"Question","name":"Qual disjuntor usar para chuveiro elétrico?","acceptedAnswer":{"@type":"Answer","text":"Depende da potência: chuveiros de 3500W em 127V precisam de fio 6mm² e disjuntor 32A. Em 220V, fio 4mm² e disjuntor 20A. Chuveiros de 7500W em 220V exigem fio 6mm² e disjuntor 40A. Sempre use circuito exclusivo."}},{"@type":"Question","name":"O que é queda de tensão e por que importa?","acceptedAnswer":{"@type":"Answer","text":"Queda de tensão é a perda de voltagem ao longo do fio devido à resistência. A NBR 5410 limita a 4% para circuitos terminais. Queda excessiva causa mau funcionamento de equipamentos, superaquecimento e desperdício de energia."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},{"@type":"ListItem","position":2,"name":"Calculadora de Fio Elétrico","item":"https://quantopreciso.com/calculadora-de-fio-eletrico.html"}]}]}
+</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">Quanto<span>Preciso</span>.com</a><nav><a href="/">Início</a><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-cimento.html">Cimento</a></nav></div></header>
+<div class="container">
+<div class="breadcrumb"><a href="/">Início</a> <span>›</span> <span>Calculadora de Fio Elétrico</span></div>
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+<div class="card">
+<h1><span class="icon">⚡</span> Calculadora de Fio Elétrico</h1>
+<p class="subtitle">Descubra a bitola correta do fio, o disjuntor adequado e a queda de tensão do circuito — baseado na NBR 5410.</p>
+<div class="form-grid">
+<div class="form-group"><label for="potencia">Potência do circuito (W)</label><input type="number" id="potencia" min="1" step="1" placeholder="Ex: 5500"></div>
+<div class="form-group"><label for="tensao">Tensão (V)</label><select id="tensao"><option value="127">127 V</option><option value="220">220 V</option></select></div>
+<div class="form-group"><label for="distancia">Distância até o quadro (m)</label><input type="number" id="distancia" min="0.1" step="0.1" placeholder="Ex: 15"></div>
+<div class="form-group"><label for="tipo">Tipo de circuito</label><select id="tipo"><option value="iluminacao">Iluminação</option><option value="tomada">Tomada comum</option><option value="chuveiro">Chuveiro elétrico</option><option value="ar">Ar-condicionado</option></select></div>
+<div class="form-group full"><button class="btn" onclick="calcFio()">Calcular Bitola do Fio</button></div>
+</div>
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rCorrente">—</div><div class="lbl">Corrente do circuito (A)</div></div>
+<div class="result-item"><div class="val" id="rBitola">—</div><div class="lbl">Bitola recomendada (mm²)</div></div>
+<div class="result-item"><div class="val" id="rDisjuntor">—</div><div class="lbl">Disjuntor adequado (A)</div></div>
+<div class="result-item"><div class="val" id="rQueda">—</div><div class="lbl">Queda de tensão (%)</div></div>
+</div>
+<div class="result-note" id="resultNote" style="display:none"></div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+<div class="card content-section">
+<h2>Como dimensionar fio elétrico corretamente</h2>
+<p>Dimensionar a fiação elétrica é uma etapa crítica de qualquer instalação. Um fio subdimensionado pode causar superaquecimento, disparos frequentes do disjuntor e até incêndios. Já um fio superdimensionado encarece a obra sem necessidade. O cálculo segue três critérios da NBR 5410: capacidade de corrente, queda de tensão e seção mínima por tipo de circuito.</p>
+<p>A fórmula básica é: <strong>I = P ÷ V</strong> (corrente = potência dividida pela tensão). Com a corrente calculada, consultamos a tabela de capacidade de condução para encontrar a seção do cabo. Em seguida, verificamos se a queda de tensão fica dentro do limite de 4%.</p>
+
+<h2>Tabela de bitolas — NBR 5410</h2>
+<p>A tabela abaixo mostra as seções padronizadas de cabos de cobre para instalações residenciais, com a capacidade de corrente em eletrodutos embutidos (método B1, 2 condutores carregados):</p>
+<table class="info-table">
+<thead><tr><th>Seção (mm²)</th><th>Corrente máx. (A)</th><th>Uso típico</th><th>Disjuntor (A)</th></tr></thead>
+<tbody>
+<tr><td>1,5</td><td>15,5</td><td>Iluminação</td><td>10</td></tr>
+<tr><td>2,5</td><td>21</td><td>Tomadas comuns</td><td>16 ou 20</td></tr>
+<tr><td>4</td><td>28</td><td>Tomadas específicas, ar-condicionado pequeno</td><td>25</td></tr>
+<tr><td>6</td><td>36</td><td>Chuveiro, forno elétrico</td><td>32</td></tr>
+<tr><td>10</td><td>50</td><td>Chuveiro potente, alimentação do quadro</td><td>40 ou 50</td></tr>
+<tr><td>16</td><td>68</td><td>Alimentação geral, quadros de distribuição</td><td>50 ou 63</td></tr>
+<tr><td>25</td><td>89</td><td>Entrada de energia, circuitos de alta potência</td><td>70 ou 80</td></tr>
+</tbody>
+</table>
+
+<h2>Seção mínima por tipo de circuito</h2>
+<ul>
+<li><strong>Iluminação:</strong> mínimo 1,5 mm² — circuitos separados por área da casa. Máximo de 1.200 W por circuito.</li>
+<li><strong>Tomadas comuns:</strong> mínimo 2,5 mm² — máximo de 1.200 W por circuito em 127V (2.200W em 220V).</li>
+<li><strong>Chuveiro elétrico:</strong> circuito exclusivo, mínimo 4 mm² (220V) ou 6 mm² (127V). Sempre com disjuntor dedicado.</li>
+<li><strong>Ar-condicionado:</strong> circuito exclusivo, mínimo 2,5 mm² — dimensionar conforme a potência do aparelho (BTUs).</li>
+</ul>
+
+<h3>Queda de tensão</h3>
+<p>A NBR 5410 limita a queda de tensão a <strong>4%</strong> em circuitos terminais (do quadro até o ponto de consumo). Para calcular:</p>
+<p><strong>ΔV (%) = (2 × ρ × L × I) ÷ (S × V) × 100</strong></p>
+<ul>
+<li>ρ = resistividade do cobre = 0,0178 Ω·mm²/m</li>
+<li>L = distância em metros (ida)</li>
+<li>I = corrente em ampères</li>
+<li>S = seção do condutor em mm²</li>
+<li>V = tensão em volts</li>
+</ul>
+<p>Se a queda ultrapassar 4%, aumente a bitola do fio até atender o limite.</p>
+
+<h3>Dicas de segurança</h3>
+<ul>
+<li><strong>Nunca use fio de bitola inferior</strong> ao recomendado — risco de incêndio.</li>
+<li><strong>Use disjuntor compatível:</strong> o disjuntor protege o fio, não o aparelho. Ele deve ser menor que a capacidade do cabo.</li>
+<li><strong>Circuitos exclusivos:</strong> chuveiro, ar-condicionado, forno e micro-ondas devem ter circuitos separados.</li>
+<li><strong>Aterramento (fio terra):</strong> obrigatório em todos os circuitos. Use cabo verde ou verde-amarelo na mesma seção do fase.</li>
+<li><strong>Contrate um eletricista:</strong> instalações elétricas devem ser feitas por profissional qualificado com ART/RRT.</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual a diferença entre fio e cabo elétrico?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O fio possui um único condutor sólido (rígido), sendo mais difícil de curvar. O cabo é formado por vários fios finos trançados (flexível), facilitando a passagem por eletrodutos curvos. Para instalações residenciais, o cabo flexível é mais utilizado pela praticidade. Ambos são permitidos pela NBR 5410 — o importante é respeitar a seção (bitola) correta para a corrente do circuito.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Como escolher a bitola do fio elétrico?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Primeiro, calcule a corrente do circuito dividindo a potência pela tensão (I = P / V). Depois, consulte a tabela de capacidade de condução da NBR 5410 para encontrar a seção que suporta essa corrente. Por fim, verifique a queda de tensão — se ultrapassar 4%, suba para a próxima bitola. Lembre-se: seção mínima de 1,5 mm² para iluminação e 2,5 mm² para tomadas.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual disjuntor usar para chuveiro elétrico?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Depende da potência e da tensão. Para chuveiro de 5.500W em 220V: corrente ≈ 25A, use fio de 4 mm² e disjuntor de 25A. Para 7.500W em 220V: corrente ≈ 34A, use fio de 6 mm² e disjuntor de 32A ou 40A. Em 127V, o chuveiro de 5.500W exige 43A, necessitando fio de 10 mm² e disjuntor de 40A. Sempre use circuito exclusivo com disjuntor dedicado.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>O que é queda de tensão e por que importa?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Queda de tensão é a perda de voltagem que ocorre ao longo do condutor devido à sua resistência elétrica. Quanto mais longo o fio e maior a corrente, maior a queda. A NBR 5410 limita a queda a 4% para circuitos terminais. Queda excessiva faz equipamentos funcionar mal (chuveiro não esquenta, lâmpadas ficam fracas), causa superaquecimento do fio e aumenta o consumo de energia.</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>Calculadoras</h4><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-tijolo.html">Tijolo</a><a href="/calculadora-de-areia.html">Areia</a><a href="/calculadora-de-telha.html">Telha</a><a href="/calculadora-de-drywall.html">Drywall</a><a href="/calculadora-de-concreto.html">Concreto</a><a href="/calculadora-de-piscina.html">Piscina</a><a href="/calculadora-de-impermeabilizacao.html">Impermeabilização</a><a href="/calculadora-de-fio-eletrico.html">Fio Elétrico</a><a href="/calculadora-de-cano.html">Cano</a><a href="/calculadora-de-madeira.html">Madeira</a></div>
+<div class="footer-col"><h4>Guias</h4><a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a><a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a></div>
+<div class="footer-col"><h4>Outros sites</h4><a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a></div>
+<div class="footer-col"><h4>QuantoPreciso.com</h4><p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p></div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+<script>
+var bitolas=[
+  {secao:1.5,corrMax:15.5,disj:10},
+  {secao:2.5,corrMax:21,disj:20},
+  {secao:4,corrMax:28,disj:25},
+  {secao:6,corrMax:36,disj:32},
+  {secao:10,corrMax:50,disj:40},
+  {secao:16,corrMax:68,disj:50},
+  {secao:25,corrMax:89,disj:70}
+];
+var secaoMinima={iluminacao:1.5,tomada:2.5,chuveiro:4,ar:2.5};
+var rho=0.0178;
+
+function calcFio(){
+  var P=parseFloat(document.getElementById('potencia').value);
+  var V=parseFloat(document.getElementById('tensao').value);
+  var L=parseFloat(document.getElementById('distancia').value);
+  var tipo=document.getElementById('tipo').value;
+  if(!P||!V||!L||P<=0||L<=0){alert('Preencha todos os campos corretamente.');return;}
+  var I=P/V;
+  var secMin=secaoMinima[tipo]||2.5;
+  var secQueda=(2*rho*L*I)/(V*0.04);
+  var escolhida=null;
+  for(var i=0;i<bitolas.length;i++){
+    if(bitolas[i].secao>=secMin&&bitolas[i].secao>=secQueda&&bitolas[i].corrMax>=I){
+      escolhida=bitolas[i];break;
+    }
+  }
+  if(!escolhida){escolhida=bitolas[bitolas.length-1];}
+  var quedaReal=(2*rho*L*I)/(escolhida.secao*V)*100;
+  document.getElementById('rCorrente').textContent=I.toFixed(1);
+  document.getElementById('rBitola').textContent=escolhida.secao+' mm²';
+  document.getElementById('rDisjuntor').textContent=escolhida.disj+'A';
+  document.getElementById('rQueda').textContent=quedaReal.toFixed(2)+'%';
+  var note=document.getElementById('resultNote');
+  if(quedaReal>4){
+    note.style.display='block';
+    note.innerHTML='⚠️ <strong>Atenção:</strong> mesmo com a maior bitola calculada, a queda de tensão ficou em '+quedaReal.toFixed(2)+'%. Considere reduzir a distância ou aumentar a seção do condutor. Consulte um eletricista.';
+  } else if(tipo==='chuveiro'||tipo==='ar'){
+    note.style.display='block';
+    note.innerHTML='💡 <strong>Lembrete:</strong> '+( tipo==='chuveiro'?'chuveiros':'aparelhos de ar-condicionado')+' exigem circuito exclusivo com disjuntor dedicado e fio terra.';
+  } else {
+    note.style.display='none';
+  }
+  document.getElementById('results').style.display='block';
+  var txt='Fio elétrico: '+escolhida.secao+' mm² | Corrente: '+I.toFixed(1)+'A | Disjuntor: '+escolhida.disj+'A | Queda: '+quedaReal.toFixed(2)+'% — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

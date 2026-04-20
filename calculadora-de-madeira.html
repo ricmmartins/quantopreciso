@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9XR4FLXXT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N9XR4FLXXT');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Madeira — Quantas Tábuas Preciso?</title>
+<meta name="description" content="Calcule a quantidade de tábuas de madeira para deck, forro ou assoalho. Número de peças, parafusos, custo estimado e comparação entre pinus, eucalipto, cumaru e ipê.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-madeira.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+label .hint{font-weight:400;font-size:.8rem;color:var(--txt-l)}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.result-note{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:1rem;margin-top:1rem;font-size:.9rem;color:#166534}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.card h1{font-size:1.35rem}.header-inner{height:auto;padding:.75rem 0}nav{display:none}.card{padding:1.25rem}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calculadora de Madeira","url":"https://quantopreciso.com/calculadora-de-madeira.html","description":"Calcule a quantidade de tábuas de madeira para deck, forro ou assoalho. Número de peças, parafusos, custo estimado e comparação de tipos de madeira.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qual a melhor madeira para deck externo?","acceptedAnswer":{"@type":"Answer","text":"Cumaru e ipê são as melhores opções para deck externo por sua altíssima durabilidade e resistência natural a cupins e umidade. O eucalipto tratado (autoclave) é uma alternativa mais econômica com boa durabilidade. Pinus tratado é a opção mais barata, mas exige manutenção mais frequente."}},{"@type":"Question","name":"Como calcular quantas tábuas preciso?","acceptedAnswer":{"@type":"Answer","text":"Divida a área total (m²) pela área de cada tábua (largura × comprimento em metros). Adicione 10-15% de perda para cortes e encaixes. Exemplo: área de 20 m², tábua de 10cm × 3m = 0,30 m² por tábua → 20 ÷ 0,30 = 67 tábuas + 15% = ~77 tábuas."}},{"@type":"Question","name":"Preciso tratar a madeira antes de instalar?","acceptedAnswer":{"@type":"Answer","text":"Sim. Para uso externo (deck, pergolado), aplique stain ou verniz marítimo. Para forro e assoalho interno, use selador e verniz. Madeira sem tratamento apodrece, mancha e é atacada por cupins. Madeiras de lei (ipê, cumaru) têm resistência natural maior, mas o tratamento prolonga a vida útil."}},{"@type":"Question","name":"Qual o espaçamento entre tábuas de deck?","acceptedAnswer":{"@type":"Answer","text":"O espaçamento recomendado entre tábuas de deck é de 5 a 8 mm. Esse vão permite a dilatação da madeira e o escoamento da água. Sem espaçamento, a madeira pode empenar. Os apoios (barrotes) devem ser espaçados a cada 40-50 cm para evitar flexão das tábuas."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},{"@type":"ListItem","position":2,"name":"Calculadora de Madeira","item":"https://quantopreciso.com/calculadora-de-madeira.html"}]}]}
+</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">Quanto<span>Preciso</span>.com</a><nav><a href="/">Início</a><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-cimento.html">Cimento</a></nav></div></header>
+<div class="container">
+<div class="breadcrumb"><a href="/">Início</a> <span>›</span> <span>Calculadora de Madeira</span></div>
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+<div class="card">
+<h1><span class="icon">🪵</span> Calculadora de Madeira</h1>
+<p class="subtitle">Calcule quantas tábuas você precisa para deck, forro ou assoalho — com estimativa de parafusos e custo por tipo de madeira.</p>
+<div class="form-grid">
+<div class="form-group"><label for="comp">Comprimento (m) <span class="hint">ou deixe vazio</span></label><input type="number" id="comp" min="0.1" step="0.01" placeholder="Ex: 5"></div>
+<div class="form-group"><label for="larg">Largura (m) <span class="hint">ou deixe vazio</span></label><input type="number" id="larg" min="0.1" step="0.01" placeholder="Ex: 4"></div>
+<div class="form-group"><label for="area">Ou informe a área (m²)</label><input type="number" id="area" min="0.1" step="0.01" placeholder="Ex: 20"></div>
+<div class="form-group"><label for="tipo">Tipo de aplicação</label><select id="tipo"><option value="deck">Deck externo</option><option value="forro">Forro (lambri)</option><option value="assoalho">Assoalho interno</option></select></div>
+<div class="form-group"><label for="largTabua">Largura da tábua (cm)</label><select id="largTabua"><option value="10">10 cm</option><option value="12">12 cm</option><option value="15" selected>15 cm</option><option value="20">20 cm</option></select></div>
+<div class="form-group"><label for="madeira">Tipo de madeira</label><select id="madeira"><option value="pinus">Pinus tratado</option><option value="eucalipto">Eucalipto tratado</option><option value="cumaru" selected>Cumaru</option><option value="ipe">Ipê</option></select></div>
+<div class="form-group full"><button class="btn" onclick="calcMadeira()">Calcular Madeira</button></div>
+</div>
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rArea">—</div><div class="lbl">Área total (m²)</div></div>
+<div class="result-item"><div class="val" id="rTabuas">—</div><div class="lbl">Tábuas necessárias</div></div>
+<div class="result-item"><div class="val" id="rParafusos">—</div><div class="lbl">Parafusos / Pregos</div></div>
+<div class="result-item"><div class="val" id="rCusto">—</div><div class="lbl">Custo estimado (madeira)</div></div>
+</div>
+<div class="result-note" id="resultNote"></div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+<div class="card content-section">
+<h2>Comparação de tipos de madeira</h2>
+<p>A escolha da madeira impacta diretamente na durabilidade, manutenção e custo do projeto. Veja a comparação entre as espécies mais usadas:</p>
+<table class="info-table">
+<thead><tr><th>Madeira</th><th>Durabilidade</th><th>Resistência</th><th>Preço (m²)</th><th>Melhor uso</th></tr></thead>
+<tbody>
+<tr><td>Pinus tratado</td><td>10-15 anos</td><td>Baixa (precisa autoclave)</td><td>R$ 45 – R$ 80</td><td>Deck coberto, forro, estrutura</td></tr>
+<tr><td>Eucalipto tratado</td><td>15-25 anos</td><td>Média-alta</td><td>R$ 70 – R$ 120</td><td>Deck, pergolado, assoalho</td></tr>
+<tr><td>Cumaru</td><td>25-40 anos</td><td>Alta (resistente a cupins)</td><td>R$ 150 – R$ 250</td><td>Deck externo, assoalho nobre</td></tr>
+<tr><td>Ipê</td><td>40-60+ anos</td><td>Muito alta (quase indestrutível)</td><td>R$ 250 – R$ 450</td><td>Deck de piscina, áreas nobres</td></tr>
+</tbody>
+</table>
+
+<h2>Como calcular madeira para deck</h2>
+<p>O cálculo de madeira para deck segue uma lógica simples, mas é preciso considerar perdas de corte e o espaçamento entre tábuas:</p>
+<ol>
+<li><strong>Meça a área:</strong> comprimento × largura em metros. Para áreas irregulares, divida em retângulos menores.</li>
+<li><strong>Adicione a perda:</strong> acrescente 10% para deck e assoalho, 12% para forro (mais cortes).</li>
+<li><strong>Calcule tábuas:</strong> área total ÷ (largura da tábua × comprimento da tábua). Tábuas padrão têm 3 metros.</li>
+<li><strong>Parafusos:</strong> para deck, use 15-20 parafusos por m² (inox para área externa). Para forro, 8-12 pregos/m².</li>
+</ol>
+
+<h3>Estrutura de apoio (barrotes)</h3>
+<p>O deck precisa de barrotes (vigas de apoio) para sustentar as tábuas:</p>
+<ul>
+<li><strong>Espaçamento:</strong> 40-50 cm entre barrotes para deck, 50-60 cm para forro.</li>
+<li><strong>Dimensão:</strong> barrotes de 5×7 cm ou 5×10 cm para deck. Para forro, ripas de 2,5×5 cm.</li>
+<li><strong>Material:</strong> use a mesma madeira das tábuas ou eucalipto tratado. Nunca use pinus sem tratamento em contato com o solo.</li>
+</ul>
+
+<h2>Tratamento e manutenção</h2>
+<ul>
+<li><strong>Stain (verniz impregnante):</strong> ideal para deck externo. Penetra na madeira e protege contra UV, umidade e fungos. Reaplicar a cada 1-2 anos.</li>
+<li><strong>Verniz marítimo:</strong> forma película protetora. Mais brilhante, mas descasca com o tempo. Melhor para áreas cobertas.</li>
+<li><strong>Óleo de peroba / tungue:</strong> acabamento natural e fosco. Excelente para cumaru e ipê. Reaplicar a cada 6-12 meses em área externa.</li>
+<li><strong>Autoclave (pinus/eucalipto):</strong> tratamento em fábrica com CCA ou CCB. Essencial para madeiras moles usadas em área externa.</li>
+</ul>
+
+<h3>Dicas de instalação</h3>
+<ul>
+<li><strong>Espaçamento entre tábuas:</strong> 5-8 mm para deck (dilatação e drenagem). Para assoalho interno, junta seca (sem espaço).</li>
+<li><strong>Parafusos inox:</strong> obrigatório em área externa. Parafusos comuns enferrujam e mancham a madeira.</li>
+<li><strong>Impermeabilize os topos:</strong> aplique seladora nos cortes para evitar absorção de umidade pelas pontas.</li>
+<li><strong>Aclimate a madeira:</strong> deixe as tábuas no local de instalação por 3-5 dias antes de fixar.</li>
+<li><strong>Pré-fure:</strong> sempre faça furo-guia para evitar rachaduras, especialmente em ipê e cumaru.</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual a melhor madeira para deck externo?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Cumaru e ipê são as melhores opções para deck externo — têm altíssima durabilidade (25 a 60 anos), resistência natural a cupins, fungos e umidade. O ipê é a mais resistente, mas também a mais cara. O cumaru oferece excelente custo-benefício para áreas nobres. Para orçamentos mais apertados, eucalipto tratado em autoclave é uma alternativa com boa durabilidade (15-25 anos). Pinus tratado funciona, mas exige manutenção mais frequente.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Como calcular quantas tábuas preciso?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Divida a área total em m² pela área de cada tábua (largura × comprimento, em metros). Tábuas padrão têm 3 metros de comprimento. Exemplo: área de 20 m² com tábua de 15cm × 3m = 0,45 m² por tábua → 20 ÷ 0,45 = 45 tábuas. Adicione 10-15% para perdas de corte e encaixes. Nossa calculadora já inclui essa margem automaticamente.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Preciso tratar a madeira antes de instalar?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Sim, sempre. Para uso externo (deck, pergolado, jardim), aplique stain ou óleo protetor antes e após a instalação. Para forro e assoalho interno, use selador e verniz ou stain. Madeira sem tratamento apodrece rapidamente, mancha com umidade e é atacada por cupins e brocas. Mesmo madeiras de lei como ipê e cumaru se beneficiam do tratamento, que prolonga significativamente a vida útil e mantém a cor original.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual o espaçamento entre tábuas de deck?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O espaçamento recomendado entre tábuas de deck é de 5 a 8 mm. Esse vão é essencial para permitir a dilatação natural da madeira com variações de temperatura e umidade, e para o escoamento da água da chuva. Sem espaçamento, as tábuas podem empenar, estufar ou rachar. Use espaçadores durante a instalação para manter o vão uniforme. Os barrotes de apoio devem ser espaçados a cada 40-50 cm.</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>Calculadoras</h4><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-tijolo.html">Tijolo</a><a href="/calculadora-de-areia.html">Areia</a><a href="/calculadora-de-telha.html">Telha</a><a href="/calculadora-de-drywall.html">Drywall</a><a href="/calculadora-de-concreto.html">Concreto</a><a href="/calculadora-de-piscina.html">Piscina</a><a href="/calculadora-de-impermeabilizacao.html">Impermeabilização</a><a href="/calculadora-de-fio-eletrico.html">Fio Elétrico</a><a href="/calculadora-de-cano.html">Cano</a><a href="/calculadora-de-madeira.html">Madeira</a></div>
+<div class="footer-col"><h4>Guias</h4><a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a><a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a></div>
+<div class="footer-col"><h4>Outros sites</h4><a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a></div>
+<div class="footer-col"><h4>QuantoPreciso.com</h4><p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p></div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+<script>
+var perdaTipo={deck:0.10,forro:0.12,assoalho:0.10};
+var fixPorM2={deck:18,forro:10,assoalho:8};
+var fixLabel={deck:'parafusos inox',forro:'pregos/grampos',assoalho:'pregos sem cabeça'};
+var precoM2={pinus:65,eucalipto:95,cumaru:200,ipe:350};
+var compTabua=3;
+
+function calcMadeira(){
+  var c=parseFloat(document.getElementById('comp').value);
+  var l=parseFloat(document.getElementById('larg').value);
+  var areaInput=parseFloat(document.getElementById('area').value);
+  var tipo=document.getElementById('tipo').value;
+  var largTcm=parseFloat(document.getElementById('largTabua').value);
+  var madeira=document.getElementById('madeira').value;
+  var area=0;
+  if(areaInput&&areaInput>0){area=areaInput;}
+  else if(c&&l&&c>0&&l>0){area=c*l;}
+  else{alert('Informe a área ou comprimento × largura.');return;}
+  var perda=perdaTipo[tipo]||0.10;
+  var areaMadeira=area*(1+perda);
+  var largTm=largTcm/100;
+  var areaTabua=largTm*compTabua;
+  var numTabuas=Math.ceil(areaMadeira/areaTabua);
+  var fixacao=Math.ceil(areaMadeira*fixPorM2[tipo]);
+  var custo=areaMadeira*precoM2[madeira];
+  document.getElementById('rArea').textContent=areaMadeira.toFixed(1)+' m²';
+  document.getElementById('rTabuas').textContent=numTabuas;
+  document.getElementById('rParafusos').textContent=fixacao.toLocaleString('pt-BR');
+  document.getElementById('rCusto').textContent='R$ '+custo.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+  var note=document.getElementById('resultNote');
+  var madeiraLabel={pinus:'Pinus tratado',eucalipto:'Eucalipto tratado',cumaru:'Cumaru',ipe:'Ipê'};
+  note.innerHTML='🪵 <strong>'+madeiraLabel[madeira]+'</strong> — tábuas de '+largTcm+'cm × '+compTabua+'m. Inclui '+(perda*100).toFixed(0)+'% de perda. Fixação: ~'+fixPorM2[tipo]+' '+fixLabel[tipo]+'/m².';
+  if(tipo==='deck') note.innerHTML+=' Use parafusos de aço inox em área externa.';
+  document.getElementById('results').style.display='block';
+  var txt='Madeira ('+tipo+'): '+numTabuas+' tábuas de '+largTcm+'cm | Área: '+areaMadeira.toFixed(1)+' m² | '+fixLabel[tipo]+': '+fixacao+' | Custo: ~R$ '+custo.toFixed(0)+' — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

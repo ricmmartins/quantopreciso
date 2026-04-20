@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Azulejo — Quantos Azulejos Preciso?</title>
+<meta name="description" content="Calcule quantos azulejos, caixas e sacos de argamassa você precisa para revestir paredes de banheiro e cozinha. Com desconto de portas e janelas.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-azulejo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .card h1{font-size:1.35rem}
+  .header-inner{height:auto;padding:.75rem 0}
+  .card{padding:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Calculadora de Azulejo",
+      "url":"https://quantopreciso.com/calculadora-de-azulejo.html",
+      "description":"Calcule quantos azulejos, caixas e argamassa você precisa para revestir paredes de banheiro e cozinha.",
+      "applicationCategory":"UtilityApplication",
+      "operatingSystem":"All",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Até que altura azulejar o banheiro?","acceptedAnswer":{"@type":"Answer","text":"O padrão é azulejar até 1,50 m na área seca e até o teto (2,20–2,50 m) dentro do box. Em banheiros modernos, muitos optam por azulejar até o teto em todas as paredes para facilitar a limpeza e valorizar o ambiente."}},
+        {"@type":"Question","name":"Como calcular azulejo no canto?","acceptedAnswer":{"@type":"Answer","text":"Some os comprimentos de todas as paredes a serem azulejadas e multiplique pela altura. Cantos não acrescentam m² — são apenas a junção de duas paredes. Descontar janelas e portas economiza material."}},
+        {"@type":"Question","name":"Quantos m² de azulejo para um banheiro?","acceptedAnswer":{"@type":"Answer","text":"Um banheiro padrão de 2,5×2 m com azulejo até o teto (2,50 m) nas 4 paredes usa cerca de 22,5 m². Descontando porta (~1,6 m²) e box até o teto, a média fica entre 18–22 m²."}}
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
+        {"@type":"ListItem","position":2,"name":"Calculadora de Azulejo","item":"https://quantopreciso.com/calculadora-de-azulejo.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo">Quanto<span>Preciso</span>.com</a>
+<nav>
+<a href="/">Início</a>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb">
+<a href="/">Início</a> <span>›</span> <span>Calculadora de Azulejo</span>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+
+<div class="card">
+<h1><span class="icon">🔲</span> Calculadora de Azulejo</h1>
+<p class="subtitle">Calcule quantos azulejos, caixas e sacos de argamassa você precisa para revestir paredes — com desconto de portas e janelas.</p>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="largParede">Largura da parede (m)</label>
+<input type="number" id="largParede" min="0.1" step="0.01" placeholder="Ex: 3">
+</div>
+<div class="form-group">
+<label for="altRev">Altura do revestimento (m)</label>
+<input type="number" id="altRev" min="0.1" step="0.01" placeholder="Ex: 1.50">
+</div>
+<div class="form-group">
+<label for="numParedes">Número de paredes</label>
+<input type="number" id="numParedes" min="1" step="1" value="4" placeholder="Ex: 4">
+</div>
+<div class="form-group">
+<label for="tamAzulejo">Tamanho do azulejo</label>
+<select id="tamAzulejo">
+<option value="0.0484">22×22 cm</option>
+<option value="0.075">7,5×10 cm (metrô)</option>
+<option value="0.06">20×30 cm</option>
+<option value="0.09">30×30 cm</option>
+<option value="0.1">25×40 cm</option>
+<option value="0.135" selected>30×45 cm</option>
+<option value="0.18">30×60 cm</option>
+<option value="0.24">40×60 cm</option>
+</select>
+</div>
+<div class="form-group">
+<label for="desconto">Descontar porta/janela (m²)</label>
+<input type="number" id="desconto" min="0" step="0.1" value="0" placeholder="Ex: 3.2">
+</div>
+<div class="form-group">
+<label for="m2Caixa">m² por caixa</label>
+<input type="number" id="m2Caixa" min="0.1" step="0.01" value="2.0" placeholder="Ex: 2.0">
+</div>
+<div class="form-group full">
+<button class="btn" onclick="calcAzulejo()">Calcular Azulejo</button>
+</div>
+</div>
+
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rArea">—</div><div class="lbl">Área (m²)</div></div>
+<div class="result-item"><div class="val" id="rPecas">—</div><div class="lbl">Peças</div></div>
+<div class="result-item"><div class="val" id="rCaixas">—</div><div class="lbl">Caixas</div></div>
+<div class="result-item"><div class="val" id="rArgamassa">—</div><div class="lbl">Argamassa (sacos 20kg)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+
+<div class="card content-section">
+<h2>Altura padrão para azulejar banheiro e cozinha</h2>
+<table class="info-table">
+<thead><tr><th>Ambiente</th><th>Altura recomendada</th><th>Observação</th></tr></thead>
+<tbody>
+<tr><td>Box do banheiro</td><td>Até o teto (2,20–2,50 m)</td><td>Obrigatório para impermeabilização</td></tr>
+<tr><td>Banheiro (área seca)</td><td>1,50 m</td><td>Padrão econômico</td></tr>
+<tr><td>Banheiro completo</td><td>Até o teto</td><td>Tendência moderna, fácil limpeza</td></tr>
+<tr><td>Cozinha (atrás da pia)</td><td>0,60–0,80 m</td><td>Apenas o frontão (splash)</td></tr>
+<tr><td>Cozinha completa</td><td>1,50 m ou até o teto</td><td>Mais higiênico</td></tr>
+</tbody>
+</table>
+
+<h3>Tipos de azulejo populares</h3>
+<ul>
+<li><strong>Cerâmica esmaltada:</strong> Mais acessível, grande variedade de padrões. Ideal para banheiros e cozinhas.</li>
+<li><strong>Azulejo de metrô (subway tile):</strong> Formato retangular 7,5×15 cm ou 10×20 cm, estilo clássico e atemporal.</li>
+<li><strong>Porcelanato de parede:</strong> Peças grandes (30×60, 40×80 cm), visual clean e moderno. Exige AC-II ou AC-III.</li>
+<li><strong>Pastilha:</strong> Peças pequenas em placas, ideal para detalhes decorativos e nichos do box.</li>
+</ul>
+
+<h3>Azulejo de metrô: tendência que não sai de moda</h3>
+<p>O azulejo de metrô (subway tile) é um clássico que combina com estilos modernos, retrô e industriais. Pode ser assentado reto, em espinha de peixe ou em brick (tijolinho). A junta com rejunte colorido cria efeitos visuais interessantes.</p>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Até que altura devo azulejar o banheiro?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Dentro do box, azuleje até o teto (obrigatório). Na área seca, o mínimo recomendado é 1,50 m. Muitos projetos modernos azulejam até o teto em todas as paredes — fica mais bonito, higiênico e facilita a limpeza. O investimento extra vale a pena.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Como calcular azulejo no canto?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Some os comprimentos de todas as paredes a serem azulejadas e multiplique pela altura. Os cantos não acrescentam metros quadrados — são apenas a junção de duas paredes. Não se esqueça de descontar janelas e portas e adicionar 10% de perda para recortes.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantos m² de azulejo para um banheiro?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para um banheiro padrão de 2,5×2 m com azulejo até o teto (2,50 m) nas 4 paredes, a área é de ~22,5 m². Descontando a porta (~1,6 m²) e janela (~0,5 m²), você precisará de ~20,4 m². Com 10% de perda: ~22,5 m² de azulejo. Um saco de 20 kg de argamassa AC-I cobre ~4 m².</div>
+</div>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col">
+<h4>Calculadoras</h4>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-tijolo.html">Tijolo</a>
+<a href="/calculadora-de-areia.html">Areia</a>
+<a href="/calculadora-de-telha.html">Telha</a>
+</div>
+<div class="footer-col">
+<h4>Guias</h4>
+<a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a>
+<a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a>
+</div>
+<div class="footer-col">
+<h4>Outros sites</h4>
+<a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a>
+</div>
+<div class="footer-col">
+<h4>QuantoPreciso.com</h4>
+<p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p>
+</div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+
+<script>
+function calcAzulejo(){
+  var lp=parseFloat(document.getElementById('largParede').value);
+  var ar=parseFloat(document.getElementById('altRev').value);
+  var np=parseInt(document.getElementById('numParedes').value);
+  var ta=parseFloat(document.getElementById('tamAzulejo').value);
+  var desc=parseFloat(document.getElementById('desconto').value)||0;
+  var m2cx=parseFloat(document.getElementById('m2Caixa').value);
+  if(!lp||!ar||!np||lp<=0||ar<=0||np<=0){alert('Preencha todos os campos corretamente.');return;}
+  var areaBase=(lp*ar*np)-desc;
+  if(areaBase<=0){alert('A área descontada é maior que a área total.');return;}
+  var areaComPerda=areaBase*1.10;
+  var pecas=Math.ceil(areaComPerda/ta);
+  var caixas=Math.ceil(areaComPerda/m2cx);
+  var sacosArg=Math.ceil(areaComPerda*5/20);
+  document.getElementById('rArea').textContent=areaComPerda.toFixed(1);
+  document.getElementById('rPecas').textContent=pecas;
+  document.getElementById('rCaixas').textContent=caixas;
+  document.getElementById('rArgamassa').textContent=sacosArg;
+  document.getElementById('results').style.display='block';
+  var txt='Azulejo: '+areaComPerda.toFixed(1)+' m² | '+pecas+' peças | '+caixas+' caixas | '+sacosArg+' sacos argamassa — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Cimento — Quantos Sacos de Cimento Preciso?</title>
+<meta name="description" content="Calcule quantos sacos de cimento de 50kg você precisa para contrapiso, laje, alicerce ou reboco. Calculadora com traço e proporção de areia e brita.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-cimento.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .card h1{font-size:1.35rem}
+  .header-inner{height:auto;padding:.75rem 0}
+  .card{padding:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Calculadora de Cimento",
+      "url":"https://quantopreciso.com/calculadora-de-cimento.html",
+      "description":"Calcule quantos sacos de cimento de 50kg você precisa para contrapiso, laje, alicerce ou reboco.",
+      "applicationCategory":"UtilityApplication",
+      "operatingSystem":"All",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"O que significa traço 1:3:5?","acceptedAnswer":{"@type":"Answer","text":"É a proporção de cimento:areia:brita em volume. Para cada 1 medida de cimento, usa-se 3 de areia e 5 de brita. É o traço mais comum para contrapiso e pisos em geral."}},
+        {"@type":"Question","name":"Qual o tempo de cura do concreto?","acceptedAnswer":{"@type":"Answer","text":"O concreto atinge cerca de 70% da resistência em 7 dias e a resistência total em 28 dias. Durante a cura, mantenha a superfície úmida para evitar trincas."}},
+        {"@type":"Question","name":"Qual a diferença entre CP-II e CP-V?","acceptedAnswer":{"@type":"Answer","text":"O CP-II é o cimento multiuso, indicado para a maioria das obras residenciais. O CP-V é de alta resistência inicial, ideal quando se precisa desformar rápido ou em obras estruturais."}},
+        {"@type":"Question","name":"Quantos sacos de cimento por m² de contrapiso?","acceptedAnswer":{"@type":"Answer","text":"Com espessura de 10cm e traço 1:3:5, são necessários cerca de 0,7 sacos de 50kg por m² de contrapiso."}},
+        {"@type":"Question","name":"Posso usar cimento vencido?","acceptedAnswer":{"@type":"Answer","text":"Não é recomendado. O cimento perde resistência após 90 dias da fabricação, especialmente se armazenado em local úmido. Use sempre cimento dentro da validade."}}
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
+        {"@type":"ListItem","position":2,"name":"Calculadora de Cimento","item":"https://quantopreciso.com/calculadora-de-cimento.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo">Quanto<span>Preciso</span>.com</a>
+<nav>
+<a href="/">Início</a>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb">
+<a href="/">Início</a> <span>›</span> <span>Calculadora de Cimento</span>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+
+<div class="card">
+<h1><span class="icon">🧱</span> Calculadora de Cimento</h1>
+<p class="subtitle">Calcule quantos sacos de cimento de 50 kg você precisa para contrapiso, laje, alicerce ou reboco — com proporção de areia e brita.</p>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="comp">Comprimento (m)</label>
+<input type="number" id="comp" min="0.1" step="0.01" placeholder="Ex: 5">
+</div>
+<div class="form-group">
+<label for="larg">Largura (m)</label>
+<input type="number" id="larg" min="0.1" step="0.01" placeholder="Ex: 4">
+</div>
+<div class="form-group">
+<label for="esp">Espessura (cm)</label>
+<input type="number" id="esp" min="1" step="0.5" value="10" placeholder="Ex: 10">
+</div>
+<div class="form-group">
+<label for="tipo">Tipo de uso</label>
+<select id="tipo">
+<option value="contrapiso">Contrapiso (1:3:5) — 7 sacos/m³</option>
+<option value="laje">Laje / Viga (1:2:4) — 9 sacos/m³</option>
+<option value="alicerce">Alicerce (1:4:8) — 5 sacos/m³</option>
+<option value="reboco">Reboco (1:2:8) — 14 sacos/m³</option>
+</select>
+</div>
+<div class="form-group full">
+<button class="btn" onclick="calcCimento()">Calcular Cimento</button>
+</div>
+</div>
+
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rVol">—</div><div class="lbl">Volume (m³)</div></div>
+<div class="result-item"><div class="val" id="rSacos">—</div><div class="lbl">Sacos de 50 kg</div></div>
+<div class="result-item"><div class="val" id="rAreia">—</div><div class="lbl">Areia (m³)</div></div>
+<div class="result-item"><div class="val" id="rBrita">—</div><div class="lbl">Brita (m³)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+
+<div class="card content-section">
+<h2>Como funciona o traço do cimento?</h2>
+<p>O <strong>traço</strong> indica a proporção em volume de cimento, areia e brita (ou pedra). Por exemplo, o traço <strong>1:3:5</strong> significa que para cada 1 lata de cimento, usa-se 3 latas de areia e 5 latas de brita.</p>
+<p>Cada tipo de obra exige um traço diferente, pois a resistência necessária varia. Veja os traços mais comuns:</p>
+<ul>
+<li><strong>Contrapiso (1:3:5)</strong> — uso geral para pisos internos, calçadas</li>
+<li><strong>Laje / Viga (1:2:4)</strong> — estrutural, maior resistência</li>
+<li><strong>Alicerce (1:4:8)</strong> — fundações, mais econômico</li>
+<li><strong>Reboco (1:2:8)</strong> — acabamento de paredes, sem brita</li>
+</ul>
+
+<h2>CP-II vs CP-V: Qual cimento usar?</h2>
+<table class="info-table">
+<thead><tr><th>Característica</th><th>CP-II (Composto)</th><th>CP-V (ARI)</th></tr></thead>
+<tbody>
+<tr><td>Uso principal</td><td>Obras em geral</td><td>Obras estruturais / desforma rápida</td></tr>
+<tr><td>Resistência inicial</td><td>Moderada</td><td>Alta (ARI = Alta Resistência Inicial)</td></tr>
+<tr><td>Tempo de pega</td><td>Normal</td><td>Mais rápido</td></tr>
+<tr><td>Preço</td><td>Mais acessível</td><td>Mais caro</td></tr>
+<tr><td>Indicação</td><td>Contrapiso, alicerce, reboco</td><td>Lajes, vigas, pilares</td></tr>
+</tbody>
+</table>
+
+<h3>Tempo de cura do concreto</h3>
+<p>O concreto precisa de <strong>28 dias</strong> para atingir a resistência total. Nos primeiros 7 dias atinge cerca de 70% da resistência. Durante a cura, é fundamental manter a superfície úmida (molhar 2-3 vezes ao dia) para evitar trincas e garantir a resistência final.</p>
+<p>Evite tráfego sobre o contrapiso antes de 72 horas e não aplique revestimentos antes de 14 dias.</p>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>O que significa traço 1:3:5?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">É a proporção de cimento:areia:brita em volume. Para cada 1 medida de cimento, usa-se 3 de areia e 5 de brita. Este é o traço mais comum para contrapiso e pisos em geral. A soma das partes (1+3+5=9) é usada para calcular a quantidade de cada material por metro cúbico de concreto.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual o tempo de cura do concreto?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O concreto atinge cerca de 70% da resistência em 7 dias e a resistência total em 28 dias. Durante todo o período de cura, mantenha a superfície úmida molhando 2 a 3 vezes ao dia para evitar trincas e garantir a qualidade final do concreto.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual a diferença entre CP-II e CP-V?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O CP-II é o cimento multiuso, indicado para a maioria das obras residenciais como contrapiso, reboco e alicerce. O CP-V é de alta resistência inicial (ARI), ideal quando se precisa desformar rápido ou em obras estruturais como lajes e vigas. O CP-V é mais caro, mas ganha resistência muito mais rápido nos primeiros dias.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantos sacos de cimento por m² de contrapiso?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Com espessura de 10 cm e traço 1:3:5, são necessários cerca de 0,7 sacos de cimento de 50 kg por metro quadrado de contrapiso. Para espessuras diferentes, o consumo é proporcional: 5 cm usa ~0,35 sacos/m² e 15 cm usa ~1,05 sacos/m².</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Posso usar cimento vencido?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Não é recomendado. O cimento perde resistência após 90 dias da fabricação, especialmente se armazenado em local úmido. Cimento empedrado ou com grumos também deve ser descartado. Use sempre cimento dentro da validade e armazene-o em local seco, sobre estrado de madeira e coberto com lona.</div>
+</div>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col">
+<h4>Calculadoras</h4>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-tijolo.html">Tijolo</a>
+<a href="/calculadora-de-areia.html">Areia</a>
+<a href="/calculadora-de-telha.html">Telha</a>
+</div>
+<div class="footer-col">
+<h4>Guias</h4>
+<a href="/como-reformar-banheiro.html">Como reformar banheiro</a>
+<a href="/como-reformar-cozinha.html">Como reformar cozinha</a>
+</div>
+<div class="footer-col">
+<h4>Outros sites</h4>
+<a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a>
+</div>
+<div class="footer-col">
+<h4>QuantoPreciso.com</h4>
+<p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p>
+</div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+
+<script>
+function calcCimento(){
+  var c=parseFloat(document.getElementById('comp').value);
+  var l=parseFloat(document.getElementById('larg').value);
+  var e=parseFloat(document.getElementById('esp').value);
+  var t=document.getElementById('tipo').value;
+  if(!c||!l||!e||c<=0||l<=0||e<=0){alert('Preencha todos os campos corretamente.');return;}
+  var vol=c*l*(e/100);
+  var dados={contrapiso:{sacos:7,areia:0.42,brita:0.83},laje:{sacos:9,areia:0.42,brita:0.83},alicerce:{sacos:5,areia:0.54,brita:1.07},reboco:{sacos:14,areia:1.28,brita:0}};
+  var d=dados[t];
+  var sacos=Math.ceil(vol*d.sacos);
+  var areia=(vol*d.areia).toFixed(2);
+  var brita=(vol*d.brita).toFixed(2);
+  document.getElementById('rVol').textContent=vol.toFixed(2);
+  document.getElementById('rSacos').textContent=sacos;
+  document.getElementById('rAreia').textContent=areia;
+  document.getElementById('rBrita').textContent=t==='reboco'?'N/A':brita;
+  document.getElementById('results').style.display='block';
+  var txt='Cimento: '+sacos+' sacos 50kg | Areia: '+areia+' m³'+(t!=='reboco'?' | Brita: '+brita+' m³':'')+' | Vol: '+vol.toFixed(2)+' m³ — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

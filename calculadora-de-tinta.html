@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Tinta — Quanto de Tinta Preciso?</title>
+<meta name="description" content="Calcule quantos litros e latas de tinta você precisa para pintar paredes. Considere demãos, rendimento e descontos de portas e janelas.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-tinta.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .card h1{font-size:1.35rem}
+  .header-inner{height:auto;padding:.75rem 0}
+  .card{padding:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Calculadora de Tinta",
+      "url":"https://quantopreciso.com/calculadora-de-tinta.html",
+      "description":"Calcule quantos litros e latas de tinta você precisa para pintar paredes, com rendimento por tipo e demãos.",
+      "applicationCategory":"UtilityApplication",
+      "operatingSystem":"All",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Quanto rende 1 lata de tinta de 18 litros?","acceptedAnswer":{"@type":"Answer","text":"Uma lata de 18 litros rende em média 180 m² por demão (rendimento de 10 m²/L). Com duas demãos, cobre aproximadamente 90 m² de parede. O rendimento varia conforme o tipo de tinta, cor e preparo da superfície."}},
+        {"@type":"Question","name":"Precisa usar selador antes de pintar?","acceptedAnswer":{"@type":"Answer","text":"Sim, em paredes novas (reboco) ou muito porosas, o selador é essencial. Ele uniformiza a absorção da parede e pode reduzir o consumo de tinta em até 30%. Em repinturas sobre tinta em bom estado, pode-se dispensar o selador."}},
+        {"@type":"Question","name":"Quantas demãos de tinta escura são necessárias?","acceptedAnswer":{"@type":"Answer","text":"Cores escuras como vermelho, azul marinho e verde escuro geralmente exigem 3 ou mais demãos para cobertura uniforme. Use um fundo preparador na cor aproximada para reduzir o número de demãos."}},
+        {"@type":"Question","name":"Como pintar o teto corretamente?","acceptedAnswer":{"@type":"Answer","text":"Use tinta específica para teto (maior viscosidade, evita respingos). Pinte com rolo de lã em movimentos paralelos, sempre na mesma direção. Comece pela área próxima à janela para melhor visibilidade. Aplique pelo menos 2 demãos."}}
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
+        {"@type":"ListItem","position":2,"name":"Calculadora de Tinta","item":"https://quantopreciso.com/calculadora-de-tinta.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo">Quanto<span>Preciso</span>.com</a>
+<nav>
+<a href="/">Início</a>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb">
+<a href="/">Início</a> <span>›</span> <span>Calculadora de Tinta</span>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+
+<div class="card">
+<h1><span class="icon">🎨</span> Calculadora de Tinta</h1>
+<p class="subtitle">Calcule quantos litros e quantas latas de tinta você precisa para pintar suas paredes — com ajuste de demãos, rendimento e desconto de portas e janelas.</p>
+
+<div class="form-grid">
+<div class="form-group">
+<label for="largParede">Largura da parede (m)</label>
+<input type="number" id="largParede" min="0.1" step="0.01" placeholder="Ex: 4">
+</div>
+<div class="form-group">
+<label for="altParede">Altura da parede (m)</label>
+<input type="number" id="altParede" min="0.1" step="0.01" placeholder="Ex: 2.8">
+</div>
+<div class="form-group">
+<label for="numParedes">Número de paredes</label>
+<input type="number" id="numParedes" min="1" step="1" value="4" placeholder="Ex: 4">
+</div>
+<div class="form-group">
+<label for="demaos">Demãos</label>
+<select id="demaos">
+<option value="1">1 demão</option>
+<option value="2" selected>2 demãos</option>
+<option value="3">3 demãos</option>
+</select>
+</div>
+<div class="form-group">
+<label for="rendimento">Rendimento (m²/litro)</label>
+<select id="rendimento">
+<option value="6">6 m²/L — Econômica / Acrílica fosca</option>
+<option value="8">8 m²/L — Látex Standard</option>
+<option value="10" selected>10 m²/L — Acrílica Premium</option>
+<option value="12">12 m²/L — Acrílica Semibrilho/Acetinada</option>
+</select>
+</div>
+<div class="form-group">
+<label for="desconto">Descontar janelas/portas (m²)</label>
+<input type="number" id="desconto" min="0" step="0.1" value="0" placeholder="Ex: 3.5">
+</div>
+<div class="form-group full">
+<button class="btn" onclick="calcTinta()">Calcular Tinta</button>
+</div>
+</div>
+
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rLitros">—</div><div class="lbl">Litros de tinta</div></div>
+<div class="result-item"><div class="val" id="rLatas36">—</div><div class="lbl">Latas de 3,6 L</div></div>
+<div class="result-item"><div class="val" id="rLatas18">—</div><div class="lbl">Latas de 18 L</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+
+<div class="card content-section">
+<h2>Rendimento por tipo de tinta</h2>
+<p>O rendimento da tinta varia conforme o tipo, a marca e o acabamento. Veja os valores médios:</p>
+<table class="info-table">
+<thead><tr><th>Tipo de tinta</th><th>Rendimento (m²/L)</th><th>Indicação</th></tr></thead>
+<tbody>
+<tr><td>Econômica / PVA</td><td>4–6 m²/L</td><td>Áreas internas, tetos, baixo orçamento</td></tr>
+<tr><td>Látex Standard</td><td>6–8 m²/L</td><td>Quartos, salas (baixo tráfego)</td></tr>
+<tr><td>Acrílica Premium</td><td>8–10 m²/L</td><td>Uso geral, lavável, boa durabilidade</td></tr>
+<tr><td>Acrílica Semibrilho</td><td>10–12 m²/L</td><td>Cozinhas, banheiros, áreas úmidas</td></tr>
+<tr><td>Esmalte Sintético</td><td>8–10 m²/L</td><td>Portas, janelas, madeira, metal</td></tr>
+</tbody>
+</table>
+
+<h3>Dicas para uma pintura perfeita</h3>
+<ul>
+<li><strong>Use selador:</strong> Em paredes novas, o selador uniformiza a absorção e economiza até 30% de tinta.</li>
+<li><strong>Cores escuras exigem mais demãos:</strong> Vermelho, azul e verde escuro podem precisar de 3 a 4 demãos. Use fundo preparador na cor aproximada.</li>
+<li><strong>Teto usa tinta específica:</strong> Tintas para teto têm maior viscosidade para evitar respingos e geralmente possuem acabamento fosco.</li>
+<li><strong>Compre um pouco a mais:</strong> Reserve 5–10% extra para retoques futuros. A tinta pode variar entre lotes.</li>
+<li><strong>Prepare a superfície:</strong> Lixe, limpe e corrija imperfeições antes de pintar. Uma boa preparação é 80% do resultado.</li>
+<li><strong>Respeite o tempo de secagem:</strong> Espere 2–4 horas entre demãos (látex/acrílica) e 12–24 horas para esmalte sintético.</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto rende 1 lata de tinta de 18 litros?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Uma lata de 18 litros rende em média 180 m² por demão, considerando rendimento de 10 m²/litro. Com duas demãos, cobre aproximadamente 90 m² de parede. O rendimento real depende do tipo da tinta, da cor escolhida e do preparo da superfície.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Precisa usar selador antes de pintar?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Sim, em paredes novas (reboco) ou muito porosas, o selador é essencial. Ele uniformiza a absorção da parede e pode reduzir o consumo de tinta em até 30%. Em repinturas sobre tinta em bom estado, pode-se dispensar o selador e aplicar diretamente a tinta.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantas demãos de tinta escura são necessárias?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Cores escuras como vermelho, azul marinho e verde escuro geralmente exigem 3 ou mais demãos para cobertura uniforme. Uma dica é usar um fundo preparador (primer) na cor aproximada — isso pode reduzir para 2 demãos e economizar tinta significativamente.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Como pintar o teto corretamente?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Use tinta específica para teto, que tem maior viscosidade e evita respingos. Pinte com rolo de lã em movimentos paralelos, sempre na mesma direção, começando pela área próxima à janela. Aplique pelo menos 2 demãos e proteja o piso e móveis com lona plástica.</div>
+</div>
+</div>
+
+<div class="ad-slot">Espaço publicitário</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col">
+<h4>Calculadoras</h4>
+<a href="/calculadora-de-tinta.html">Tinta</a>
+<a href="/calculadora-de-piso.html">Piso</a>
+<a href="/calculadora-de-cimento.html">Cimento</a>
+<a href="/calculadora-de-argamassa.html">Argamassa</a>
+<a href="/calculadora-de-grama.html">Grama</a>
+<a href="/calculadora-de-azulejo.html">Azulejo</a>
+<a href="/calculadora-de-tijolo.html">Tijolo</a>
+<a href="/calculadora-de-areia.html">Areia</a>
+<a href="/calculadora-de-telha.html">Telha</a>
+</div>
+<div class="footer-col">
+<h4>Guias</h4>
+<a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a>
+<a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a>
+</div>
+<div class="footer-col">
+<h4>Outros sites</h4>
+<a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a>
+</div>
+<div class="footer-col">
+<h4>QuantoPreciso.com</h4>
+<p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p>
+</div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+
+<script>
+function calcTinta(){
+  var lp=parseFloat(document.getElementById('largParede').value);
+  var ap=parseFloat(document.getElementById('altParede').value);
+  var np=parseInt(document.getElementById('numParedes').value);
+  var dm=parseInt(document.getElementById('demaos').value);
+  var rd=parseFloat(document.getElementById('rendimento').value);
+  var desc=parseFloat(document.getElementById('desconto').value)||0;
+  if(!lp||!ap||!np||lp<=0||ap<=0||np<=0){alert('Preencha todos os campos corretamente.');return;}
+  var area=(lp*ap*np)-desc;
+  if(area<=0){alert('A área descontada é maior que a área total.');return;}
+  var litros=(area*dm)/rd;
+  var latas36=Math.ceil(litros/3.6);
+  var latas18=Math.ceil(litros/18);
+  document.getElementById('rLitros').textContent=litros.toFixed(1);
+  document.getElementById('rLatas36').textContent=latas36;
+  document.getElementById('rLatas18').textContent=latas18;
+  document.getElementById('results').style.display='block';
+  var txt='Tinta: '+litros.toFixed(1)+' litros ('+latas36+' latas 3,6L ou '+latas18+' latas 18L) | Área: '+area.toFixed(1)+' m² | '+dm+' demãos — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

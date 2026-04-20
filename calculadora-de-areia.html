@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Areia — Quanto de Areia Preciso?</title>
+<meta name="description" content="Calcule quanto de areia você precisa para contrapiso, reboco ou assentamento. Volume em m³, peso em kg e caminhões.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-areia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.card h1{font-size:1.35rem}.header-inner{height:auto;padding:.75rem 0}.card{padding:1.25rem}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calculadora de Areia","url":"https://quantopreciso.com/calculadora-de-areia.html","description":"Calcule quanto de areia você precisa para contrapiso, reboco ou assentamento. Volume em m³, peso em kg e caminhões.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quanto pesa 1 m³ de areia?","acceptedAnswer":{"@type":"Answer","text":"Aproximadamente 1.500 kg (1,5 tonelada). Esse valor pode variar entre 1.400 e 1.600 kg dependendo da umidade e da granulometria da areia. Areia molhada pode chegar a 1.800 kg/m³."}},{"@type":"Question","name":"Quantos m³ cabem em um caminhão?","acceptedAnswer":{"@type":"Answer","text":"Caminhão toco: 5 m³, Caminhão truck: 10 m³, Carreta: 15 m³. O volume pode variar conforme o modelo do caminhão e a altura da caçamba."}},{"@type":"Question","name":"Qual areia usar para contrapiso?","acceptedAnswer":{"@type":"Answer","text":"Para contrapiso, use areia média, também chamada de areia lavada de rio. Ela tem granulometria intermediária, ideal para mistura com cimento e brita."}},{"@type":"Question","name":"Quanto de areia por m² de reboco?","acceptedAnswer":{"@type":"Answer","text":"Com 2 cm de espessura, são necessários cerca de 0,03 m³ de areia por m² de reboco. Para 3 cm de espessura, o consumo sobe para 0,045 m³/m²."}},{"@type":"Question","name":"Areia de rio ou de brita?","acceptedAnswer":{"@type":"Answer","text":"Areia de rio é melhor para acabamento, reboco e assentamento. Areia de brita (artificial) é indicada para concreto estrutural, pois seus grãos angulosos melhoram a aderência."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},{"@type":"ListItem","position":2,"name":"Calculadora de Areia","item":"https://quantopreciso.com/calculadora-de-areia.html"}]}]}
+</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">Quanto<span>Preciso</span>.com</a><nav><a href="/">Início</a><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a></nav></div></header>
+<div class="container">
+<div class="breadcrumb"><a href="/">Início</a> <span>›</span> <span>Calculadora de Areia</span></div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+<div class="card">
+<h1><span class="icon">⏳</span> Calculadora de Areia</h1>
+<p class="subtitle">Calcule o volume de areia necessário para contrapiso, reboco ou assentamento — com peso em kg e número de caminhões.</p>
+<div class="form-grid">
+<div class="form-group"><label for="comp">Comprimento (m)</label><input type="number" id="comp" min="0.1" step="0.01" placeholder="Ex: 8"></div>
+<div class="form-group"><label for="larg">Largura (m)</label><input type="number" id="larg" min="0.1" step="0.01" placeholder="Ex: 5"></div>
+<div class="form-group"><label for="esp">Espessura (cm)</label><input type="number" id="esp" min="0.5" step="0.5" value="5" placeholder="Ex: 5"></div>
+<div class="form-group"><label for="uso">Uso</label><select id="uso"><option value="contrapiso" selected>Contrapiso</option><option value="reboco">Reboco</option><option value="assentamento">Assentamento de tijolos</option></select></div>
+<div class="form-group full"><button class="btn" onclick="calcAreia()">Calcular Areia</button></div>
+</div>
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rVol">—</div><div class="lbl">Volume (m³)</div></div>
+<div class="result-item"><div class="val" id="rPeso">—</div><div class="lbl">Peso (kg)</div></div>
+<div class="result-item"><div class="val" id="rCaminhao">—</div><div class="lbl">Caminhões (5 m³)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+<div class="card content-section">
+<h2>Tipos de areia e seus usos</h2>
+<p>Nem toda areia é igual. A granulometria (tamanho dos grãos) define o uso mais adequado para cada tipo:</p>
+<table class="info-table">
+<thead><tr><th>Tipo</th><th>Granulometria</th><th>Uso principal</th><th>Peso/m³</th></tr></thead>
+<tbody>
+<tr><td>Areia fina</td><td>0,06 – 0,2 mm</td><td>Reboco, acabamento, massa fina</td><td>~1.400 kg</td></tr>
+<tr><td>Areia média</td><td>0,2 – 0,6 mm</td><td>Contrapiso, assentamento, argamassa</td><td>~1.500 kg</td></tr>
+<tr><td>Areia grossa</td><td>0,6 – 2,0 mm</td><td>Concreto estrutural, fundações</td><td>~1.600 kg</td></tr>
+<tr><td>Areia de brita</td><td>Variável</td><td>Concreto, substituição de areia natural</td><td>~1.550 kg</td></tr>
+</tbody>
+</table>
+
+<h2>Preço médio da areia</h2>
+<p>O preço da areia varia conforme a região, o tipo e a distância do fornecedor:</p>
+<table class="info-table">
+<thead><tr><th>Tipo</th><th>Preço por m³</th><th>Caminhão toco (5 m³)</th></tr></thead>
+<tbody>
+<tr><td>Areia fina</td><td>R$ 90 – R$ 150</td><td>R$ 450 – R$ 750</td></tr>
+<tr><td>Areia média lavada</td><td>R$ 80 – R$ 140</td><td>R$ 400 – R$ 700</td></tr>
+<tr><td>Areia grossa</td><td>R$ 100 – R$ 160</td><td>R$ 500 – R$ 800</td></tr>
+</tbody>
+</table>
+<p>Dica: o frete costuma representar boa parte do custo. Compre de fornecedores próximos à obra e, se possível, negocie entregas em maior volume para reduzir o valor do frete por m³.</p>
+
+<h3>Como armazenar areia na obra</h3>
+<ul>
+<li><strong>Use uma baia ou cercado</strong> para evitar que a areia se espalhe e misture com terra.</li>
+<li><strong>Cubra com lona</strong> em dias de chuva para evitar excesso de umidade.</li>
+<li><strong>Não deixe em contato direto com o solo</strong> se possível — use uma base de concreto ou lona.</li>
+<li><strong>Compre no volume certo:</strong> areia em excesso ocupa espaço e dificulta a logística da obra.</li>
+</ul>
+
+<h3>Consumo de areia por tipo de serviço</h3>
+<ul>
+<li><strong>Contrapiso (5 cm):</strong> 0,05 m³/m² de areia para a mistura com cimento e brita</li>
+<li><strong>Reboco (2 cm):</strong> ~0,03 m³/m² de areia fina</li>
+<li><strong>Assentamento de tijolos:</strong> ~0,02 m³/m² de parede</li>
+<li><strong>Concreto estrutural:</strong> ~0,6 m³ de areia por m³ de concreto</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto pesa 1 m³ de areia?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Aproximadamente 1.500 kg (1,5 tonelada). Esse valor pode variar entre 1.400 e 1.600 kg dependendo da umidade e da granulometria da areia. Areia molhada pode chegar a 1.800 kg/m³, o que é importante considerar no transporte e na logística da obra.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantos m³ cabem em um caminhão?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Depende do tipo de caminhão: Caminhão toco: 5 m³ (o mais comum para obras residenciais), Caminhão truck: 10 m³, Carreta: 15 m³. O volume pode variar conforme o modelo e a altura da caçamba. Sempre confirme a capacidade com o fornecedor antes de fechar a compra.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual areia usar para contrapiso?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para contrapiso, use areia média, também chamada de areia lavada de rio. Ela tem granulometria intermediária, ideal para mistura com cimento e brita no traço do contrapiso. Evite areia fina (indicada para reboco) ou areia grossa pura (melhor para concreto estrutural). A areia média garante boa trabalhabilidade e resistência.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto de areia por m² de reboco?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Com 2 cm de espessura, são necessários cerca de 0,03 m³ de areia por metro quadrado de reboco. Para 3 cm de espessura, o consumo sobe para 0,045 m³/m². Use areia fina peneirada para reboco, que proporciona melhor acabamento e facilita o trabalho de desempeno.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Areia de rio ou de brita?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Areia de rio (natural) é melhor para acabamento, reboco e assentamento de tijolos. Seus grãos são arredondados e proporcionam melhor trabalhabilidade. Areia de brita (artificial/manufaturada) é indicada para concreto estrutural, pois seus grãos angulosos melhoram a aderência no concreto. A areia de brita é uma alternativa sustentável, já que reduz a extração de leitos de rios.</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>Calculadoras</h4><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-tijolo.html">Tijolo</a><a href="/calculadora-de-areia.html">Areia</a><a href="/calculadora-de-telha.html">Telha</a></div>
+<div class="footer-col"><h4>Guias</h4><a href="/como-reformar-banheiro.html">Como reformar banheiro</a><a href="/como-reformar-cozinha.html">Como reformar cozinha</a></div>
+<div class="footer-col"><h4>Outros sites</h4><a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a></div>
+<div class="footer-col"><h4>QuantoPreciso.com</h4><p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p></div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+<script>
+function calcAreia(){
+  var c=parseFloat(document.getElementById('comp').value);
+  var l=parseFloat(document.getElementById('larg').value);
+  var e=parseFloat(document.getElementById('esp').value);
+  if(!c||!l||!e||c<=0||l<=0||e<=0){alert('Preencha todos os campos corretamente.');return;}
+  var vol=c*l*(e/100);
+  var peso=Math.round(vol*1500);
+  var caminhoes=Math.ceil(vol/5);
+  document.getElementById('rVol').textContent=vol.toFixed(2);
+  document.getElementById('rPeso').textContent=peso.toLocaleString('pt-BR');
+  document.getElementById('rCaminhao').textContent=caminhoes;
+  document.getElementById('results').style.display='block';
+  var txt='Areia: '+vol.toFixed(2)+' m³ | Peso: '+peso.toLocaleString('pt-BR')+' kg | Caminhões: '+caminhoes+' — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

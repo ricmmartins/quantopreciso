@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Telha — Quantas Telhas Preciso?</title>
+<meta name="description" content="Calcule quantas telhas você precisa para o telhado. Calculadora para telha colonial, romana, portuguesa, fibrocimento e plan.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-telha.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.card h1{font-size:1.35rem}.header-inner{height:auto;padding:.75rem 0}.card{padding:1.25rem}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calculadora de Telha","url":"https://quantopreciso.com/calculadora-de-telha.html","description":"Calcule quantas telhas você precisa para o telhado. Calculadora para telha colonial, romana, portuguesa, fibrocimento e plan.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quantas telhas coloniais por m²?","acceptedAnswer":{"@type":"Answer","text":"São necessárias aproximadamente 26 telhas coloniais por metro quadrado de telhado. Esse valor já considera a sobreposição entre as telhas."}},{"@type":"Question","name":"Qual a inclinação mínima para telhado?","acceptedAnswer":{"@type":"Answer","text":"Colonial, Romana e Portuguesa: 30% de inclinação mínima. Fibrocimento: 15%. Plan/Concreto: 25%."}},{"@type":"Question","name":"Telha cerâmica ou fibrocimento?","acceptedAnswer":{"@type":"Answer","text":"A telha cerâmica tem melhor isolamento térmico e acústico, durabilidade superior (50+ anos). A de fibrocimento é mais barata, mais leve e mais rápida de instalar, mas esquenta mais e dura menos (15-20 anos)."}},{"@type":"Question","name":"Preciso de manta asfáltica?","acceptedAnswer":{"@type":"Answer","text":"Recomendado em áreas com pouca inclinação, muita chuva ou quando se usa telhas planas. A manta cria uma camada impermeável sob as telhas."}},{"@type":"Question","name":"Como calcular a água do telhado?","acceptedAnswer":{"@type":"Answer","text":"Área do telhado (m²) × precipitação mensal (mm) = volume em litros. Ex: 100 m² × 150 mm = 15.000 litros/mês."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},{"@type":"ListItem","position":2,"name":"Calculadora de Telha","item":"https://quantopreciso.com/calculadora-de-telha.html"}]}]}
+</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">Quanto<span>Preciso</span>.com</a><nav><a href="/">Início</a><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a></nav></div></header>
+<div class="container">
+<div class="breadcrumb"><a href="/">Início</a> <span>›</span> <span>Calculadora de Telha</span></div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+<div class="card">
+<h1><span class="icon">🏠</span> Calculadora de Telha</h1>
+<p class="subtitle">Calcule quantas telhas você precisa para cobrir o telhado — com estimativa de cumeeiras e ripas.</p>
+<div class="form-grid">
+<div class="form-group"><label for="comp">Comprimento do telhado (m)</label><input type="number" id="comp" min="0.1" step="0.01" placeholder="Ex: 10"></div>
+<div class="form-group"><label for="larg">Largura do telhado (m)</label><input type="number" id="larg" min="0.1" step="0.01" placeholder="Ex: 6"></div>
+<div class="form-group"><label for="inclinacao">Inclinação (%)</label><select id="inclinacao"><option value="20">20%</option><option value="25">25%</option><option value="30" selected>30%</option><option value="35">35%</option><option value="40">40%</option></select></div>
+<div class="form-group"><label for="tipo">Tipo de telha</label><select id="tipo"><option value="colonial" selected>Colonial — 26 telhas/m²</option><option value="romana">Romana — 16 telhas/m²</option><option value="portuguesa">Portuguesa — 17 telhas/m²</option><option value="fibrocimento">Fibrocimento — 1,7 chapas/m²</option><option value="plan">Plan / Concreto — 12,5 telhas/m²</option></select></div>
+<div class="form-group full"><button class="btn" onclick="calcTelha()">Calcular Telhas</button></div>
+</div>
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rArea">—</div><div class="lbl">Área do telhado (m²)</div></div>
+<div class="result-item"><div class="val" id="rTelhas">—</div><div class="lbl">Telhas (unidades)</div></div>
+<div class="result-item"><div class="val" id="rCumeeiras">—</div><div class="lbl">Cumeeiras (unidades)</div></div>
+<div class="result-item"><div class="val" id="rRipas">—</div><div class="lbl">Ripas (metros lineares)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+<div class="card content-section">
+<h2>Tipos de telha: comparação completa</h2>
+<p>Cada tipo de telha tem características próprias de rendimento, peso e custo. Escolher a telha certa impacta no orçamento e na estrutura do telhado:</p>
+<table class="info-table">
+<thead><tr><th>Tipo</th><th>Telhas/m²</th><th>Peso/m²</th><th>Inclinação mín.</th><th>Preço unitário</th></tr></thead>
+<tbody>
+<tr><td>Colonial</td><td>26</td><td>~48 kg</td><td>30%</td><td>R$ 1,50 – R$ 3,00</td></tr>
+<tr><td>Romana</td><td>16</td><td>~40 kg</td><td>30%</td><td>R$ 2,00 – R$ 3,50</td></tr>
+<tr><td>Portuguesa</td><td>17</td><td>~42 kg</td><td>30%</td><td>R$ 1,80 – R$ 3,00</td></tr>
+<tr><td>Fibrocimento</td><td>1,7 chapas</td><td>~15 kg</td><td>15%</td><td>R$ 30 – R$ 60/chapa</td></tr>
+<tr><td>Plan / Concreto</td><td>12,5</td><td>~48 kg</td><td>25%</td><td>R$ 2,50 – R$ 5,00</td></tr>
+</tbody>
+</table>
+
+<h2>Inclinação mínima por tipo de telha</h2>
+<p>A inclinação (caimento) do telhado é fundamental para evitar infiltrações. Cada tipo de telha exige uma inclinação mínima:</p>
+<ul>
+<li><strong>Colonial, Romana, Portuguesa:</strong> 30% (≈ 17°) — telhas cerâmicas precisam de boa inclinação para a água escorrer entre as sobreposições.</li>
+<li><strong>Fibrocimento:</strong> 15% (≈ 8,5°) — as chapas grandes permitem menor inclinação.</li>
+<li><strong>Plan / Concreto:</strong> 25% (≈ 14°) — o encaixe plano exige inclinação intermediária.</li>
+</ul>
+<p>Usar inclinação menor que a mínima pode causar infiltrações, acúmulo de água e danos à estrutura.</p>
+
+<h2>Dicas de impermeabilização</h2>
+<ul>
+<li><strong>Manta asfáltica sob as telhas:</strong> recomendada para inclinações baixas ou regiões com chuva forte.</li>
+<li><strong>Subcobertura (manta térmica):</strong> reduz infiltrações e melhora o isolamento térmico em até 40%.</li>
+<li><strong>Calhas e rufos:</strong> essenciais em encontros de telhados e paredes. Use calhas de alumínio ou PVC com dimensionamento adequado.</li>
+<li><strong>Impermeabilizante nas cumeeiras:</strong> aplique argamassa com aditivo impermeabilizante nas juntas das cumeeiras.</li>
+<li><strong>Beiral mínimo de 50 cm:</strong> protege as paredes da chuva e evita infiltrações nas laterais.</li>
+</ul>
+
+<h3>Estrutura do telhado</h3>
+<p>A estrutura (madeiramento) precisa ser dimensionada conforme o peso das telhas:</p>
+<ul>
+<li><strong>Telhas cerâmicas:</strong> use caibros de 5×6 cm e ripas de 1,5×5 cm. Terças espaçadas a cada 1,5–2,0 m.</li>
+<li><strong>Fibrocimento:</strong> estrutura mais leve, com terças espaçadas a cada 1,5–3,0 m conforme a chapa.</li>
+<li><strong>Telha de concreto:</strong> estrutura similar à cerâmica, porém com reforço nos apoios.</li>
+</ul>
+</div>
+
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantas telhas coloniais por m²?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">São necessárias aproximadamente 26 telhas coloniais por metro quadrado de telhado. Esse valor já considera a sobreposição (galga) entre as telhas. A quantidade exata pode variar entre 24 e 28 conforme o fabricante, o tamanho da telha e a galga utilizada. Sempre consulte a ficha técnica do fabricante.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual a inclinação mínima para telhado?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Depende do tipo de telha: Colonial, Romana e Portuguesa exigem no mínimo 30% de inclinação. Fibrocimento aceita a partir de 15%. Telha Plan/Concreto precisa de pelo menos 25%. Uma inclinação menor que a recomendada pelo fabricante pode causar infiltrações, retorno de água por capilaridade e acúmulo nas sobreposições.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Telha cerâmica ou fibrocimento?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">A telha cerâmica tem melhor isolamento térmico e acústico, durabilidade superior (50+ anos) e visual mais bonito. Porém, é mais pesada e exige estrutura reforçada. A telha de fibrocimento é mais barata (até 40% menos), mais leve e mais rápida de instalar. Entretanto, esquenta mais, tem vida útil menor (15-20 anos) e pode ressecar com o tempo. Para residências, a cerâmica costuma ser a melhor escolha a longo prazo.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Preciso de manta asfáltica?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Recomendado em áreas com pouca inclinação (abaixo de 30%), regiões com muita chuva ou quando se usa telhas planas (plan/concreto). A manta asfáltica cria uma camada impermeável sob as telhas, protegendo a estrutura contra infiltrações por chuva de vento ou acúmulo de água. Em telhados com inclinação adequada e telhas bem encaixadas, a manta é opcional mas sempre recomendável.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Como calcular a água do telhado?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Multiplique a área do telhado em m² pela precipitação mensal da sua região em mm (1 mm = 1 litro/m²). Exemplo: telhado de 100 m² em região com 150 mm de chuva/mês = 15.000 litros/mês. Esse cálculo é essencial para dimensionar calhas, condutores e cisternas de captação de água da chuva. Consulte os dados pluviométricos do INMET para sua cidade.</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>Calculadoras</h4><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-tijolo.html">Tijolo</a><a href="/calculadora-de-areia.html">Areia</a><a href="/calculadora-de-telha.html">Telha</a></div>
+<div class="footer-col"><h4>Guias</h4><a href="/como-reformar-banheiro.html">Como reformar banheiro</a><a href="/como-reformar-cozinha.html">Como reformar cozinha</a></div>
+<div class="footer-col"><h4>Outros sites</h4><a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a></div>
+<div class="footer-col"><h4>QuantoPreciso.com</h4><p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p></div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+<script>
+var telhaData={colonial:{unid:26,label:'telhas coloniais'},romana:{unid:16,label:'telhas romanas'},portuguesa:{unid:17,label:'telhas portuguesas'},fibrocimento:{unid:1.7,label:'chapas de fibrocimento'},plan:{unid:12.5,label:'telhas plan/concreto'}};
+var slopeFactor={20:1.02,25:1.03,30:1.04,35:1.06,40:1.08};
+function calcTelha(){
+  var c=parseFloat(document.getElementById('comp').value);
+  var l=parseFloat(document.getElementById('larg').value);
+  var inc=parseInt(document.getElementById('inclinacao').value);
+  var t=document.getElementById('tipo').value;
+  if(!c||!l||c<=0||l<=0){alert('Preencha todos os campos corretamente.');return;}
+  var fator=slopeFactor[inc]||1.04;
+  var area=c*l*fator;
+  var d=telhaData[t];
+  var telhas=Math.ceil(area*d.unid);
+  var cumeeiras=Math.ceil(c*2.5);
+  var ripas=Math.ceil(area*3);
+  document.getElementById('rArea').textContent=area.toFixed(2);
+  document.getElementById('rTelhas').textContent=telhas.toLocaleString('pt-BR');
+  document.getElementById('rCumeeiras').textContent=cumeeiras;
+  document.getElementById('rRipas').textContent=ripas.toLocaleString('pt-BR');
+  document.getElementById('results').style.display='block';
+  var txt=d.label+': '+telhas+' unid | Área: '+area.toFixed(2)+' m² | Cumeeiras: '+cumeeiras+' | Ripas: '+ripas+' m — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Grama — Quantas Placas de Grama Preciso?</title>
+    <meta name="description" content="Calcule quantas placas ou rolos de grama você precisa para seu jardim. Inclui terra vegetal e adubo necessários.">
+    <meta name="keywords" content="calculadora de grama, quantas placas de grama, grama esmeralda, grama são carlos, quanto de grama preciso, m2 grama, jardim">
+    <link rel="canonical" href="https://quantopreciso.com/calculadora-de-grama.html">
+    <meta property="og:title" content="Calculadora de Grama — Quantas Placas de Grama Preciso?">
+    <meta property="og:description" content="Calcule quantas placas ou rolos de grama você precisa para seu jardim. Inclui terra vegetal e adubo necessários.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantopreciso.com/calculadora-de-grama.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+        .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+        header{background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;padding:16px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+        header .container{display:flex;justify-content:space-between;align-items:center}
+        a.logo{font-size:1.3rem;font-weight:800;color:#fff;text-decoration:none}
+        a.logo span{color:#fbbf24}
+        nav a{color:rgba(255,255,255,.9);text-decoration:none;margin-left:24px;font-size:.9rem;font-weight:500}
+        nav a:hover{color:#fbbf24}
+
+        .breadcrumb{padding:16px 0;font-size:.85rem;color:var(--txt-l)}
+        .breadcrumb a{color:var(--pri);text-decoration:none}
+        .breadcrumb a:hover{text-decoration:underline}
+
+        .hero{text-align:center;padding:32px 20px 16px}
+        .hero h1{font-size:2.2rem;font-weight:800;margin-bottom:12px}
+        .hero p{color:var(--txt-l);font-size:1.05rem;max-width:620px;margin:0 auto}
+
+        .ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:8px;padding:20px;text-align:center;color:var(--txt-l);font-size:.85rem;margin:24px auto;max-width:728px}
+
+        .calc-card{background:var(--card);border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.06);padding:28px;max-width:600px;margin:0 auto 32px}
+        .form-row{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+        .form-row > *{flex:1;min-width:140px}
+        .fg{display:flex;flex-direction:column}
+        .fg label{font-size:.78rem;font-weight:600;margin-bottom:4px;color:var(--txt)}
+        .fg input,.fg select{width:100%;padding:10px 12px;border:2px solid var(--brd);border-radius:10px;font-size:.95rem;font-family:inherit;transition:border-color .2s}
+        .fg input:focus,.fg select:focus{outline:none;border-color:var(--pri)}
+        .btn-calc{display:block;width:100%;padding:14px;margin-top:8px;background:var(--pri);color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s}
+        .btn-calc:hover{background:var(--pri-d)}
+        .result{display:none;margin-top:16px;background:#ecfdf5;border-radius:12px;padding:20px;text-align:center;animation:fadeIn .4s ease}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        .result .val{font-size:1.8rem;font-weight:700;color:var(--ok)}
+        .result .det{font-size:.85rem;color:var(--txt-l);margin-top:4px}
+        .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;text-align:left}
+        .result-item{background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px}
+        .result-item .ri-label{font-size:.75rem;color:var(--txt-l);font-weight:500}
+        .result-item .ri-value{font-size:1.1rem;font-weight:700;color:var(--txt)}
+        .share-bar{display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap}
+        .share-btn{padding:8px 18px;border-radius:99px;border:2px solid;font-weight:600;cursor:pointer;font-size:.82rem;background:#fff;transition:all .2s}
+        .share-btn.copy{border-color:var(--pri);color:var(--pri)}
+        .share-btn.copy:hover{background:var(--pri);color:#fff}
+        .share-btn.wpp{border-color:#25d366;color:#25d366}
+        .share-btn.wpp:hover{background:#25d366;color:#fff}
+
+        .content-section{padding:48px 0;background:#fff}
+        .content-section h2{font-size:1.5rem;font-weight:700;margin-bottom:20px;color:var(--txt)}
+        .content-section h3{font-size:1.15rem;font-weight:600;margin:24px 0 10px;color:var(--pri)}
+        .content-section p,.content-section li{font-size:.92rem;color:var(--txt-l);line-height:1.8}
+        .content-section ul,.content-section ol{padding-left:20px;margin-bottom:16px}
+        .content-section li{margin-bottom:6px}
+        .content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:24px}
+        .content-card{background:var(--bg);border-radius:12px;padding:24px}
+        .content-card h3{margin-top:0}
+
+        .compare-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.9rem}
+        .compare-table th,.compare-table td{padding:12px 16px;border-bottom:1px solid var(--brd);text-align:left}
+        .compare-table th{background:var(--bg);font-weight:600;color:var(--txt);font-size:.8rem;text-transform:uppercase}
+        .compare-table td{color:var(--txt-l)}
+        .compare-table tr:last-child td{border-bottom:none}
+
+        .faq-section{padding:48px 0}
+        .faq-section h2{font-size:1.5rem;font-weight:700;text-align:center;margin-bottom:28px}
+        .faq-item{background:var(--card);border-radius:12px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.04);overflow:hidden}
+        .faq-q{padding:18px 24px;cursor:pointer;font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;user-select:none}
+        .faq-q:hover{background:#f8fafc}
+        .faq-q::after{content:'+';font-size:1.3rem;color:var(--pri);font-weight:700;transition:transform .3s}
+        .faq-item.open .faq-q::after{transform:rotate(45deg)}
+        .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;padding:0 24px}
+        .faq-item.open .faq-a{max-height:600px;padding:0 24px 18px}
+        .faq-a p{font-size:.9rem;color:var(--txt-l);line-height:1.7}
+
+        footer{background:var(--txt);color:rgba(255,255,255,.7);padding:32px 0;text-align:center;font-size:.85rem}
+        footer a{color:rgba(255,255,255,.7);text-decoration:none}
+        footer a:hover{color:#fbbf24}
+        footer strong{color:rgba(255,255,255,.9)}
+
+        @media(max-width:768px){
+            .hero h1{font-size:1.5rem}
+            nav{display:none}
+            .result-grid{grid-template-columns:1fr}
+            .content-grid{grid-template-columns:1fr}
+            .compare-table{font-size:.8rem}
+            .compare-table th,.compare-table td{padding:8px 10px}
+        }
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de Grama","url":"https://quantopreciso.com/calculadora-de-grama.html","description":"Calcule quantas placas ou rolos de grama você precisa para seu jardim. Inclui terra vegetal e adubo necessários.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"inLanguage":"pt-BR"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Qual a diferença entre grama esmeralda e são carlos?","acceptedAnswer":{"@type":"Answer","text":"Esmeralda é mais resistente ao sol e ao pisoteio, ideal para áreas abertas. São Carlos tolera mais sombra e é indicada para jardins com árvores. A esmeralda tem folhas mais finas, enquanto a são carlos tem folhas mais largas."}},
+        {"@type":"Question","name":"Como preparar o solo para plantar grama?","acceptedAnswer":{"@type":"Answer","text":"Remova pedras e detritos, aplique terra vegetal numa camada de 2 a 5 cm, nivele bem o terreno e compacte levemente. Adicione adubo orgânico antes de colocar as placas."}},
+        {"@type":"Question","name":"Quantas vezes regar grama recém-plantada?","acceptedAnswer":{"@type":"Answer","text":"Regue 2 vezes ao dia nos primeiros 15 dias (manhã e final da tarde). Depois, reduza gradualmente para 1 vez ao dia e, após 30 dias, regue em dias alternados."}},
+        {"@type":"Question","name":"Quanto custa o m² de grama?","acceptedAnswer":{"@type":"Answer","text":"Grama esmeralda custa entre R$8 e R$15 por m². São Carlos entre R$10 e R$18 por m². Bermuda entre R$12 e R$20 por m². Preços variam conforme região e quantidade."}},
+        {"@type":"Question","name":"Em quanto tempo a grama pega?","acceptedAnswer":{"@type":"Answer","text":"Placas de grama pegam em 15 a 30 dias com rega adequada. Sementes levam de 30 a 60 dias para germinação e cobertura completa."}}
+    ]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
+        {"@type":"ListItem","position":2,"name":"Calculadora de Grama","item":"https://quantopreciso.com/calculadora-de-grama.html"}
+    ]}
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="/" class="logo">Quanto<span>Preciso</span>.com</a>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/calculadora-de-tinta.html">Tinta</a>
+            <a href="/calculadora-de-piso.html">Piso</a>
+            <a href="/calculadora-de-cimento.html">Cimento</a>
+            <a href="/calculadora-de-grama.html">Grama</a>
+            <a href="/calculadora-de-azulejo.html">Azulejo</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="breadcrumb">
+        <a href="/">Início</a> &rsaquo; Calculadora de Grama
+    </div>
+</div>
+
+<section class="hero">
+    <h1>🌱 Calculadora de Grama</h1>
+    <p>Calcule quantas <strong>placas ou rolos de grama</strong> você precisa para seu jardim. Inclui terra vegetal e adubo necessários.</p>
+</section>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<div class="container">
+    <div class="calc-card">
+        <div class="form-row">
+            <div class="fg">
+                <label>Comprimento (m)</label>
+                <input type="number" id="g-comp" placeholder="10" min="0.1" step="0.1">
+            </div>
+            <div class="fg">
+                <label>Largura (m)</label>
+                <input type="number" id="g-larg" placeholder="8" min="0.1" step="0.1">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="fg">
+                <label>Tipo de grama</label>
+                <select id="g-tipo">
+                    <option value="0.5" selected>Tapete/placa 0.5 m² cada</option>
+                    <option value="1">Rolo 1 m² cada</option>
+                </select>
+            </div>
+            <div class="fg">
+                <label>Perda (%)</label>
+                <select id="g-perda">
+                    <option value="5">5%</option>
+                    <option value="10" selected>10% (recomendado)</option>
+                    <option value="15">15% (área irregular)</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn-calc" onclick="calcGrama()">Calcular Grama →</button>
+        <div class="result" id="res-grama">
+            <div class="val" id="val-grama"></div>
+            <div class="det" id="det-grama"></div>
+            <div class="result-grid" id="grid-grama"></div>
+            <div class="share-bar">
+                <button class="share-btn copy" id="btn-copy" onclick="copyResult()">📋 Copiar</button>
+                <button class="share-btn wpp" onclick="shareWhatsApp()">💬 WhatsApp</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<section class="content-section">
+    <div class="container">
+        <h2>🌿 Grama Esmeralda vs São Carlos</h2>
+        <p>Escolher o tipo certo de grama faz toda a diferença no resultado final do seu jardim. Veja a comparação entre as duas espécies mais populares do Brasil:</p>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Esmeralda</th>
+                    <th>São Carlos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Nome científico</td><td>Zoysia japonica</td><td>Axonopus compressus</td></tr>
+                <tr><td>Resistência ao sol</td><td>Alta — sol pleno</td><td>Moderada — tolera sombra</td></tr>
+                <tr><td>Pisoteio</td><td>Alta resistência</td><td>Média resistência</td></tr>
+                <tr><td>Folhas</td><td>Finas e pontudas</td><td>Largas e macias</td></tr>
+                <tr><td>Manutenção</td><td>Baixa — poda mensal</td><td>Média — poda quinzenal</td></tr>
+                <tr><td>Preço médio/m²</td><td>R$ 8 – 15</td><td>R$ 10 – 18</td></tr>
+                <tr><td>Melhor uso</td><td>Jardins abertos, taludes</td><td>Jardins sombreados, residenciais</td></tr>
+            </tbody>
+        </table>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h3>🛠️ Preparo do Solo</h3>
+                <ol>
+                    <li><strong>Limpeza:</strong> remova pedras, entulho e ervas daninhas da área inteira.</li>
+                    <li><strong>Terra vegetal:</strong> aplique uma camada de 2 a 5 cm de terra vegetal adubada.</li>
+                    <li><strong>Nivelamento:</strong> nivele o terreno com enxada e rodo, garantindo um caimento suave para escoamento de água.</li>
+                    <li><strong>Compactação:</strong> compacte levemente com rolo ou pisando uniformemente.</li>
+                    <li><strong>Adubação:</strong> aplique adubo orgânico ou NPK 10-10-10 antes de posicionar as placas.</li>
+                    <li><strong>Colocação:</strong> posicione as placas bem juntas, sem sobreposição, em fileiras alternadas (como tijolos).</li>
+                    <li><strong>Rega:</strong> regue abundantemente logo após a instalação.</li>
+                </ol>
+            </div>
+            <div class="content-card">
+                <h3>💧 Dicas de Irrigação</h3>
+                <ul>
+                    <li><strong>Primeiros 15 dias:</strong> regue 2 vezes ao dia (manhã cedo e final da tarde).</li>
+                    <li><strong>15 a 30 dias:</strong> reduza para 1 vez ao dia, preferencialmente pela manhã.</li>
+                    <li><strong>Após 30 dias:</strong> regue em dias alternados ou conforme necessidade do solo.</li>
+                    <li>Evite regar nas horas mais quentes — a água evapora antes de penetrar no solo.</li>
+                    <li>O solo deve ficar úmido, não encharcado. Excesso de água causa apodrecimento das raízes.</li>
+                    <li>Em épocas de chuva, suspenda a rega e observe o comportamento do gramado.</li>
+                    <li>Considere instalar irrigação por aspersão para áreas maiores que 50 m².</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container">
+        <h2>Perguntas Frequentes sobre Grama</h2>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Qual a diferença entre grama esmeralda e são carlos?</div>
+            <div class="faq-a"><p>A grama esmeralda (Zoysia japonica) é mais resistente ao sol pleno e ao pisoteio, sendo ideal para áreas abertas, jardins residenciais e taludes. Já a grama são carlos (Axonopus compressus) tolera mais sombra e é indicada para jardins com árvores ou áreas que recebem menos de 4 horas de sol direto. A esmeralda tem folhas mais finas e pontudas, enquanto a são carlos possui folhas mais largas e macias ao toque.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Como preparar o solo para plantar grama?</div>
+            <div class="faq-a"><p>Remova pedras, entulho e ervas daninhas de toda a área. Aplique uma camada de terra vegetal de 2 a 5 cm de espessura, nivele bem o terreno com enxada e rodo, e compacte levemente. Antes de colocar as placas, adicione adubo orgânico ou NPK 10-10-10 para estimular o enraizamento. O terreno deve ter um leve caimento para evitar empoçamento de água.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Quantas vezes regar grama recém-plantada?</div>
+            <div class="faq-a"><p>Regue 2 vezes ao dia nos primeiros 15 dias — pela manhã cedo e no final da tarde. Após esse período, reduza gradualmente para 1 vez ao dia. Depois de 30 dias, quando as raízes já estiverem fixas, regue em dias alternados ou conforme a necessidade do solo. Evite regar nas horas mais quentes do dia para minimizar a evaporação.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Quanto custa o m² de grama?</div>
+            <div class="faq-a"><p>Os preços variam por espécie e região: <strong>Grama Esmeralda:</strong> R$ 8 a R$ 15 por m². <strong>Grama São Carlos:</strong> R$ 10 a R$ 18 por m². <strong>Grama Bermuda:</strong> R$ 12 a R$ 20 por m². Considere também o custo do preparo do solo (terra vegetal + adubo), que acrescenta de R$ 5 a R$ 10 por m². Comprar em maior quantidade geralmente garante descontos.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Em quanto tempo a grama pega?</div>
+            <div class="faq-a"><p><strong>Placas de grama:</strong> enraízam em 15 a 30 dias com rega adequada. Você saberá que pegou quando não conseguir puxar a placa facilmente. <strong>Sementes:</strong> a germinação leva de 7 a 14 dias, mas a cobertura completa do terreno demora de 30 a 60 dias. Durante esse período, evite pisar no gramado e mantenha a rega constante.</p></div>
+        </div>
+    </div>
+</section>
+
+<div class="ad-slot">[ Espaço para Anúncio — 728×90 ]</div>
+
+<footer>
+    <div class="container">
+        <p style="margin-bottom:12px"><strong>Calculadoras:</strong>
+            <a href="/calculadora-de-tinta.html">Tinta</a> ·
+            <a href="/calculadora-de-piso.html">Piso</a> ·
+            <a href="/calculadora-de-cimento.html">Cimento</a> ·
+            <a href="/calculadora-de-argamassa.html">Argamassa</a> ·
+            <a href="/calculadora-de-grama.html">Grama</a> ·
+            <a href="/calculadora-de-azulejo.html">Azulejo</a> ·
+            <a href="/calculadora-de-tijolo.html">Tijolo</a> ·
+            <a href="/calculadora-de-areia.html">Areia</a> ·
+            <a href="/calculadora-de-telha.html">Telha</a>
+        </p>
+        <p style="margin-bottom:12px"><strong>Guias:</strong>
+            <a href="/quanto-gasto-para-reformar-banheiro.html">Reformar Banheiro</a> ·
+            <a href="/quanto-gasto-para-reformar-cozinha.html">Reformar Cozinha</a>
+        </p>
+        <p>&copy; 2025 QuantoPreciso.com — Calculadoras Gratuitas para Obra e Reforma</p>
+        <p style="margin-top:8px">Os valores calculados são aproximados. Consulte sempre um profissional para orçamentos definitivos.</p>
+        <p style="margin-top:8px">🇺🇸 Need a flooring calculator in English? Visit <a href="https://howmuchflooring.com" target="_blank" style="color:#fbbf24">HowMuchFlooring.com</a></p>
+    </div>
+</footer>
+
+<script>
+function calcGrama() {
+    var c = parseFloat(document.getElementById('g-comp').value);
+    var l = parseFloat(document.getElementById('g-larg').value);
+    var placa = parseFloat(document.getElementById('g-tipo').value);
+    var perda = parseInt(document.getElementById('g-perda').value);
+    if (!c || !l || c <= 0 || l <= 0) return alert('Preencha comprimento e largura.');
+    var area = c * l;
+    var totalArea = area * (1 + perda / 100);
+    var placas = Math.ceil(totalArea / placa);
+    var terra = (totalArea * 2).toFixed(1);
+    var adubo = (totalArea * 0.1).toFixed(1);
+    var tipoNome = placa === 0.5 ? 'Placas' : 'Rolos';
+
+    document.getElementById('val-grama').textContent = placas + ' ' + tipoNome;
+    document.getElementById('det-grama').textContent = area.toFixed(1) + ' m\u00B2 + ' + perda + '% perda = ' + totalArea.toFixed(1) + ' m\u00B2';
+    document.getElementById('grid-grama').innerHTML =
+        '<div class="result-item"><div class="ri-label">\u00C1rea total</div><div class="ri-value">' + totalArea.toFixed(1) + ' m\u00B2</div></div>' +
+        '<div class="result-item"><div class="ri-label">' + tipoNome + ' necess\u00E1rias</div><div class="ri-value">' + placas + ' un.</div></div>' +
+        '<div class="result-item"><div class="ri-label">Terra vegetal (2 kg/m\u00B2)</div><div class="ri-value">' + terra + ' kg</div></div>' +
+        '<div class="result-item"><div class="ri-label">Adubo (0.1 kg/m\u00B2)</div><div class="ri-value">' + adubo + ' kg</div></div>';
+    document.getElementById('res-grama').style.display = 'block';
+}
+
+function getResultText() {
+    var val = document.getElementById('val-grama').textContent;
+    var det = document.getElementById('det-grama').textContent;
+    return val + ' \u2014 ' + det + '\nCalculado em QuantoPreciso.com';
+}
+
+function copyResult() {
+    var text = getResultText();
+    navigator.clipboard.writeText(text).then(function() {
+        var btn = document.getElementById('btn-copy');
+        btn.textContent = '\u2713 Copiado!';
+        setTimeout(function() { btn.textContent = '\uD83D\uDCCB Copiar'; }, 2000);
+    });
+}
+
+function shareWhatsApp() {
+    var text = encodeURIComponent(getResultText());
+    window.open('https://wa.me/?text=' + text, '_blank');
+}
+
+function toggleFaq(el) {
+    var item = el.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+}
+</script>
+
+</body>
+</html>

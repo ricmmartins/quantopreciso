@@ -66,6 +66,15 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebApplication","name":"Quanto Preciso","url":"https://quantopreciso.com","description":"Calculadoras gratuitas para obra e reforma: tinta, piso, cimento, argamassa e mais.","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"inLanguage":"pt-BR"}
     </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Quanto de tinta preciso para pintar um cômodo?","acceptedAnswer":{"@type":"Answer","text":"Calcule a área das paredes (largura × altura × número de paredes), multiplique pelo número de demãos, e divida pelo rendimento da tinta (geralmente 10 m²/litro). Uma lata de 3,6L cobre cerca de 36 m² por demão."}},
+        {"@type":"Question","name":"Como calcular a quantidade de piso?","acceptedAnswer":{"@type":"Answer","text":"Multiplique comprimento × largura do ambiente para obter a metragem. Adicione 10% de perda para cortes (15% se for diagonal). Divida pela área de cada peça para saber a quantidade."}},
+        {"@type":"Question","name":"Quantos sacos de cimento por metro cúbico?","acceptedAnswer":{"@type":"Answer","text":"Depende do traço: contrapiso (1:3:5) usa 7 sacos/m³, laje (1:2:4) usa 9 sacos/m³, alicerce (1:4:8) usa 5 sacos/m³, reboco (1:2:8) usa 14 sacos/m³."}},
+        {"@type":"Question","name":"Qual argamassa usar para porcelanato?","acceptedAnswer":{"@type":"Answer","text":"Use argamassa AC-III, específica para porcelanatos e peças de baixa absorção. O consumo médio é de 1,8 kg/m²/mm de espessura."}},
+        {"@type":"Question","name":"Quanto custa o metro quadrado de grama?","acceptedAnswer":{"@type":"Answer","text":"Placas de grama esmeralda custam entre R$ 8 e R$ 15 por m². Inclua 10% a mais para recortes. O preparo do solo (terra vegetal + adubo) custa cerca de R$ 5-10/m² adicional."}}
+    ]}
+    </script>
 </head>
 <body>
 
@@ -374,8 +383,24 @@
 
 <footer>
     <div class="container">
+        <p style="margin-bottom:12px;color:rgba(255,255,255,.9)"><strong>Calculadoras:</strong>
+            <a href="/calculadora-de-tinta.html" style="color:rgba(255,255,255,.7)">Tinta</a> ·
+            <a href="/calculadora-de-piso.html" style="color:rgba(255,255,255,.7)">Piso</a> ·
+            <a href="/calculadora-de-cimento.html" style="color:rgba(255,255,255,.7)">Cimento</a> ·
+            <a href="/calculadora-de-argamassa.html" style="color:rgba(255,255,255,.7)">Argamassa</a> ·
+            <a href="/calculadora-de-grama.html" style="color:rgba(255,255,255,.7)">Grama</a> ·
+            <a href="/calculadora-de-azulejo.html" style="color:rgba(255,255,255,.7)">Azulejo</a> ·
+            <a href="/calculadora-de-tijolo.html" style="color:rgba(255,255,255,.7)">Tijolo</a> ·
+            <a href="/calculadora-de-areia.html" style="color:rgba(255,255,255,.7)">Areia</a> ·
+            <a href="/calculadora-de-telha.html" style="color:rgba(255,255,255,.7)">Telha</a>
+        </p>
+        <p style="margin-bottom:12px;color:rgba(255,255,255,.9)"><strong>Guias:</strong>
+            <a href="/quanto-gasto-para-reformar-banheiro.html" style="color:rgba(255,255,255,.7)">Reformar Banheiro</a> ·
+            <a href="/quanto-gasto-para-reformar-cozinha.html" style="color:rgba(255,255,255,.7)">Reformar Cozinha</a>
+        </p>
         <p>&copy; 2025 QuantoPreciso.com — Calculadoras Gratuitas para Obra e Reforma</p>
         <p style="margin-top:8px">Os valores calculados são aproximados. Consulte sempre um profissional para orçamentos definitivos.</p>
+        <p style="margin-top:8px">🇺🇸 Need a flooring calculator in English? Visit <a href="https://howmuchflooring.com" target="_blank" style="color:#fbbf24">HowMuchFlooring.com</a></p>
     </div>
 </footer>
 
@@ -383,7 +408,35 @@
 function show(id, val, det) {
     document.getElementById('val-' + id).textContent = val;
     document.getElementById('det-' + id).textContent = det;
-    document.getElementById('res-' + id).style.display = 'block';
+    const res = document.getElementById('res-' + id);
+    res.style.display = 'block';
+    // Show share bar
+    let shareBar = res.querySelector('.share-bar');
+    if (!shareBar) {
+        shareBar = document.createElement('div');
+        shareBar.className = 'share-bar';
+        shareBar.style.cssText = 'display:flex;justify-content:center;gap:10px;margin-top:12px;flex-wrap:wrap';
+        shareBar.innerHTML = `<button onclick="shareResult('${id}')" class="share-btn-${id}" style="padding:8px 16px;border-radius:99px;border:2px solid #2563eb;background:white;color:#2563eb;font-weight:600;cursor:pointer;font-size:.82rem">📋 Copiar</button><button onclick="shareWhatsApp('${id}')" style="padding:8px 16px;border-radius:99px;border:2px solid #25d366;background:white;color:#25d366;font-weight:600;cursor:pointer;font-size:.82rem">💬 WhatsApp</button>`;
+        res.appendChild(shareBar);
+    }
+}
+
+function shareResult(id) {
+    const val = document.getElementById('val-' + id).textContent;
+    const det = document.getElementById('det-' + id).textContent;
+    const text = `${val} — ${det}\nCalculado em QuantoPreciso.com`;
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.share-btn-' + id);
+        btn.textContent = '✓ Copiado!';
+        setTimeout(() => btn.textContent = '📋 Copiar', 2000);
+    });
+}
+
+function shareWhatsApp(id) {
+    const val = document.getElementById('val-' + id).textContent;
+    const det = document.getElementById('det-' + id).textContent;
+    const text = encodeURIComponent(`${val} — ${det}\nCalculado em https://quantopreciso.com`);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
 }
 
 function calcTinta() {

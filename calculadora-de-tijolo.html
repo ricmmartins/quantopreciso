@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Tijolo — Quantos Tijolos Preciso?</title>
+<meta name="description" content="Calcule quantos tijolos você precisa para construir uma parede. Calculadora para tijolo baiano, maciço e bloco cerâmico.">
+<link rel="canonical" href="https://quantopreciso.com/calculadora-de-tijolo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pri:#2563eb;--pri-d:#1d4ed8;--bg:#f8fafc;--card:#fff;--txt:#1e293b;--txt-l:#64748b;--brd:#e2e8f0;--ok:#16a34a;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--pri);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#1e40af,#3b82f6);position:sticky;top:0;z-index:100;padding:0 1rem;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:#fbbf24}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{color:rgba(255,255,255,.85);font-size:.85rem;padding:.35rem .65rem;border-radius:8px;transition:background .2s}
+nav a:hover{background:rgba(255,255,255,.15);text-decoration:none;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.breadcrumb{font-size:.85rem;color:var(--txt-l);margin-bottom:1rem;display:flex;flex-wrap:wrap;gap:.25rem}
+.breadcrumb a{color:var(--pri)}
+.ad-slot{background:#f1f5f9;border:2px dashed var(--brd);border-radius:12px;padding:2rem;text-align:center;color:var(--txt-l);font-size:.85rem;margin:1.5rem 0}
+.card{background:var(--card);border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);padding:2rem;margin-bottom:1.5rem}
+.card h1{font-size:1.75rem;font-weight:800;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.card h1 .icon{font-size:2rem}
+.subtitle{color:var(--txt-l);font-size:1rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group.full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem}
+input,select{padding:.7rem .9rem;border:2px solid var(--brd);border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.btn{background:var(--pri);color:#fff;border:none;padding:.85rem 2rem;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn:hover{background:var(--pri-d)}
+.results{display:none;margin-top:1.5rem}
+.results-title{font-weight:700;font-size:1.15rem;margin-bottom:1rem;color:var(--pri)}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.result-item{background:var(--bg);border-radius:12px;padding:1.1rem;text-align:center;border:1px solid var(--brd)}
+.result-item .val{font-size:1.8rem;font-weight:800;color:var(--pri)}
+.result-item .lbl{font-size:.8rem;color:var(--txt-l);margin-top:.25rem}
+.share-bar{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.share-btn{padding:.55rem 1.2rem;border-radius:10px;border:none;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.4rem;transition:opacity .2s}
+.share-btn:hover{opacity:.85}
+.share-copy{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}
+.share-wpp{background:#25d366;color:#fff}
+.content-section{margin-top:0}
+.content-section h2{font-size:1.3rem;font-weight:700;margin:1.5rem 0 .75rem;color:var(--txt)}
+.content-section h3{font-size:1.1rem;font-weight:600;margin:1.25rem 0 .5rem}
+.content-section p{color:var(--txt-l);margin-bottom:.75rem}
+.content-section ul,.content-section ol{color:var(--txt-l);padding-left:1.5rem;margin-bottom:.75rem}
+.content-section li{margin-bottom:.35rem}
+.info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.info-table th,.info-table td{padding:.65rem .85rem;border:1px solid var(--brd);text-align:left}
+.info-table th{background:var(--bg);font-weight:600;color:var(--txt)}
+.info-table td{color:var(--txt-l)}
+.faq-section{margin-top:0}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.faq-item{border:1px solid var(--brd);border-radius:12px;margin-bottom:.65rem;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--card);transition:background .2s;gap:.75rem}
+.faq-q:hover{background:var(--bg)}
+.faq-icon{font-size:1.3rem;font-weight:400;transition:transform .3s;flex-shrink:0;color:var(--pri);width:1.3rem;text-align:center}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 1.2rem;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--txt-l);font-size:.92rem;line-height:1.7}
+.faq-item.open .faq-a{max-height:500px;padding:0 1.2rem 1.2rem}
+footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;margin-top:3rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-col h4{color:#fff;font-size:.95rem;margin-bottom:.75rem}
+.footer-col a{color:rgba(255,255,255,.6);font-size:.85rem;display:block;padding:.2rem 0;transition:color .2s}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.card h1{font-size:1.35rem}.header-inner{height:auto;padding:.75rem 0}.card{padding:1.25rem}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calculadora de Tijolo","url":"https://quantopreciso.com/calculadora-de-tijolo.html","description":"Calcule quantos tijolos você precisa para construir uma parede. Calculadora para tijolo baiano, maciço e bloco cerâmico.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quantos tijolos baianos por metro quadrado?","acceptedAnswer":{"@type":"Answer","text":"São necessários aproximadamente 25 unidades de tijolo baiano (9x19x19 cm) por metro quadrado de parede, considerando juntas de 1,5 cm."}},{"@type":"Question","name":"Quanto custa um milheiro de tijolos?","acceptedAnswer":{"@type":"Answer","text":"Tijolo baiano: R$400-600, Tijolo maciço: R$700-1.000, Bloco cerâmico: R$500-800. Valores variam por região."}},{"@type":"Question","name":"Qual tijolo é mais barato?","acceptedAnswer":{"@type":"Answer","text":"O bloco cerâmico 14x19x29 cm é o mais econômico no custo total, pois usa menos unidades por m² e consome menos argamassa."}},{"@type":"Question","name":"Preciso de cinta de amarração?","acceptedAnswer":{"@type":"Answer","text":"Sim, a cada 6 fiadas e no topo da parede. Use vergalhões de 8mm com concreto ou graute."}},{"@type":"Question","name":"Tijolo baiano ou bloco cerâmico?","acceptedAnswer":{"@type":"Answer","text":"O bloco cerâmico é mais rápido de assentar e tem melhor isolamento. O baiano é mais versátil e fácil de encontrar."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},{"@type":"ListItem","position":2,"name":"Calculadora de Tijolo","item":"https://quantopreciso.com/calculadora-de-tijolo.html"}]}]}
+</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo">Quanto<span>Preciso</span>.com</a><nav><a href="/">Início</a><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a></nav></div></header>
+<div class="container">
+<div class="breadcrumb"><a href="/">Início</a> <span>›</span> <span>Calculadora de Tijolo</span></div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+<div class="card">
+<h1><span class="icon">🧱</span> Calculadora de Tijolo</h1>
+<p class="subtitle">Calcule quantos tijolos você precisa para construir uma parede — com estimativa de cimento e areia para o assentamento.</p>
+<div class="form-grid">
+<div class="form-group"><label for="comp">Comprimento da parede (m)</label><input type="number" id="comp" min="0.1" step="0.01" placeholder="Ex: 5"></div>
+<div class="form-group"><label for="alt">Altura da parede (m)</label><input type="number" id="alt" min="0.1" step="0.01" placeholder="Ex: 2.8"></div>
+<div class="form-group"><label for="tipo">Tipo de tijolo</label><select id="tipo"><option value="baiano" selected>Tijolo baiano 9×19×19 cm — 25 unid/m²</option><option value="macico">Tijolo maciço 5×10×20 cm — 77 unid/m²</option><option value="bloco">Bloco cerâmico 14×19×29 cm — 17 unid/m²</option></select></div>
+<div class="form-group"><label for="perda">Perda (%)</label><select id="perda"><option value="5">5%</option><option value="10" selected>10%</option><option value="15">15%</option></select></div>
+<div class="form-group full"><button class="btn" onclick="calcTijolo()">Calcular Tijolos</button></div>
+</div>
+<div class="results" id="results">
+<div class="results-title">📋 Resultado do cálculo</div>
+<div class="results-grid">
+<div class="result-item"><div class="val" id="rArea">—</div><div class="lbl">Área da parede (m²)</div></div>
+<div class="result-item"><div class="val" id="rTijolos">—</div><div class="lbl">Tijolos (unidades)</div></div>
+<div class="result-item"><div class="val" id="rCimento">—</div><div class="lbl">Cimento (sacos 50 kg)</div></div>
+<div class="result-item"><div class="val" id="rAreia">—</div><div class="lbl">Areia (m³)</div></div>
+</div>
+<div class="share-bar">
+<button class="share-btn share-copy" onclick="copiarResultado()">📋 Copiar</button>
+<a class="share-btn share-wpp" id="wppLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+<div class="card content-section">
+<h2>Tipos de tijolo: comparação completa</h2>
+<p>Escolher o tipo certo de tijolo é essencial para a economia e a qualidade da obra. Veja as principais opções:</p>
+<table class="info-table">
+<thead><tr><th>Tipo</th><th>Dimensões</th><th>Unid/m²</th><th>Peso unitário</th><th>Uso principal</th></tr></thead>
+<tbody>
+<tr><td>Tijolo baiano</td><td>9×19×19 cm</td><td>25</td><td>~2,5 kg</td><td>Vedação, paredes internas e externas</td></tr>
+<tr><td>Tijolo maciço</td><td>5×10×20 cm</td><td>77</td><td>~2,0 kg</td><td>Paredes aparentes, churrasqueiras</td></tr>
+<tr><td>Bloco cerâmico</td><td>14×19×29 cm</td><td>17</td><td>~5,0 kg</td><td>Vedação, melhor isolamento</td></tr>
+<tr><td>Bloco de concreto</td><td>14×19×39 cm</td><td>12,5</td><td>~10 kg</td><td>Alvenaria estrutural</td></tr>
+</tbody>
+</table>
+<h2>Quanto custa um milheiro de tijolos?</h2>
+<p>Os preços variam por região e fornecedor. Valores médios em 2024/2025:</p>
+<table class="info-table">
+<thead><tr><th>Tipo</th><th>Preço por milheiro</th><th>Custo por m²</th></tr></thead>
+<tbody>
+<tr><td>Tijolo baiano</td><td>R$ 400 – R$ 600</td><td>R$ 10 – R$ 15</td></tr>
+<tr><td>Tijolo maciço</td><td>R$ 700 – R$ 1.000</td><td>R$ 54 – R$ 77</td></tr>
+<tr><td>Bloco cerâmico</td><td>R$ 500 – R$ 800</td><td>R$ 8,50 – R$ 13,60</td></tr>
+<tr><td>Bloco de concreto</td><td>R$ 800 – R$ 1.200</td><td>R$ 10 – R$ 15</td></tr>
+</tbody>
+</table>
+<p>Dica: sempre peça orçamento de pelo menos 3 fornecedores e verifique se o frete está incluso no preço.</p>
+<h2>Dicas de assentamento</h2>
+<ul>
+<li><strong>Molhe os tijolos</strong> antes de assentar para melhorar a aderência da argamassa.</li>
+<li><strong>Use nível e prumo</strong> a cada 3 fiadas para garantir alinhamento.</li>
+<li><strong>Juntas de 1,0 a 1,5 cm</strong> são o padrão para a maioria dos tijolos.</li>
+<li><strong>Cinta de amarração</strong> a cada 6 fiadas e no topo da parede com vergalhão de 8 mm.</li>
+<li><strong>Argamassa de assentamento:</strong> traço 1:2:8 (cimento:cal:areia) é o mais utilizado.</li>
+<li><strong>Evite paredes muito longas</strong> sem amarração; use pilares intermediários a cada 3-4 metros.</li>
+</ul>
+<h3>Argamassa de assentamento</h3>
+<p>O consumo de argamassa varia conforme o tipo de tijolo e a espessura da junta. Em média:</p>
+<ul>
+<li><strong>Tijolo baiano:</strong> ~0,5 saco de cimento e ~0,02 m³ de areia por m²</li>
+<li><strong>Tijolo maciço:</strong> ~1 saco de cimento e ~0,04 m³ de areia por m²</li>
+<li><strong>Bloco cerâmico:</strong> ~0,3 saco de cimento e ~0,015 m³ de areia por m²</li>
+</ul>
+</div>
+<div class="card faq-section">
+<h2>Perguntas frequentes</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantos tijolos baianos por metro quadrado?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">São necessários aproximadamente 25 unidades de tijolo baiano (9×19×19 cm) por metro quadrado de parede, considerando juntas de 1,5 cm. Esse é o tipo mais usado em alvenaria de vedação no Brasil. Para paredes com vãos de portas e janelas, desconte a área das aberturas antes de calcular.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto custa um milheiro de tijolos?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Os preços médios por milheiro são: Tijolo baiano: R$ 400 a R$ 600, Tijolo maciço: R$ 700 a R$ 1.000, Bloco cerâmico: R$ 500 a R$ 800. Os valores variam conforme a região, época do ano e volume de compra. Peça orçamentos de vários fornecedores e negocie descontos para grandes quantidades.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual tijolo é mais barato?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O bloco cerâmico 14×19×29 cm é o mais econômico no custo total da obra. Apesar de o milheiro ser mais caro, ele usa menos unidades por m² (apenas 17 un/m²) e consome menos argamassa. Além disso, é mais rápido de assentar, o que reduz o custo de mão de obra. No resultado final, o bloco cerâmico costuma ser 15-25% mais barato que o tijolo baiano.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Preciso de cinta de amarração?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Sim, a cinta de amarração é obrigatória a cada 6 fiadas de tijolos e no topo da parede. Ela distribui os esforços estruturais e evita trincas. Use vergalhões de 8 mm com concreto ou graute. Em paredes acima de 3 metros de comprimento, inclua também pilares intermediários de amarração.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Tijolo baiano ou bloco cerâmico?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">O bloco cerâmico é mais rápido de assentar, tem melhor isolamento térmico e acústico, e consome menos argamassa. O tijolo baiano é mais versátil, mais fácil de encontrar e mais leve individualmente. Para paredes de vedação em geral, o bloco cerâmico costuma ser a melhor escolha. O tijolo baiano é preferido quando se precisa de mais flexibilidade em recortes e ajustes.</div>
+</div>
+</div>
+<div class="ad-slot">[ Espaço para Anúncio — 728x90 ]</div>
+</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><h4>Calculadoras</h4><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-tijolo.html">Tijolo</a><a href="/calculadora-de-areia.html">Areia</a><a href="/calculadora-de-telha.html">Telha</a></div>
+<div class="footer-col"><h4>Guias</h4><a href="/como-reformar-banheiro.html">Como reformar banheiro</a><a href="/como-reformar-cozinha.html">Como reformar cozinha</a></div>
+<div class="footer-col"><h4>Outros sites</h4><a href="https://howmuchflooring.com" target="_blank" rel="noopener">HowMuchFlooring.com</a></div>
+<div class="footer-col"><h4>QuantoPreciso.com</h4><p style="font-size:.85rem;color:rgba(255,255,255,.5)">Calculadoras gratuitas para materiais de construção e reforma. Resultados são estimativas — consulte sempre um profissional.</p></div>
+</div>
+<div class="footer-bottom">© 2025 QuantoPreciso.com — Todos os direitos reservados.</div>
+</footer>
+<script>
+var tijoloData={baiano:{unid:25,cimento:0.5,areia:0.02},macico:{unid:77,cimento:1,areia:0.04},bloco:{unid:17,cimento:0.3,areia:0.015}};
+function calcTijolo(){
+  var c=parseFloat(document.getElementById('comp').value);
+  var a=parseFloat(document.getElementById('alt').value);
+  var t=document.getElementById('tipo').value;
+  var p=parseFloat(document.getElementById('perda').value);
+  if(!c||!a||c<=0||a<=0){alert('Preencha todos os campos corretamente.');return;}
+  var area=c*a;
+  var d=tijoloData[t];
+  var tijolos=Math.ceil(area*d.unid*(1+p/100));
+  var cimento=Math.ceil(area*d.cimento);
+  var areia=(area*d.areia).toFixed(2);
+  document.getElementById('rArea').textContent=area.toFixed(2);
+  document.getElementById('rTijolos').textContent=tijolos.toLocaleString('pt-BR');
+  document.getElementById('rCimento').textContent=cimento;
+  document.getElementById('rAreia').textContent=areia;
+  document.getElementById('results').style.display='block';
+  var txt='Tijolos: '+tijolos+' unid | Área: '+area.toFixed(2)+' m² | Cimento: '+cimento+' sacos | Areia: '+areia+' m³ — QuantoPreciso.com';
+  document.getElementById('wppLink').href='https://api.whatsapp.com/send?text='+encodeURIComponent(txt);
+  window._lastResult=txt;
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function copiarResultado(){if(window._lastResult){navigator.clipboard.writeText(window._lastResult).then(function(){var b=document.querySelector('.share-copy');b.textContent='✅ Copiado!';setTimeout(function(){b.innerHTML='📋 Copiar';},2000);});}}
+function toggleFaq(el){var item=el.parentElement;item.classList.toggle('open');}
+</script>
+</body>
+</html>

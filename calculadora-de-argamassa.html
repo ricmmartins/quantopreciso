@@ -110,7 +110,9 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"Question","name":"Quanta argamassa por m²?","acceptedAnswer":{"@type":"Answer","text":"O consumo médio é de 5 kg/m² com espessura de 3–4 mm usando desempenadeira dentada. Para porcelanatos grandes com dupla colagem, o consumo pode chegar a 10 kg/m²."}},
         {"@type":"Question","name":"Posso usar AC-I no piso?","acceptedAnswer":{"@type":"Answer","text":"Sim, AC-I pode ser usada em pisos internos sem trânsito pesado, sobre contrapiso. Para áreas externas, piscinas ou fachadas, use AC-II ou AC-III."}},
         {"@type":"Question","name":"Qual argamassa usar para porcelanato?","acceptedAnswer":{"@type":"Answer","text":"Para porcelanato retificado e peças grandes (acima de 60×60 cm), use AC-II ou AC-III. Porcelanato tem baixa absorção, então a argamassa precisa ter maior aderência. Faça dupla colagem em peças acima de 60×60."}}
-      ]
+      ,
+        {"@type": "Question", "name": "Quanto de argamassa para assentar piso em 20 metros quadrados?", "acceptedAnswer": {"@type": "Answer", "text": "Para 20 m² em ambiente interno com argamassa AC-I (20 kg), são ~10 sacos — rendimento de 5 kg/m². Para porcelanatos grandes com dupla colagem, ~20 sacos."}},
+        {"@type": "Question", "name": "Qual a diferença entre argamassa AC-I, AC-II e AC-III?", "acceptedAnswer": {"@type": "Answer", "text": "AC-I: uso interno sobre contrapiso (menor aderência). AC-II: áreas externas, fachadas e piscinas (maior aderência). AC-III: altíssima aderência, para porcelanatos grandes e superfícies difíceis."}}]
     },
     {
       "@type":"BreadcrumbList",
@@ -118,6 +120,53 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
         {"@type":"ListItem","position":2,"name":"Calculadora de Argamassa","item":"https://quantopreciso.com/calculadora-de-argamassa.html"}
       ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como calcular a quantidade de argamassa colante",
+  "description": "Calcule quantos sacos de argamassa você precisa para assentar pisos e revestimentos cerâmicos.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Meça a área a revestir",
+      "text": "Comprimento × largura para pisos, ou largura × altura para paredes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Escolha o tipo de argamassa",
+      "text": "AC-I: interno. AC-II: externo/áreas úmidas. AC-III: porcelanatos grandes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Verifique o consumo",
+      "text": "AC-I: ~5 kg/m². AC-II: ~6,5 kg/m². Dupla colagem (porcelanatos grandes): dobra o consumo."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Calcule o total em kg",
+      "text": "Área × consumo por m². Exemplo: 20 m² × 5 kg = 100 kg."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Converta em sacos",
+      "text": "Divida pelo peso do saco (geralmente 20 kg). Exemplo: 100 kg ÷ 20 = 5 sacos."
+    }
+  ],
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Calculadora online"
     }
   ]
 }
@@ -218,6 +267,24 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <p>Após assentar, o rejunte é fundamental para vedar as juntas e evitar infiltração. Use rejunte flexível para porcelanato e rejunte comum para cerâmica. Consumo médio: 0,3–0,5 kg/m² para juntas de 2–3 mm.</p>
 </div>
 
+
+<div class="card content-section">
+<h2>Quanto de argamassa por tamanho de área?</h2>
+<p>Estimativas de consumo de argamassa colante para assentamento de pisos e revestimentos:</p>
+<table class="info-table">
+<thead><tr><th>Ambiente</th><th>Área</th><th>Sacos AC-I (20 kg)</th><th>Sacos AC-II (20 kg)</th></tr></thead>
+<tbody>
+<tr><td>Banheiro</td><td>5 m²</td><td>~3 sacos</td><td>~4 sacos</td></tr>
+<tr><td>Quarto</td><td>12 m²</td><td>~6 sacos</td><td>~8 sacos</td></tr>
+<tr><td>Sala</td><td>20 m²</td><td>~10 sacos</td><td>~13 sacos</td></tr>
+<tr><td>Cozinha</td><td>10 m²</td><td>~5 sacos</td><td>~7 sacos</td></tr>
+<tr><td>Casa inteira</td><td>50 m²</td><td>~25 sacos</td><td>~33 sacos</td></tr>
+<tr><td>Casa inteira</td><td>100 m²</td><td>~50 sacos</td><td>~67 sacos</td></tr>
+</tbody>
+</table>
+<p><em>AC-I: uso interno (~5 kg/m²). AC-II: áreas úmidas e externas (~6,5 kg/m²). Porcelanatos grandes (80×80+) podem exigir dupla colagem, dobrando o consumo.</em></p>
+</div>
+
 <div class="card faq-section">
 <h2>Perguntas frequentes</h2>
 <div class="faq-item">
@@ -232,8 +299,36 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <div class="faq-q" onclick="toggleFaq(this)"><span>Qual argamassa usar para porcelanato?</span><span class="faq-icon">+</span></div>
 <div class="faq-a">Para porcelanato retificado e peças grandes (acima de 60×60 cm), use AC-II ou AC-III. O porcelanato tem baixíssima absorção de água, exigindo uma argamassa com alta aderência. Faça sempre dupla colagem em peças grandes para garantir aderência total e evitar peças ocas.</div>
 </div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto de argamassa para assentar piso em 20 metros quadrados?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para 20 m² em ambiente interno com argamassa AC-I (20 kg), são ~10 sacos — rendimento de 5 kg/m². Para porcelanatos grandes com dupla colagem, ~20 sacos.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual a diferença entre argamassa AC-I, AC-II e AC-III?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">AC-I: uso interno sobre contrapiso (menor aderência). AC-II: áreas externas, fachadas e piscinas (maior aderência). AC-III: altíssima aderência, para porcelanatos grandes e superfícies difíceis.</div>
 </div>
 
+</div>
+
+</div>
+
+
+
+<div class="card content-section">
+<h2>Quanto de argamassa para cada tipo de revestimento?</h2>
+<p><strong>Quanto de argamassa para assentar porcelanato 60×60?</strong> O consumo de argamassa AC-II para porcelanato grande é de ~6,5 kg/m² com colagem simples. Para <strong>dupla colagem</strong> (obrigatória em peças acima de 60×60), o consumo dobra para ~13 kg/m². Em um piso de 30 m²: ~195 kg = 10 sacos de 20 kg com dupla colagem.</p>
+<p><strong>Quanto de argamassa para azulejar um banheiro?</strong> Para 8 m² de parede com azulejo 20×20 (AC-I), ~40 kg = 2 sacos. Para porcelanato de parede 30×60 (AC-II): ~52 kg = 3 sacos.</p>
+</div>
+
+<div class="card content-section">
+<h2>Calculadoras relacionadas</h2>
+<p>Planejando uma obra ou reforma? Veja também estas calculadoras:</p>
+<ul>
+<li><a href="/calculadora-de-piso.html"><strong>Calculadora de Piso</strong></a> — Quanto de piso para cada ambiente</li>
+<li><a href="/calculadora-de-azulejo.html"><strong>Calculadora de Azulejo</strong></a> — Quanto de azulejo para revestir</li>
+<li><a href="/calculadora-de-cimento.html"><strong>Calculadora de Cimento</strong></a> — Quantos sacos de cimento</li>
+<li><a href="/calculadora-de-areia.html"><strong>Calculadora de Areia</strong></a> — Quanto de areia para reboco</li>
+</ul>
 </div>
 
 <footer>

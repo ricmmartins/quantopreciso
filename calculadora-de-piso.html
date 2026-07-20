@@ -110,7 +110,10 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"Question","name":"Como calcular piso na diagonal?","acceptedAnswer":{"@type":"Answer","text":"Para assentamento na diagonal, adicione 15–20% de perda ao cálculo normal, pois os recortes nos cantos geram mais desperdício. A área total não muda, apenas a margem de perda."}},
         {"@type":"Question","name":"Quanto custa o metro quadrado de piso?","acceptedAnswer":{"@type":"Answer","text":"O preço varia muito: cerâmica simples custa R$30–60/m², porcelanato esmaltado R$50–120/m², e porcelanato técnico polido R$80–200/m². A mão de obra custa entre R$40–80/m² dependendo da região."}},
         {"@type":"Question","name":"Qual a diferença entre porcelanato e cerâmica?","acceptedAnswer":{"@type":"Answer","text":"O porcelanato tem absorção de água menor que 0,5%, é mais resistente e durável. A cerâmica absorve mais água (6–10%) e é mais acessível. Para áreas molhadas e alto tráfego, prefira porcelanato."}}
-      ]
+      ,
+        {"@type": "Question", "name": "Quanto de piso preciso para um quarto de 12 metros quadrados?", "acceptedAnswer": {"@type": "Answer", "text": "Para um quarto de 12 m² com porcelanato 60×60 cm e 10% de margem, você precisa de aproximadamente 37 peças (13,2 m²), cerca de 6 caixas de 2,52 m²."}},
+        {"@type": "Question", "name": "Quantas caixas de porcelanato para 20 metros quadrados?", "acceptedAnswer": {"@type": "Answer", "text": "Para 20 m² com 10% de perda (22 m² total), com caixas de 2,52 m² (padrão 60×60 cm), você precisa de 9 caixas. Para porcelanato 80×80, as caixas costumam cobrir 1,92 m² — seriam 12 caixas."}},
+        {"@type": "Question", "name": "Como calcular a quantidade de piso com margem de corte?", "acceptedAnswer": {"@type": "Answer", "text": "Some 10% à área total para ambientes retangulares e 15% para ambientes com recortes (banheiros, corredores em L). Exemplo: sala de 25 m² + 10% = 27,5 m². Divida pelo tamanho da caixa para saber quantas comprar."}}]
     },
     {
       "@type":"BreadcrumbList",
@@ -118,6 +121,59 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
         {"@type":"ListItem","position":2,"name":"Calculadora de Piso","item":"https://quantopreciso.com/calculadora-de-piso.html"}
       ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como calcular a quantidade de piso para um cômodo",
+  "description": "Calcule quantas peças e caixas de porcelanato ou cerâmica você precisa para revestir qualquer ambiente.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Meça o ambiente",
+      "text": "Meça o comprimento e a largura do cômodo com uma trena."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Calcule a área",
+      "text": "Multiplique comprimento × largura. Exemplo: quarto de 3 × 4 m = 12 m²."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Adicione margem de corte",
+      "text": "Some 10% para ambientes retangulares ou 15% para ambientes com recortes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Escolha o tamanho do piso",
+      "text": "Porcelanato 60×60 cm = 0,36 m²/peça. 80×80 cm = 0,64 m²/peça."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Calcule as peças",
+      "text": "Divida a área com margem pela área de cada peça. Exemplo: 13,2 m² ÷ 0,36 = 37 peças."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Converta em caixas",
+      "text": "Divida pela cobertura de cada caixa. Caixa de 60×60 cobre ~2,52 m². Exemplo: 13,2 ÷ 2,52 = 6 caixas."
+    }
+  ],
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Calculadora online"
     }
   ]
 }
@@ -227,6 +283,25 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <p>O rodapé é calculado pelo perímetro do ambiente, descontando as portas. Use a fórmula: <strong>Perímetro = 2 × (comprimento + largura) – largura das portas</strong>. Rodapés são vendidos em peças lineares, geralmente de 60 cm ou 1 metro.</p>
 </div>
 
+
+<div class="card content-section">
+<h2>Quanto de piso para cada tamanho de cômodo?</h2>
+<p>Veja estimativas rápidas de quantas peças e caixas de piso você precisa para os tamanhos mais comuns de ambientes, considerando porcelanato 60×60 cm (2,72 peças/m²) e 10% de margem para cortes:</p>
+<table class="info-table">
+<thead><tr><th>Tamanho do ambiente</th><th>Área com margem (10%)</th><th>Peças 60×60 cm</th><th>Caixas (2,52 m²)</th></tr></thead>
+<tbody>
+<tr><td>Banheiro (4 m²)</td><td>4,4 m²</td><td>13 peças</td><td>2 caixas</td></tr>
+<tr><td>Quarto (10 m²)</td><td>11 m²</td><td>31 peças</td><td>5 caixas</td></tr>
+<tr><td>Quarto (15 m²)</td><td>16,5 m²</td><td>46 peças</td><td>7 caixas</td></tr>
+<tr><td>Sala (20 m²)</td><td>22 m²</td><td>62 peças</td><td>9 caixas</td></tr>
+<tr><td>Sala (30 m²)</td><td>33 m²</td><td>92 peças</td><td>14 caixas</td></tr>
+<tr><td>Casa inteira (50 m²)</td><td>55 m²</td><td>153 peças</td><td>22 caixas</td></tr>
+<tr><td>Casa inteira (100 m²)</td><td>110 m²</td><td>306 peças</td><td>44 caixas</td></tr>
+</tbody>
+</table>
+<p><em>Valores para porcelanato 60×60 cm com 10% de perda. Pisos menores (45×45) geram mais peças. Use a calculadora acima para tamanhos exatos.</em></p>
+</div>
+
 <div class="card faq-section">
 <h2>Perguntas frequentes</h2>
 <div class="faq-item">
@@ -241,8 +316,41 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <div class="faq-q" onclick="toggleFaq(this)"><span>Qual a diferença entre porcelanato e cerâmica?</span><span class="faq-icon">+</span></div>
 <div class="faq-a">O porcelanato é feito com argila mais pura e queimado em temperatura mais alta, resultando em absorção de água menor que 0,5% — o que o torna mais resistente e durável. A cerâmica absorve 6–10% de água e é mais barata. Para banheiros, cozinhas e áreas de alto tráfego, o porcelanato é a melhor escolha.</div>
 </div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto de piso preciso para um quarto de 12 metros quadrados?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para um quarto de 12 m² com porcelanato 60×60 cm e 10% de margem, você precisa de aproximadamente 37 peças (13,2 m²), cerca de 6 caixas de 2,52 m².</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantas caixas de porcelanato para 20 metros quadrados?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para 20 m² com 10% de perda (22 m² total), com caixas de 2,52 m² (padrão 60×60 cm), você precisa de 9 caixas. Para porcelanato 80×80, as caixas costumam cobrir 1,92 m² — seriam 12 caixas.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Como calcular a quantidade de piso com margem de corte?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Some 10% à área total para ambientes retangulares e 15% para ambientes com recortes (banheiros, corredores em L). Exemplo: sala de 25 m² + 10% = 27,5 m². Divida pelo tamanho da caixa para saber quantas comprar.</div>
 </div>
 
+</div>
+
+</div>
+
+
+
+<div class="card content-section">
+<h2>Quanto de piso para cada tipo de ambiente?</h2>
+<p>Para saber <strong>quanto de porcelanato comprar para uma sala de 25 m²</strong>, some 10% de margem: 27,5 m². Em caixas de 2,52 m² (porcelanato 60×60), são 11 caixas. Para <strong>porcelanato retificado 80×80</strong> (caixa de 1,92 m²), seriam 15 caixas.</p>
+<p><strong>Quanto custa colocar piso?</strong> O porcelanato 60×60 custa entre R$ 30 e R$ 120 por m² (material). A mão de obra para assentamento custa R$ 40–80/m². Para uma sala de 25 m², o custo total fica entre R$ 1.750 e R$ 5.000.</p>
+<p>Para <strong>uma casa inteira de 80 m²</strong> (com 10% de margem = 88 m²), você precisará de 35 caixas de porcelanato 60×60 cm. Se optar por pisos menores como cerâmica 45×45, o número de peças aumenta mas o custo por m² geralmente diminui.</p>
+</div>
+
+<div class="card content-section">
+<h2>Calculadoras relacionadas</h2>
+<p>Planejando uma obra ou reforma? Veja também estas calculadoras:</p>
+<ul>
+<li><a href="/calculadora-de-argamassa.html"><strong>Calculadora de Argamassa</strong></a> — Quanto de argamassa para assentar piso</li>
+<li><a href="/calculadora-de-azulejo.html"><strong>Calculadora de Azulejo</strong></a> — Quanto de azulejo para paredes</li>
+<li><a href="/calculadora-de-cimento.html"><strong>Calculadora de Cimento</strong></a> — Quanto de cimento para contrapiso</li>
+<li><a href="/calculadora-de-tinta.html"><strong>Calculadora de Tinta</strong></a> — Quanto de tinta para pintar a casa</li>
+</ul>
 </div>
 
 <footer>

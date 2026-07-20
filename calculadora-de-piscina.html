@@ -114,7 +114,9 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"Question","name":"Quantas horas a bomba da piscina deve ficar ligada?","acceptedAnswer":{"@type":"Answer","text":"A bomba deve filtrar todo o volume da piscina pelo menos 1 vez ao dia. Para uma piscina de 30.000 litros com bomba de 1/2 cv (vazão ~7.000 L/h), são necessárias cerca de 4–5 horas diárias. No verão ou com uso intenso, aumente para 6–8 horas."}},
         {"@type":"Question","name":"Como calcular a quantidade de cloro para piscina?","acceptedAnswer":{"@type":"Answer","text":"Para manter o cloro entre 1 e 3 ppm (ideal), use cerca de 3 gramas de cloro granulado (hipoclorito de cálcio 65%) por 1.000 litros de água, por aplicação. A cloração de choque (para recuperar água verde) requer 10–15 g por 1.000 litros."}},
         {"@type":"Question","name":"Quanto tempo demora para encher uma piscina?","acceptedAnswer":{"@type":"Answer","text":"Com uma mangueira de jardim padrão (vazão de ~1.000 litros/hora), uma piscina de 20.000 litros leva cerca de 20 horas para encher. Com duas mangueiras simultâneas, o tempo cai pela metade. Algumas concessionárias oferecem caminhão pipa como alternativa."}}
-      ]
+      ,
+        {"@type": "Question", "name": "Quantos litros de água tem uma piscina de 5×10 metros?", "acceptedAnswer": {"@type": "Answer", "text": "Com profundidade média de 1,4 m, ~70.000 litros. Com profundidade variável (1,0–1,8 m), entre 50.000 e 90.000 litros."}},
+        {"@type": "Question", "name": "Quanto custa construir uma piscina de alvenaria?", "acceptedAnswer": {"@type": "Answer", "text": "Uma piscina de 4×8 m em alvenaria custa R$ 25.000–50.000 (estrutura + revestimento + equipamentos). Manutenção mensal: R$ 150–300. Piscinas de fibra são 30–50% mais baratas."}}]
     },
     {
       "@type":"BreadcrumbList",
@@ -122,6 +124,47 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
         {"@type":"ListItem","position":2,"name":"Calculadora de Piscina","item":"https://quantopreciso.com/calculadora-de-piscina.html"}
       ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como calcular o material para construir uma piscina",
+  "description": "Calcule o volume de água, azulejos e cimento para sua piscina de alvenaria.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Defina as dimensões",
+      "text": "Comprimento × largura × profundidade média."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Calcule o volume de água",
+      "text": "C × L × P × 1.000 = litros. Exemplo: 5 × 10 × 1,4 × 1.000 = 70.000 L."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Calcule a área de revestimento",
+      "text": "Fundo + paredes laterais. Exemplo: (5×10) + 2×(5×1,4) + 2×(10×1,4) = 92 m²."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Estime o cimento",
+      "text": "Estrutura + revestimento: ~2,4 sacos por m² de área total."
+    }
+  ],
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Calculadora online"
     }
   ]
 }
@@ -250,6 +293,23 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 </ul>
 </div>
 
+
+<div class="card content-section">
+<h2>Quanto de material para cada tamanho de piscina?</h2>
+<p>Estimativas para piscinas de alvenaria retangulares (profundidade média 1,4 m):</p>
+<table class="info-table">
+<thead><tr><th>Tamanho</th><th>Volume (litros)</th><th>Azulejos (paredes+fundo)</th><th>Sacos cimento (50 kg)</th></tr></thead>
+<tbody>
+<tr><td>3 × 5 m</td><td>~21.000 L</td><td>~45 m²</td><td>~60 sacos</td></tr>
+<tr><td>4 × 8 m</td><td>~44.800 L</td><td>~66 m²</td><td>~90 sacos</td></tr>
+<tr><td>5 × 10 m</td><td>~70.000 L</td><td>~92 m²</td><td>~120 sacos</td></tr>
+<tr><td>6 × 12 m</td><td>~100.800 L</td><td>~122 m²</td><td>~160 sacos</td></tr>
+<tr><td>8 × 15 m</td><td>~168.000 L</td><td>~184 m²</td><td>~240 sacos</td></tr>
+</tbody>
+</table>
+<p><em>Volume = C × L × profundidade × 1.000. Área de azulejo inclui laterais e fundo. Cimento para estrutura + revestimento.</em></p>
+</div>
+
 <div class="card faq-section">
 <h2>Perguntas frequentes</h2>
 <div class="faq-item">
@@ -268,8 +328,37 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <div class="faq-q" onclick="toggleFaq(this)"><span>Quanto tempo demora para encher uma piscina?</span><span class="faq-icon">+</span></div>
 <div class="faq-a">Com uma mangueira de jardim padrão (vazão de ~1.000 litros/hora), uma piscina de 20.000 litros leva cerca de 20 horas para encher. Com duas mangueiras simultâneas, o tempo cai pela metade. Algumas concessionárias de água também oferecem o serviço de caminhão pipa como alternativa mais rápida.</div>
 </div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantos litros de água tem uma piscina de 5×10 metros?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Com profundidade média de 1,4 m, ~70.000 litros. Com profundidade variável (1,0–1,8 m), entre 50.000 e 90.000 litros.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto custa construir uma piscina de alvenaria?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Uma piscina de 4×8 m em alvenaria custa R$ 25.000–50.000 (estrutura + revestimento + equipamentos). Manutenção mensal: R$ 150–300. Piscinas de fibra são 30–50% mais baratas.</div>
 </div>
 
+</div>
+
+</div>
+
+
+
+<div class="card content-section">
+<h2>Quanto de material para cada tipo de piscina?</h2>
+<p><strong>Quanto custa construir uma piscina 5×10 m?</strong> Volume de água: ~70.000 litros. Material de alvenaria (cimento, tijolo, ferro): R$ 15.000–25.000. Revestimento (azulejo/pastilha): R$ 8.000–20.000. Sistema de filtragem: R$ 3.000–8.000. Total estimado: R$ 35.000–70.000.</p>
+<p><strong>Piscina de fibra ou alvenaria?</strong> Fibra: instalação rápida (3–5 dias), menor custo (R$ 15.000–40.000 instalada), mas tamanhos limitados. Alvenaria: personalização total, qualquer formato e profundidade, mas 30–60 dias de obra e custo mais alto.</p>
+<p><strong>Quantos litros de água tem minha piscina?</strong> Multiplique comprimento × largura × profundidade média × 1.000. Uma piscina 4×8 m com profundidade média de 1,3 m = 41.600 litros. Isso impacta no custo mensal de tratamento (~R$ 150–300/mês para piscinas médias).</p>
+</div>
+
+<div class="card content-section">
+<h2>Calculadoras relacionadas</h2>
+<p>Planejando uma obra ou reforma? Veja também estas calculadoras:</p>
+<ul>
+<li><a href="/calculadora-de-azulejo.html"><strong>Calculadora de Azulejo</strong></a> — Quanto de azulejo para revestir piscina</li>
+<li><a href="/calculadora-de-impermeabilizacao.html"><strong>Calculadora de Impermeabilização</strong></a> — Impermeabilizar piscina</li>
+<li><a href="/calculadora-de-concreto.html"><strong>Calculadora de Concreto</strong></a> — Quanto de concreto para piscina</li>
+<li><a href="/calculadora-de-cano.html"><strong>Calculadora de Cano</strong></a> — Quanto de cano para hidráulica da piscina</li>
+</ul>
 </div>
 
 <footer>

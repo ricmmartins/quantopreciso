@@ -112,7 +112,9 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"Question","name":"Quanto tempo o concreto leva para curar?","acceptedAnswer":{"@type":"Answer","text":"O concreto atinge cerca de 70% da resistência em 7 dias e a resistência total (fck) em 28 dias. Durante a cura, mantenha a superfície úmida por pelo menos 7 dias, molhando 2-3 vezes ao dia ou cobrindo com lona plástica para evitar evaporação prematura."}},
         {"@type":"Question","name":"Concreto usinado ou virado na obra — qual escolher?","acceptedAnswer":{"@type":"Answer","text":"Para volumes acima de 2–3 m³, o concreto usinado (de caminhão betoneira) é mais vantajoso: tem controle de qualidade, é mais rápido e evita desperdício. Para volumes pequenos (até 1 m³), o concreto virado na obra com betoneira é mais prático e econômico."}},
         {"@type":"Question","name":"Quantos sacos de cimento por m³ de concreto?","acceptedAnswer":{"@type":"Answer","text":"Depende do traço: no traço forte (1:2:3) são cerca de 7 sacos de 50 kg por m³. No traço médio (1:2,5:3,5) são ~6 sacos. No traço magro (1:3,5:5) são ~5 sacos. Esses valores são aproximados e podem variar conforme a umidade dos agregados."}}
-      ]
+      ,
+        {"@type": "Question", "name": "Quanto de concreto para uma laje de 50 metros quadrados?", "acceptedAnswer": {"@type": "Answer", "text": "Para laje de 50 m² com 10 cm: 5 m³ de concreto. Na obra (traço 1:2:3): ~70 sacos de cimento, 4 m³ de areia e 6 m³ de brita. Usinado: ~5 m³ × R$ 400 = R$ 2.000."}},
+        {"@type": "Question", "name": "Quanto de concreto para um piso de garagem?", "acceptedAnswer": {"@type": "Answer", "text": "Garagem de 15 m² com 8 cm: 1,2 m³ — ~17 sacos de cimento (traço 1:2:3). Adicione malha de aço e juntas de dilatação a cada 3 metros."}}]
     },
     {
       "@type":"BreadcrumbList",
@@ -120,6 +122,53 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
         {"@type":"ListItem","position":2,"name":"Calculadora de Concreto","item":"https://quantopreciso.com/calculadora-de-concreto.html"}
       ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como calcular a quantidade de concreto para laje ou piso",
+  "description": "Calcule o volume de concreto e os sacos de cimento para lajes, pisos e estruturas.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Meça as dimensões",
+      "text": "Comprimento × largura × espessura (em metros)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Calcule o volume",
+      "text": "Exemplo: laje 5 × 10 m × 0,10 m = 5 m³."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Escolha fazer na obra ou usinado",
+      "text": "Até 3 m³: misture na obra. Acima: concreto usinado é mais econômico."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Calcule os sacos (se na obra)",
+      "text": "Traço 1:2:3: ~14 sacos de cimento por m³. Exemplo: 5 m³ × 14 = 70 sacos."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Calcule areia e brita",
+      "text": "Traço 1:2:3: ~0,8 m³ areia e ~1,2 m³ brita por m³ de concreto."
+    }
+  ],
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Calculadora online"
     }
   ]
 }
@@ -239,6 +288,24 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 </ul>
 </div>
 
+
+<div class="card content-section">
+<h2>Quanto de concreto para cada tipo de estrutura?</h2>
+<p>Estimativas de concreto (traço 1:2:3) para obras residenciais:</p>
+<table class="info-table">
+<thead><tr><th>Estrutura</th><th>Dimensões</th><th>Volume concreto</th><th>Sacos cimento (50 kg)</th></tr></thead>
+<tbody>
+<tr><td>Laje (10 cm)</td><td>20 m²</td><td>2,0 m³</td><td>~28 sacos</td></tr>
+<tr><td>Laje (10 cm)</td><td>50 m²</td><td>5,0 m³</td><td>~70 sacos</td></tr>
+<tr><td>Laje (12 cm)</td><td>100 m²</td><td>12,0 m³</td><td>~168 sacos</td></tr>
+<tr><td>Piso garagem (8 cm)</td><td>15 m²</td><td>1,2 m³</td><td>~17 sacos</td></tr>
+<tr><td>Calçada (7 cm)</td><td>10 m²</td><td>0,7 m³</td><td>~10 sacos</td></tr>
+<tr><td>Viga (20×40 cm)</td><td>5 m linear</td><td>0,4 m³</td><td>~6 sacos</td></tr>
+</tbody>
+</table>
+<p><em>Acima de 3 m³, concreto usinado (~R$ 350–500/m³) é mais econômico. 1 saco + 4 latas areia + 6 latas brita ≈ 0,07 m³.</em></p>
+</div>
+
 <div class="card faq-section">
 <h2>Perguntas frequentes</h2>
 <div class="faq-item">
@@ -257,8 +324,29 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <div class="faq-q" onclick="toggleFaq(this)"><span>Quantos sacos de cimento por m³ de concreto?</span><span class="faq-icon">+</span></div>
 <div class="faq-a">Depende do traço utilizado. No traço forte (1:2:3) são cerca de 7 sacos de 50 kg por m³. No traço médio (1:2,5:3,5) são aproximadamente 6 sacos. No traço magro (1:3,5:5) são cerca de 5 sacos. Esses valores são aproximados e podem variar conforme a umidade dos agregados e o tipo de cimento.</div>
 </div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto de concreto para uma laje de 50 metros quadrados?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para laje de 50 m² com 10 cm: 5 m³ de concreto. Na obra (traço 1:2:3): ~70 sacos de cimento, 4 m³ de areia e 6 m³ de brita. Usinado: ~5 m³ × R$ 400 = R$ 2.000.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto de concreto para um piso de garagem?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Garagem de 15 m² com 8 cm: 1,2 m³ — ~17 sacos de cimento (traço 1:2:3). Adicione malha de aço e juntas de dilatação a cada 3 metros.</div>
 </div>
 
+</div>
+
+</div>
+
+
+<div class="card content-section">
+<h2>Calculadoras relacionadas</h2>
+<p>Planejando uma obra ou reforma? Veja também estas calculadoras:</p>
+<ul>
+<li><a href="/calculadora-de-cimento.html"><strong>Calculadora de Cimento</strong></a> — Quantos sacos de cimento para concreto</li>
+<li><a href="/calculadora-de-areia.html"><strong>Calculadora de Areia</strong></a> — Quanto de areia para concreto</li>
+<li><a href="/calculadora-de-tijolo.html"><strong>Calculadora de Tijolo</strong></a> — Quantos tijolos para parede</li>
+<li><a href="/calculadora-de-impermeabilizacao.html"><strong>Calculadora de Impermeabilização</strong></a> — Impermeabilizar laje de concreto</li>
+</ul>
 </div>
 
 <footer>

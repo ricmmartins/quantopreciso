@@ -112,7 +112,9 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"Question","name":"Onde é obrigatório impermeabilizar?","acceptedAnswer":{"@type":"Answer","text":"A NBR 9575 determina impermeabilização obrigatória em: lajes de cobertura, terraços, varandas expostas, banheiros, cozinhas, lavanderias, reservatórios de água, piscinas, jardineiras, subsolos e fundações. A falta de impermeabilização pode causar infiltrações, mofo e comprometer a estrutura."}},
         {"@type":"Question","name":"Quanto tempo dura a impermeabilização?","acceptedAnswer":{"@type":"Answer","text":"A manta asfáltica bem aplicada dura de 15 a 20 anos. O impermeabilizante líquido dura de 5 a 10 anos, dependendo da exposição. A argamassa polimérica tem durabilidade de 10 a 15 anos. A vida útil depende da qualidade da aplicação, preparo da superfície e exposição ao sol e à chuva."}},
         {"@type":"Question","name":"Posso impermeabilizar sobre piso existente?","acceptedAnswer":{"@type":"Answer","text":"Sim, em alguns casos. A manta líquida e a argamassa polimérica podem ser aplicadas sobre pisos existentes, desde que a superfície esteja limpa, sem trincas profundas e com caimento adequado. Já a manta asfáltica geralmente exige remoção do piso. Consulte sempre um profissional para avaliar."}}
-      ]
+      ,
+        {"@type": "Question", "name": "Quanto de impermeabilizante para uma laje de 30 metros quadrados?", "acceptedAnswer": {"@type": "Answer", "text": "Para laje de 30 m² com 3 demãos (0,5 kg/m²/demão), ~45 kg — 3 latas de 18 kg. Aplique cruzando direções entre demãos."}},
+        {"@type": "Question", "name": "Manta asfáltica ou impermeabilizante líquido?", "acceptedAnswer": {"@type": "Answer", "text": "Manta asfáltica: mais durável (10+ anos), ideal para lajes e terraços expostos. Líquido: mais fácil de aplicar, ideal para áreas úmidas internas. Para sol direto, prefira manta."}}]
     },
     {
       "@type":"BreadcrumbList",
@@ -120,6 +122,53 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
         {"@type":"ListItem","position":2,"name":"Calculadora de Impermeabilização","item":"https://quantopreciso.com/calculadora-de-impermeabilizacao.html"}
       ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como calcular a quantidade de impermeabilizante",
+  "description": "Calcule quantos quilos de impermeabilizante líquido para lajes, banheiros e áreas úmidas.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Meça a área",
+      "text": "Comprimento × largura da superfície a impermeabilizar."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Defina o número de demãos",
+      "text": "Mínimo 3 demãos, aplicando em direções cruzadas."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Calcule o consumo",
+      "text": "0,5 kg/m² por demão × 3 demãos = 1,5 kg/m² total."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Calcule o total",
+      "text": "Área × 1,5 kg. Exemplo: 30 m² × 1,5 = 45 kg."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Converta em latas",
+      "text": "Divida pelo tamanho da lata (3,6 kg ou 18 kg)."
+    }
+  ],
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Calculadora online"
     }
   ]
 }
@@ -240,6 +289,23 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 </ul>
 </div>
 
+
+<div class="card content-section">
+<h2>Quanto de impermeabilizante para cada área?</h2>
+<p>Estimativas de impermeabilizante líquido para 3 demãos (consumo médio 1,5 kg/m²):</p>
+<table class="info-table">
+<thead><tr><th>Aplicação</th><th>Área</th><th>Impermeabilizante (kg)</th><th>Latas de 18 kg</th></tr></thead>
+<tbody>
+<tr><td>Box do banheiro</td><td>3 m²</td><td>~4,5 kg</td><td>1 galão de 3,6 kg</td></tr>
+<tr><td>Banheiro inteiro</td><td>6 m²</td><td>~9 kg</td><td>1 lata de 18 kg</td></tr>
+<tr><td>Laje / terraço</td><td>20 m²</td><td>~30 kg</td><td>2 latas de 18 kg</td></tr>
+<tr><td>Laje / terraço</td><td>50 m²</td><td>~75 kg</td><td>5 latas de 18 kg</td></tr>
+<tr><td>Laje / terraço</td><td>100 m²</td><td>~150 kg</td><td>9 latas de 18 kg</td></tr>
+</tbody>
+</table>
+<p><em>Consumo de 0,5 kg/m² por demão, 3 demãos mínimas. Para lajes expostas, prefira manta asfáltica.</em></p>
+</div>
+
 <div class="card faq-section">
 <h2>Perguntas frequentes</h2>
 <div class="faq-item">
@@ -258,8 +324,37 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <div class="faq-q" onclick="toggleFaq(this)"><span>Posso impermeabilizar sobre piso existente?</span><span class="faq-icon">+</span></div>
 <div class="faq-a">Sim, em alguns casos. A manta líquida e a argamassa polimérica podem ser aplicadas sobre pisos existentes, desde que a superfície esteja limpa, sem trincas profundas e com caimento adequado para o ralo. Já a manta asfáltica geralmente exige remoção do piso. Consulte um profissional para avaliar.</div>
 </div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto de impermeabilizante para uma laje de 30 metros quadrados?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para laje de 30 m² com 3 demãos (0,5 kg/m²/demão), ~45 kg — 3 latas de 18 kg. Aplique cruzando direções entre demãos.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Manta asfáltica ou impermeabilizante líquido?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Manta asfáltica: mais durável (10+ anos), ideal para lajes e terraços expostos. Líquido: mais fácil de aplicar, ideal para áreas úmidas internas. Para sol direto, prefira manta.</div>
 </div>
 
+</div>
+
+</div>
+
+
+
+<div class="card content-section">
+<h2>Quanto de impermeabilizante para cada situação?</h2>
+<p><strong>Quanto de impermeabilizante para laje de 50 m²?</strong> Com 3 demãos a 0,5 kg/m² cada: 50 × 1,5 = 75 kg. São ~4 latas de 18 kg + 1 galão de 3,6 kg. O custo do material fica entre R$ 500 e R$ 900 dependendo da marca.</p>
+<p><strong>Quanto de impermeabilizante para banheiro?</strong> Para um box de chuveiro (2–3 m² de piso + 1,80 m de altura nas paredes): ~8 m² total × 1,5 kg = 12 kg. Uma lata de 18 kg cobre box + área do vaso. Para <strong>banheiro inteiro</strong> (6 m²): ~20 kg.</p>
+<p><strong>Preciso impermeabilizar antes de azulejar?</strong> Sim! Áreas molhadas (box, ao redor de banheira, atrás de pia) devem receber impermeabilizante <strong>antes</strong> da argamassa e azulejo. Isso evita infiltrações que danificam apartamentos vizinhos e causam mofo.</p>
+</div>
+
+<div class="card content-section">
+<h2>Calculadoras relacionadas</h2>
+<p>Planejando uma obra ou reforma? Veja também estas calculadoras:</p>
+<ul>
+<li><a href="/calculadora-de-piscina.html"><strong>Calculadora de Piscina</strong></a> — Calcular material de piscina</li>
+<li><a href="/calculadora-de-azulejo.html"><strong>Calculadora de Azulejo</strong></a> — Revestir área impermeabilizada</li>
+<li><a href="/calculadora-de-concreto.html"><strong>Calculadora de Concreto</strong></a> — Quanto de concreto para laje</li>
+<li><a href="/calculadora-de-telha.html"><strong>Calculadora de Telha</strong></a> — Quantas telhas para cobertura</li>
+</ul>
 </div>
 
 <footer>

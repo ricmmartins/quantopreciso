@@ -112,7 +112,9 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"Question","name":"Qual o preço do drywall por m²?","acceptedAnswer":{"@type":"Answer","text":"O custo médio do drywall instalado fica entre R$60 e R$120 por m², dependendo da região, tipo de placa (standard, resistente à umidade ou fogo) e complexidade da obra. Apenas o material (placa + perfis + acabamento) custa entre R$35 e R$65 por m²."}},
         {"@type":"Question","name":"Qual a espessura de uma parede de drywall?","acceptedAnswer":{"@type":"Answer","text":"Uma parede simples de drywall (1 placa de cada lado + perfil de 70mm) tem cerca de 95mm de espessura total. Para melhor isolamento acústico, pode-se usar perfil de 90mm com lã mineral, resultando em ~115mm. Paredes duplas (2 placas por lado) chegam a ~120–140mm."}},
         {"@type":"Question","name":"Pode usar drywall em banheiro e cozinha?","acceptedAnswer":{"@type":"Answer","text":"Sim, desde que use a placa verde (RU — Resistente à Umidade). Ela possui aditivos que reduzem a absorção de água. Para áreas de box e próximas ao chuveiro, aplique impermeabilizante sobre a placa antes do revestimento cerâmico."}}
-      ]
+      ,
+        {"@type": "Question", "name": "Quantas placas de drywall para forrar uma sala de 20m²?", "acceptedAnswer": {"@type": "Answer", "text": "Para forro de 20 m² (com 10% = 22 m²), ~8 chapas de 1,20×2,40 m, perfis metálicos e parafusos. Material: R$ 35–55/m²."}},
+        {"@type": "Question", "name": "Quanto custa uma parede de drywall por metro quadrado?", "acceptedAnswer": {"@type": "Answer", "text": "Instalada: R$ 80–150/m² (material + mão de obra). Só material: R$ 40–70/m². É 30–50% mais barato que alvenaria e mais rápido."}}]
     },
     {
       "@type":"BreadcrumbList",
@@ -120,6 +122,53 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
         {"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},
         {"@type":"ListItem","position":2,"name":"Calculadora de Drywall","item":"https://quantopreciso.com/calculadora-de-drywall.html"}
       ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como calcular a quantidade de drywall para parede ou forro",
+  "description": "Calcule quantas chapas de gesso acartonado para paredes divisórias e forros.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Meça a área",
+      "text": "Para forro: comprimento × largura do cômodo. Para parede: comprimento × altura."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Adicione 10% de margem",
+      "text": "Para recortes e encaixes."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Calcule as chapas",
+      "text": "Chapa padrão: 1,20 × 2,40 m = 2,88 m². Divida a área pela área da chapa."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Para paredes: dobre",
+      "text": "Cada parede usa 2 chapas (uma de cada lado). Multiplique por 2."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Escolha o tipo de chapa",
+      "text": "Branca (ST): padrão. Verde (RU): áreas úmidas. Rosa (RF): resistência ao fogo."
+    }
+  ],
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Calculadora online"
     }
   ]
 }
@@ -240,6 +289,24 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 </ul>
 </div>
 
+
+<div class="card content-section">
+<h2>Quanto de drywall para cada tamanho de cômodo?</h2>
+<p>Estimativas de chapas (1,20×2,40 m = 2,88 m²) para paredes e forros, com 10% de margem:</p>
+<table class="info-table">
+<thead><tr><th>Aplicação</th><th>Área</th><th>Chapas (1,20×2,40)</th><th>Perfis (montantes)</th></tr></thead>
+<tbody>
+<tr><td>Forro de quarto</td><td>12 m²</td><td>~5 chapas</td><td>~20 m lineares</td></tr>
+<tr><td>Forro de sala</td><td>20 m²</td><td>~8 chapas</td><td>~34 m lineares</td></tr>
+<tr><td>Parede divisória (3 m)</td><td>8,1 m²</td><td>~7 chapas (2 lados)</td><td>~12 m lineares</td></tr>
+<tr><td>Parede divisória (5 m)</td><td>13,5 m²</td><td>~11 chapas (2 lados)</td><td>~18 m lineares</td></tr>
+<tr><td>Forro casa (50 m²)</td><td>55 m²</td><td>~21 chapas</td><td>~92 m lineares</td></tr>
+<tr><td>Forro casa (100 m²)</td><td>110 m²</td><td>~42 chapas</td><td>~184 m lineares</td></tr>
+</tbody>
+</table>
+<p><em>Paredes: 2 chapas (uma de cada lado). Áreas úmidas: chapa verde (RU). Resistência ao fogo: chapa rosa (RF).</em></p>
+</div>
+
 <div class="card faq-section">
 <h2>Perguntas frequentes</h2>
 <div class="faq-item">
@@ -258,8 +325,37 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <div class="faq-q" onclick="toggleFaq(this)"><span>Pode usar drywall em banheiro e cozinha?</span><span class="faq-icon">+</span></div>
 <div class="faq-a">Sim, desde que use a placa verde (RU — Resistente à Umidade). Ela possui aditivos que reduzem a absorção de água. Para áreas de box e próximas ao chuveiro, aplique impermeabilizante sobre a placa antes de instalar o revestimento cerâmico.</div>
 </div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quantas placas de drywall para forrar uma sala de 20m²?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Para forro de 20 m² (com 10% = 22 m²), ~8 chapas de 1,20×2,40 m, perfis metálicos e parafusos. Material: R$ 35–55/m².</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto custa uma parede de drywall por metro quadrado?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Instalada: R$ 80–150/m² (material + mão de obra). Só material: R$ 40–70/m². É 30–50% mais barato que alvenaria e mais rápido.</div>
 </div>
 
+</div>
+
+</div>
+
+
+
+<div class="card content-section">
+<h2>Quanto de drywall para cada ambiente?</h2>
+<p><strong>Quanto de drywall para um forro de 15 m²?</strong> São ~5,3 chapas padrão (1,20 × 2,40 m = 2,88 m²/chapa), com 10% de margem: 6 chapas. Inclua 10 metros de perfil montante e 8 metros de perfil guia. Custo médio do forro: R$ 80–120/m² (material + instalação).</p>
+<p><strong>Quanto de drywall para dividir um cômodo?</strong> Uma parede divisória de 3 m × 2,70 m = 8,1 m². Como cada lado leva uma chapa: 16,2 m² ÷ 2,88 = 6 chapas (arredondando para cima). Não esqueça a lã de vidro no meio para isolamento acústico.</p>
+<p><strong>Drywall ou alvenaria?</strong> Drywall é 30–40% mais rápido, gera menos entulho, e custa R$ 80–120/m² instalado. Alvenaria custa R$ 120–180/m², mas suporta mais peso em prateleiras. Para paredes sem carga, drywall é a escolha mais inteligente.</p>
+</div>
+
+<div class="card content-section">
+<h2>Calculadoras relacionadas</h2>
+<p>Planejando uma obra ou reforma? Veja também estas calculadoras:</p>
+<ul>
+<li><a href="/calculadora-de-tinta.html"><strong>Calculadora de Tinta</strong></a> — Quanto de tinta para pintar drywall</li>
+<li><a href="/calculadora-de-fio-eletrico.html"><strong>Calculadora de Fio Elétrico</strong></a> — Quanto de fio para embutir</li>
+<li><a href="/calculadora-de-cano.html"><strong>Calculadora de Cano</strong></a> — Quanto de cano para instalação</li>
+<li><a href="/calculadora-de-impermeabilizacao.html"><strong>Calculadora de Impermeabilização</strong></a> — Proteger drywall em áreas úmidas</li>
+</ul>
 </div>
 
 <footer>

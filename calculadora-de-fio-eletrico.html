@@ -87,7 +87,56 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 @media(max-width:640px){.form-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.card h1{font-size:1.35rem}.header-inner{height:auto;padding:.75rem 0}nav{display:none}.card{padding:1.25rem}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calculadora de Fio Elétrico","url":"https://quantopreciso.com/calculadora-de-fio-eletrico.html","description":"Calcule a bitola do fio elétrico ideal para o seu circuito. Seção do cabo, disjuntor adequado e queda de tensão conforme NBR 5410.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qual a diferença entre fio e cabo elétrico?","acceptedAnswer":{"@type":"Answer","text":"O fio possui um único condutor sólido (rígido), enquanto o cabo é formado por vários fios finos trançados (flexível). Para instalações residenciais, o cabo flexível é mais usado por ser mais fácil de passar em eletrodutos. A NBR 5410 permite ambos."}},{"@type":"Question","name":"Como escolher a bitola do fio elétrico?","acceptedAnswer":{"@type":"Answer","text":"A bitola depende da corrente do circuito e da distância. Calcule a corrente (I = P / V), consulte a tabela de capacidade de condução (NBR 5410) e verifique a queda de tensão. A seção mínima é 1,5 mm² para iluminação e 2,5 mm² para tomadas."}},{"@type":"Question","name":"Qual disjuntor usar para chuveiro elétrico?","acceptedAnswer":{"@type":"Answer","text":"Depende da potência: chuveiros de 3500W em 127V precisam de fio 6mm² e disjuntor 32A. Em 220V, fio 4mm² e disjuntor 20A. Chuveiros de 7500W em 220V exigem fio 6mm² e disjuntor 40A. Sempre use circuito exclusivo."}},{"@type":"Question","name":"O que é queda de tensão e por que importa?","acceptedAnswer":{"@type":"Answer","text":"Queda de tensão é a perda de voltagem ao longo do fio devido à resistência. A NBR 5410 limita a 4% para circuitos terminais. Queda excessiva causa mau funcionamento de equipamentos, superaquecimento e desperdício de energia."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},{"@type":"ListItem","position":2,"name":"Calculadora de Fio Elétrico","item":"https://quantopreciso.com/calculadora-de-fio-eletrico.html"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calculadora de Fio Elétrico","url":"https://quantopreciso.com/calculadora-de-fio-eletrico.html","description":"Calcule a bitola do fio elétrico ideal para o seu circuito. Seção do cabo, disjuntor adequado e queda de tensão conforme NBR 5410.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qual a diferença entre fio e cabo elétrico?","acceptedAnswer":{"@type":"Answer","text":"O fio possui um único condutor sólido (rígido), enquanto o cabo é formado por vários fios finos trançados (flexível). Para instalações residenciais, o cabo flexível é mais usado por ser mais fácil de passar em eletrodutos. A NBR 5410 permite ambos."}},{"@type":"Question","name":"Como escolher a bitola do fio elétrico?","acceptedAnswer":{"@type":"Answer","text":"A bitola depende da corrente do circuito e da distância. Calcule a corrente (I = P / V), consulte a tabela de capacidade de condução (NBR 5410) e verifique a queda de tensão. A seção mínima é 1,5 mm² para iluminação e 2,5 mm² para tomadas."}},{"@type":"Question","name":"Qual disjuntor usar para chuveiro elétrico?","acceptedAnswer":{"@type":"Answer","text":"Depende da potência: chuveiros de 3500W em 127V precisam de fio 6mm² e disjuntor 32A. Em 220V, fio 4mm² e disjuntor 20A. Chuveiros de 7500W em 220V exigem fio 6mm² e disjuntor 40A. Sempre use circuito exclusivo."}},{"@type":"Question","name":"O que é queda de tensão e por que importa?","acceptedAnswer":{"@type":"Answer","text":"Queda de tensão é a perda de voltagem ao longo do fio devido à resistência. A NBR 5410 limita a 4% para circuitos terminais. Queda excessiva causa mau funcionamento de equipamentos, superaquecimento e desperdício de energia."}},
+        {"@type": "Question", "name": "Quanto de fio elétrico para uma casa de 50 metros quadrados?", "acceptedAnswer": {"@type": "Answer", "text": "Estimativa total: 150 a 200 m de fio. ~50 m de 1,5 mm² (iluminação), ~80 m de 2,5 mm² (tomadas), ~15 m de 6,0 mm² (chuveiro), ~10 m de 10 mm² (entrada). Inclua 15% extra."}},
+        {"@type": "Question", "name": "Qual a bitola de fio para chuveiro elétrico?", "acceptedAnswer": {"@type": "Answer", "text": "Em 127V (5.500 W): fio 6,0 mm² com disjuntor 40A. Em 220V: 4,0 mm² com disjuntor 25A. Circuito exclusivo e aterramento obrigatórios."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://quantopreciso.com/"},{"@type":"ListItem","position":2,"name":"Calculadora de Fio Elétrico","item":"https://quantopreciso.com/calculadora-de-fio-eletrico.html"}]}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como calcular a quantidade de fio elétrico para uma casa",
+  "description": "Estime os metros de fio e a bitola correta para cada circuito elétrico residencial.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Liste os circuitos",
+      "text": "Iluminação, tomadas, chuveiro, ar-condicionado, forno — cada um é independente."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Meça as distâncias",
+      "text": "Do quadro de distribuição até cada ponto de consumo (ida + volta = dobro)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Defina a bitola",
+      "text": "Iluminação: 1,5 mm². Tomadas: 2,5 mm². Chuveiro 127V: 6,0 mm²."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Some os metros por bitola",
+      "text": "Adicione 15% de margem para curvas e conexões."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Consulte a NBR 5410",
+      "text": "Para garantir segurança, siga as normas e contrate um eletricista."
+    }
+  ],
+  "totalTime": "PT5M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Calculadora online"
+    }
+  ]
+}
 </script>
 </head>
 <body>
@@ -169,6 +218,24 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 </ul>
 </div>
 
+
+<div class="card content-section">
+<h2>Quanto de fio elétrico para cada tipo de circuito?</h2>
+<p>Estimativas para circuitos residenciais, com 15% de margem para curvas e conexões:</p>
+<table class="info-table">
+<thead><tr><th>Circuito</th><th>Potência típica</th><th>Bitola recomendada</th><th>Metros (casa 50 m²)</th></tr></thead>
+<tbody>
+<tr><td>Iluminação</td><td>até 1.200 W</td><td>1,5 mm²</td><td>~50 m</td></tr>
+<tr><td>Tomadas gerais</td><td>até 2.200 W</td><td>2,5 mm²</td><td>~80 m</td></tr>
+<tr><td>Chuveiro elétrico</td><td>5.500–7.500 W</td><td>6,0 mm² (127V)</td><td>~15 m</td></tr>
+<tr><td>Ar-condicionado</td><td>1.400–2.500 W</td><td>2,5–4,0 mm²</td><td>~15 m</td></tr>
+<tr><td>Forno / microondas</td><td>1.500–2.000 W</td><td>2,5 mm²</td><td>~12 m</td></tr>
+<tr><td>Entrada geral</td><td>varia</td><td>10–16 mm²</td><td>~10 m</td></tr>
+</tbody>
+</table>
+<p><em>Cada circuito vai do quadro ao ponto. Sempre use conduíte e siga a NBR 5410. Projeto elétrico deve ser feito por profissional.</em></p>
+</div>
+
 <div class="card faq-section">
 <h2>Perguntas frequentes</h2>
 <div class="faq-item">
@@ -187,8 +254,37 @@ footer{background:var(--txt);color:rgba(255,255,255,.7);padding:3rem 1rem 2rem;m
 <div class="faq-q" onclick="toggleFaq(this)"><span>O que é queda de tensão e por que importa?</span><span class="faq-icon">+</span></div>
 <div class="faq-a">Queda de tensão é a perda de voltagem que ocorre ao longo do condutor devido à sua resistência elétrica. Quanto mais longo o fio e maior a corrente, maior a queda. A NBR 5410 limita a queda a 4% para circuitos terminais. Queda excessiva faz equipamentos funcionar mal (chuveiro não esquenta, lâmpadas ficam fracas), causa superaquecimento do fio e aumenta o consumo de energia.</div>
 </div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Quanto de fio elétrico para uma casa de 50 metros quadrados?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Estimativa total: 150 a 200 m de fio. ~50 m de 1,5 mm² (iluminação), ~80 m de 2,5 mm² (tomadas), ~15 m de 6,0 mm² (chuveiro), ~10 m de 10 mm² (entrada). Inclua 15% extra.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Qual a bitola de fio para chuveiro elétrico?</span><span class="faq-icon">+</span></div>
+<div class="faq-a">Em 127V (5.500 W): fio 6,0 mm² com disjuntor 40A. Em 220V: 4,0 mm² com disjuntor 25A. Circuito exclusivo e aterramento obrigatórios.</div>
+</div>
+
 </div>
 </div>
+
+
+<div class="card content-section">
+<h2>Quanto de fio elétrico para cada tipo de casa?</h2>
+<p><strong>Quanto de fio para um apartamento de 50 m²?</strong> Para um apt de 2 quartos: ~60 m de fio 1,5 mm² (iluminação), ~80 m de fio 2,5 mm² (tomadas), ~15 m de fio 4,0 mm² (ar-condicionado) e ~10 m de fio 6,0 mm² (chuveiro). Total: ~165 metros de fio.</p>
+<p><strong>Quanto de fio para uma casa de 100 m²?</strong> Uma casa de 3 quartos precisa de ~120 m (1,5 mm²), ~150 m (2,5 mm²), ~30 m (4,0 mm²) e ~15 m (6,0 mm²). Total: ~315 metros. Sempre compre rolos completos (50 m ou 100 m) — é mais barato que comprar por metro.</p>
+<p><strong>Qual fio usar para chuveiro?</strong> Em 127V: fio de 6,0 mm² com disjuntor de 40A para chuveiros até 5.500W. Em 220V: fio de 4,0 mm² com disjuntor de 25A. <strong>Nunca</strong> ligue chuveiro no mesmo circuito de tomadas — sempre use circuito exclusivo.</p>
+</div>
+
+<div class="card content-section">
+<h2>Calculadoras relacionadas</h2>
+<p>Planejando uma obra ou reforma? Veja também estas calculadoras:</p>
+<ul>
+<li><a href="/calculadora-de-cano.html"><strong>Calculadora de Cano</strong></a> — Quanto de cano para instalação hidráulica</li>
+<li><a href="/calculadora-de-drywall.html"><strong>Calculadora de Drywall</strong></a> — Quanto de drywall para parede</li>
+<li><a href="/calculadora-de-cimento.html"><strong>Calculadora de Cimento</strong></a> — Quanto de cimento para quebrar parede</li>
+<li><a href="/calculadora-de-tinta.html"><strong>Calculadora de Tinta</strong></a> — Quanto de tinta após reforma elétrica</li>
+</ul>
+</div>
+
 <footer>
 <div class="footer-inner">
 <div class="footer-col"><h4>Calculadoras</h4><a href="/calculadora-de-tinta.html">Tinta</a><a href="/calculadora-de-piso.html">Piso</a><a href="/calculadora-de-cimento.html">Cimento</a><a href="/calculadora-de-argamassa.html">Argamassa</a><a href="/calculadora-de-grama.html">Grama</a><a href="/calculadora-de-azulejo.html">Azulejo</a><a href="/calculadora-de-tijolo.html">Tijolo</a><a href="/calculadora-de-areia.html">Areia</a><a href="/calculadora-de-telha.html">Telha</a><a href="/calculadora-de-drywall.html">Drywall</a><a href="/calculadora-de-concreto.html">Concreto</a><a href="/calculadora-de-piscina.html">Piscina</a><a href="/calculadora-de-impermeabilizacao.html">Impermeabilização</a><a href="/calculadora-de-fio-eletrico.html">Fio Elétrico</a><a href="/calculadora-de-cano.html">Cano</a><a href="/calculadora-de-madeira.html">Madeira</a></div>
